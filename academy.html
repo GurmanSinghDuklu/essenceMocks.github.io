@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Essence Academy — ABT Accredited Hair Training</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--beige:#F5EFE6;--bd:#EAE0D0;--bdp:#D6C9B5;--esp:#2C1F14;--gold:#B8935A;--gl:#D4AA72;--wh:#FDFAF6;--mu:#7A6A56;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--beige);color:var(--esp);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 56px;background:rgba(245,239,230,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,147,90,.18);}
+.logo{display:flex;flex-direction:column;text-decoration:none;}
+.lw{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;letter-spacing:.2em;color:var(--esp);text-transform:uppercase;line-height:1;}
+.ls{font-size:7.5px;font-weight:200;letter-spacing:.48em;color:var(--gold);text-transform:uppercase;margin-top:1px;}
+.nl{display:flex;gap:32px;list-style:none;}
+.nl a{font-size:10px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--esp);text-decoration:none;transition:color .2s;}
+.nl a:hover{color:var(--gold);}
+.nl a.on{color:var(--gold);}
+.nb{font-size:9.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;background:var(--gold);color:var(--esp);padding:11px 24px;text-decoration:none;transition:background .2s;}
+.nb:hover{background:var(--gl);}
+.ban{background:var(--gold);padding:11px 56px;text-align:center;}
+.ban span{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--esp);}
+/* HERO */
+.hero{padding:148px 56px 100px;background:var(--wh);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.hl{}
+.eye{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:flex;align-items:center;gap:14px;}
+.eye::before{content:'';display:block;width:34px;height:1px;background:var(--gold);}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,5.5vw,80px);font-weight:300;line-height:1.04;margin-bottom:24px;}
+h1 em{font-style:italic;color:var(--gold);}
+.hb{font-size:14.5px;line-height:1.85;color:var(--mu);max-width:480px;margin-bottom:36px;}
+.acts{display:flex;gap:14px;flex-wrap:wrap;}
+.bp{font-size:9.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;background:var(--esp);color:var(--beige);padding:14px 36px;text-decoration:none;transition:background .2s;display:inline-block;}
+.bp:hover{background:var(--gold);}
+.bo{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;background:transparent;color:var(--esp);padding:13px 34px;border:1px solid var(--esp);text-decoration:none;transition:all .2s;display:inline-block;}
+.bo:hover{background:var(--esp);color:var(--beige);}
+.hr{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--bdp);}
+.sbox{background:var(--beige);padding:32px 28px;}
+.sbox.d{background:var(--bd);}
+.sbox.e{background:var(--esp);padding:28px 32px;grid-column:span 2;display:flex;align-items:center;gap:18px;}
+.sn{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--esp);line-height:1;}
+.sl{font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--mu);margin-top:5px;}
+.sbox.e .sn{color:var(--gold);}
+.sbox.e .sl{color:var(--bdp);}
+.abt-label{font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+/* PROMISE */
+.promise{display:grid;grid-template-columns:repeat(4,1fr);background:var(--bd);}
+.pi{padding:44px 28px;text-align:center;border-right:1px solid var(--bdp);}
+.pi:last-child{border-right:none;}
+.picon{font-size:22px;margin-bottom:12px;}
+.plabel{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.ptext{font-size:12.5px;line-height:1.7;color:var(--mu);}
+/* LOGO SECTION */
+.logos{padding:88px 56px;background:var(--beige);text-align:center;}
+.se{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.6vw,52px);font-weight:300;line-height:1.1;margin-bottom:0;}
+h2 em{font-style:italic;}
+.srule{width:52px;height:1px;background:var(--gold);margin:18px auto 0;}
+.snote{font-size:13.5px;line-height:1.8;color:var(--mu);max-width:480px;margin:20px auto 48px;}
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.lcard{padding:56px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.lcard.lw2{background:var(--wh);border:1px solid var(--bdp);}
+.lcard.ld{background:var(--esp);}
+.lcard.lcream{background:var(--bd);border:1px solid var(--bdp);}
+.llabel{font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;margin-top:24px;opacity:.38;}
+/* Logo A */
+.la{text-align:center;}
+.la-orn{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:12px;}
+.la-line{height:1px;width:26px;background:var(--gold);}
+.la-diamond{width:5px;height:5px;background:var(--gold);transform:rotate(45deg);}
+.la-main{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;letter-spacing:.22em;text-transform:uppercase;line-height:1;color:var(--esp);}
+.la-div{display:flex;align-items:center;gap:10px;margin:8px 0;color:var(--gold);}
+.la-div::before,.la-div::after{content:'';flex:1;height:1px;background:var(--gold);opacity:.35;}
+.la-div span{font-size:8.5px;letter-spacing:.5em;text-transform:uppercase;}
+.la-sub{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--mu);}
+/* Logo B */
+.lb{text-align:center;}
+.lb-top{font-size:7.5px;letter-spacing:.55em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.lb-main{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--beige);line-height:1;}
+.lb-rule{width:100%;height:1px;background:var(--gold);margin:11px 0;opacity:.4;}
+.lb-sub{font-size:7.5px;letter-spacing:.55em;text-transform:uppercase;color:var(--gold);}
+/* Logo C */
+.lc{text-align:center;}
+.lc-main{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:48px;font-weight:300;color:var(--esp);line-height:1;margin-bottom:5px;}
+.lc-mid{display:flex;align-items:center;gap:11px;justify-content:center;margin:9px 0;}
+.lc-mid::before,.lc-mid::after{content:'';flex:1;height:1px;background:var(--esp);opacity:.18;}
+.lc-mid span{font-size:8px;letter-spacing:.5em;text-transform:uppercase;color:var(--esp);opacity:.65;}
+.lc-sub{font-size:7px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);}
+/* COURSES */
+.courses{padding:88px 56px;background:var(--wh);}
+.ci{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:end;margin-bottom:60px;}
+.ci-l h2{font-size:clamp(32px,3.4vw,50px);}
+.ci-r p{font-size:13.5px;line-height:1.82;color:var(--mu);}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--bdp);}
+.course{background:var(--beige);padding:40px 32px;position:relative;overflow:hidden;cursor:pointer;transition:background .3s;}
+.course:hover{background:var(--wh);}
+.course::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height .4s;}
+.course:hover::before{height:100%;}
+.course.feat{grid-column:span 3;display:grid;grid-template-columns:1fr 2fr;background:var(--bd);}
+.course.feat:hover{background:var(--bd);}
+.feat-l{padding:48px 44px;border-right:1px solid var(--bdp);}
+.feat-r{padding:48px 44px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;}
+.cnum{font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:300;color:rgba(184,147,90,.16);line-height:1;margin-bottom:12px;}
+.ctag{font-size:8.5px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;}
+.cname{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--esp);margin-bottom:12px;}
+.cdesc{font-size:13px;line-height:1.75;color:var(--mu);margin-bottom:22px;}
+.cmeta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px;}
+.cmeta-l{font-size:7.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--bdp);filter:brightness(.65);margin-bottom:2px;}
+.cmeta-v{font-size:12.5px;color:var(--esp);}
+.cbook{font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--esp);background:transparent;border:1px solid var(--bdp);padding:9px 20px;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block;}
+.cbook:hover{background:var(--esp);color:var(--beige);border-color:var(--esp);}
+.learn-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.learn-list li{font-size:13px;color:var(--mu);display:flex;gap:10px;}
+.learn-list li span{color:var(--gold);flex-shrink:0;}
+.detail-rows{display:flex;flex-direction:column;gap:12px;}
+/* ENROL CTA */
+.ecta{padding:88px 56px;background:var(--bd);text-align:center;}
+.ecta h2{font-size:clamp(34px,3.8vw,56px);margin-bottom:16px;}
+.ecta h2 em{color:var(--gold);}
+.emeta{display:flex;justify-content:center;gap:56px;margin-bottom:40px;}
+.em{text-align:center;}
+.emn{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--gold);line-height:1;}
+.eml{font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--mu);margin-top:5px;}
+.ecta p{font-size:14px;line-height:1.82;color:var(--mu);max-width:440px;margin:0 auto 36px;}
+footer{background:var(--esp);padding:68px 56px 32px;}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px;}
+.ftag{font-size:13px;line-height:1.8;color:#5a4a3a;margin-top:20px;max-width:250px;}
+.fct{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.fl{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fl a{font-size:12.5px;color:#5a4a3a;text-decoration:none;transition:color .2s;}
+.fl a:hover{color:var(--beige);}
+.fbot{border-top:1px solid rgba(184,147,90,.12);padding-top:26px;display:flex;justify-content:space-between;align-items:center;}
+.fcopy{font-size:10px;color:#3a2a1a;}
+.fsoc{display:flex;gap:10px;}
+.fsoc a{width:32px;height:32px;border:1px solid rgba(184,147,90,.22);display:flex;align-items:center;justify-content:center;color:#5a4a3a;font-size:12px;text-decoration:none;transition:all .2s;}
+.fsoc a:hover{background:var(--gold);border-color:var(--gold);color:var(--esp);}
+@keyframes fu{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.hl>*:nth-child(1){animation:fu .8s .08s both;}
+.hl>*:nth-child(2){animation:fu .8s .22s both;}
+.hl>*:nth-child(3){animation:fu .8s .36s both;}
+.hl>*:nth-child(4){animation:fu .8s .5s both;}
+@media(max-width:860px){
+  nav{padding:16px 20px;}.nl{display:none;}
+  .ban,.hero,.logos,.courses,.ecta{padding-left:20px;padding-right:20px;}
+  .hero,.ci{grid-template-columns:1fr;}
+  .hr{grid-template-columns:1fr;}
+  .sbox.e{grid-column:span 1;}
+  .promise{grid-template-columns:1fr 1fr;}
+  .pi{border-right:none;border-bottom:1px solid var(--bdp);}
+  .lgrid,.cgrid{grid-template-columns:1fr;}
+  .course.feat{grid-column:span 1;grid-template-columns:1fr;}
+  .feat-r{grid-template-columns:1fr;}
+  .emeta{gap:24px;flex-wrap:wrap;}
+  footer{padding:52px 20px 24px;}.fgrid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+<div class="ban"><span>✦ Concept Design — Essence Hair Treatment · For Presentation Only ✦</span></div>
+<nav>
+  <a href="index.html" class="logo"><span class="lw">Essence</span><span class="ls">Hair Treatment · Luton</span></a>
+  <ul class="nl">
+    <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="toptips.html">Top Tips</a></li><li><a href="gallery.html">Gallery</a></li>
+    <li><a href="faqs.html">FAQs</a></li><li><a href="academy.html" class="on">Essence Academy</a></li>
+  </ul>
+  <a href="#courses" class="nb">View Courses</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hl">
+    <div class="eye">ABT Accredited · UK Recognised</div>
+    <h1>Essence<br><em>Academy</em></h1>
+    <p class="hb">Train under a master colourist. Our fully accredited, hands-on courses are designed for aspiring stylists and working professionals — intimate, practical, and built around real results. Every student leaves certified and ready to practise.</p>
+    <div class="acts">
+      <a href="#courses" class="bp">View All Courses</a>
+      <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="bo" target="_blank">Enquire Now</a>
+    </div>
+  </div>
+  <div class="hr">
+    <div class="sbox"><div class="sn">10</div><div class="sl">Accredited Courses</div></div>
+    <div class="sbox d"><div class="sn">ABT</div><div class="sl">Accreditation</div></div>
+    <div class="sbox d"><div class="sn">1</div><div class="sl">Free Shadowing Day</div></div>
+    <div class="sbox"><div class="sn">∞</div><div class="sl">Online Support</div></div>
+    <div class="sbox e">
+      <div style="font-size:28px;">🏅</div>
+      <div><div class="abt-label">Fully ABT Accredited</div><div style="font-size:13px;color:var(--bdp);">All certificates accepted by UK insurance providers and employers.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<div class="promise">
+  <div class="pi"><div class="picon">🏅</div><div class="plabel">ABT Accredited</div><p class="ptext">Every course carries full ABT accreditation — accepted by UK insurance providers and employers.</p></div>
+  <div class="pi"><div class="picon">👁</div><div class="plabel">Shadowing Day Included</div><p class="ptext">1 free shadowing day after every course. Watch real client appointments and build genuine confidence.</p></div>
+  <div class="pi"><div class="picon">💬</div><div class="plabel">Free Online Support</div><p class="ptext">Ask questions and get expert guidance as you grow your client base after training.</p></div>
+  <div class="pi"><div class="picon">◇</div><div class="plabel">Small Groups Only</div><p class="ptext">Intimate class sizes mean real attention, honest feedback, and a result you're proud of.</p></div>
+</div>
+
+<!-- LOGO CONCEPTS -->
+<section class="logos">
+  <div class="se">New Logo Directions</div>
+  <h2>Essence <em>Academy</em> Logo Concepts</h2>
+  <div class="srule"></div>
+  <p class="snote">Three directions for the Academy push — all designed to look world-class on certificates, social media, and printed materials.</p>
+  <div class="lgrid">
+    <div class="lcard lw2">
+      <div class="la">
+        <div class="la-orn"><div class="la-line"></div><div class="la-diamond"></div><div class="la-line"></div></div>
+        <div class="la-main">Essence</div>
+        <div class="la-div"><span>Academy</span></div>
+        <div class="la-sub">Hair · Colour · Education · Luton</div>
+      </div>
+      <div class="llabel" style="color:var(--esp);">Option A — Classic Crest</div>
+    </div>
+    <div class="lcard ld">
+      <div class="lb">
+        <div class="lb-top">✦ &nbsp; Est. Luton · ABT Accredited &nbsp; ✦</div>
+        <div class="lb-main">Essence</div>
+        <div class="lb-rule"></div>
+        <div class="lb-sub">Academy of Hair</div>
+      </div>
+      <div class="llabel" style="color:#5a4a3a;">Option B — Dark Authority</div>
+    </div>
+    <div class="lcard lcream">
+      <div class="lc">
+        <div class="lc-main">Essence</div>
+        <div class="lc-mid"><span>Academy</span></div>
+        <div class="lc-sub">Hair · Colour · Education</div>
+      </div>
+      <div class="llabel" style="color:var(--esp);">Option C — Italic Editorial</div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="courses" id="courses">
+  <div class="ci">
+    <div class="ci-l"><div class="se">Our Courses</div><h2>Fully Accredited<br><em>Training</em></h2></div>
+    <div class="ci-r"><p>Every course is delivered hands-on, in an intimate setting — real models, real products, real feedback. All include a free shadowing day, an extensive training manual, and ongoing online support. We teach at your pace.</p></div>
+  </div>
+  <div class="cgrid">
+
+    <!-- FEATURED: Balayage -->
+    <div class="course feat">
+      <div class="feat-l">
+        <div class="cnum">01</div>
+        <div class="ctag">Colour · 1 Day · Flagship</div>
+        <div class="cname">Balayage Masterclass</div>
+        <p class="cdesc">Master the art of balayage colouring. Our most sought-after course — a full day of hands-on training covering every element of the freehand technique. You demonstrate, you practise, you leave ready.</p>
+        <p class="cdesc">First, the technique is broken down and demonstrated step by step — not just the "how" but the "why" behind each decision. Then it's your turn, on a real model, with expert guidance throughout.</p>
+        <a href="https://www.essencehairtreatment.com/booking-calendar/balayage-masterclass" class="cbook" target="_blank">Enrol — £400</a>
+      </div>
+      <div class="feat-r">
+        <div>
+          <div style="font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">You Will Learn</div>
+          <ul class="learn-list">
+            <li><span>—</span>Freehand balayage brush technique and pressure control</li>
+            <li><span>—</span>Sectioning patterns for different lengths and densities</li>
+            <li><span>—</span>Lightener selection and timing for different hair types</li>
+            <li><span>—</span>Toning theory — achieving the perfect result every time</li>
+            <li><span>—</span>Client consultation and expectation management</li>
+            <li><span>—</span>Aftercare advice to give every client</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">Course Details</div>
+          <div class="detail-rows">
+            <div><div class="cmeta-l">Duration</div><div class="cmeta-v">9 Hours (1 Full Day)</div></div>
+            <div><div class="cmeta-l">Investment</div><div class="cmeta-v">£400</div></div>
+            <div><div class="cmeta-l">Certification</div><div class="cmeta-v">ABT Accredited</div></div>
+            <div><div class="cmeta-l">Includes</div><div class="cmeta-v">Manual + Shadowing Day + Support</div></div>
+            <div><div class="cmeta-l">Level</div><div class="cmeta-v">All Levels Welcome</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="course">
+      <div class="cnum">02</div><div class="ctag">Treatments · 1 Day</div><div class="cname">Keratin Treatment</div>
+      <p class="cdesc">Professional application of organic keratin from start to finish. Covers client consultation, strand testing, application protocol, heat activation, and full aftercare guidance — everything needed to offer this as a standalone service.</p>
+      <div class="cmeta"><div><div class="cmeta-l">Duration</div><div class="cmeta-v">6 Hours</div></div><div><div class="cmeta-l">Investment</div><div class="cmeta-v">£200</div></div><div><div class="cmeta-l">Certification</div><div class="cmeta-v">ABT Accredited</div></div><div><div class="cmeta-l">Level</div><div class="cmeta-v">All Levels</div></div></div>
+      <a href="https://www.essencehairtreatment.com/booking-calendar/keratin-treatment" class="cbook" target="_blank">Enrol Now</a>
+    </div>
+
+    <div class="course">
+      <div class="cnum">03</div><div class="ctag">Treatments · 1 Day</div><div class="cname">Nanoplastia Treatment</div>
+      <p class="cdesc">Master one of the most in-demand organic smoothing treatments on the market. Understand the science, perfect the application, and learn how to advise clients on suitability — a highly marketable and profitable skill set.</p>
+      <div class="cmeta"><div><div class="cmeta-l">Duration</div><div class="cmeta-v">9 Hours</div></div><div><div class="cmeta-l">Investment</div><div class="cmeta-v">£300</div></div><div><div class="cmeta-l">Certification</div><div class="cmeta-v">ABT Accredited</div></div><div><div class="cmeta-l">Level</div><div class="cmeta-v">All Levels</div></div></div>
+      <a href="https://www.essencehairtreatment.com/booking-calendar/nanoplastia-hair-treatment" class="cbook" target="_blank">Enrol Now</a>
+    </div>
+
+    <div class="course">
+      <div class="cnum">04</div><div class="ctag">Treatments · 1 Day</div><div class="cname">Hair Botox Treatment</div>
+      <p class="cdesc">A comprehensive training day in hair botox — an intensive restorative treatment growing rapidly in demand. Full protocol: client assessment, product layering, heat sealing, and aftercare advice for optimal results and client retention.</p>
+      <div class="cmeta"><div><div class="cmeta-l">Duration</div><div class="cmeta-v">9 Hours</div></div><div><div class="cmeta-l">Investment</div><div class="cmeta-v">£300</div></div><div><div class="cmeta-l">Certification</div><div class="cmeta-v">ABT Accredited</div></div><div><div class="cmeta-l">Level</div><div class="cmeta-v">All Levels</div></div></div>
+      <a href="https://www.essencehairtreatment.com/booking-calendar/hair-botox-treatment" class="cbook" target="_blank">Enrol Now</a>
+    </div>
+
+    <div class="course">
+      <div class="cnum">05</div><div class="ctag">Bundle · 2 Days · Best Value</div><div class="cname">Full Hair Treatment Package</div>
+      <p class="cdesc">Keratin, Nanoplastia, and Hair Botox — all three organic smoothing treatments in one intensive two-day programme. Ideal for stylists who want to offer a complete treatment menu. Excellent value versus booking separately.</p>
+      <div class="cmeta"><div><div class="cmeta-l">Duration</div><div class="cmeta-v">2 Days · 16 hrs</div></div><div><div class="cmeta-l">Investment</div><div class="cmeta-v">£800</div></div><div><div class="cmeta-l">Certification</div><div class="cmeta-v">ABT Accredited</div></div><div><div class="cmeta-l">Includes</div><div class="cmeta-v">All 3 Treatments</div></div></div>
+      <a href="https://www.essencehairtreatment.com/booking-calendar/full-hair-treatment-package-2-day" class="cbook" target="_blank">Enrol Now</a>
+    </div>
+
+    <div class="course">
+      <div class="cnum">06</div><div class="ctag">Extensions · 1 Day</div><div class="cname">Hair Extensions — 2 Method</div>
+      <p class="cdesc">Become certified in Tape and Nano Ring extensions. Covers fitting, colour matching, blending, removal, and client maintenance advice. A practical, hands-on day that immediately expands your service menu and earning potential.</p>
+      <div class="cmeta"><div><div class="cmeta-l">Duration</div><div class="cmeta-v">9 Hours</div></div><div><div class="cmeta-l">Investment</div><div class="cmeta-v">£350</div></div><div><div class="cmeta-l">Certification</div><div class="cmeta-v">ABT Accredited</div></div><div><div class="cmeta-l">Methods</div><div class="cmeta-v">Tape + Nano Ring</div></div></div>
+      <a href="https://www.essencehairtreatment.com/booking-calendar/hair-extensions-2-method-tape-nanos" class="cbook" target="_blank">Enrol Now</a>
+    </div>
+
+    <div class="course">
+      <div class="cnum">07</div><div class="ctag">Extensions · 1 Day</div><div class="cname">Hair Extensions — 4 Method</div>
+      <p class="cdesc">The most comprehensive extensions course. Tape, Nano Ring, Micro Ring, and LA Weave — covering fitting, blending, removal, maintenance, and full client aftercare. Everything needed to build a complete extensions service.</p>
+      <div class="cmeta"><div><div class="cmeta-l">Duration</div><div class="cmeta-v">9 Hours</div></div><div><div class="cmeta-l">Investment</div><div class="cmeta-v">£600</div></div><div><div class="cmeta-l">Certification</div><div class="cmeta-v">ABT Accredited</div></div><div><div class="cmeta-l">Methods</div><div class="cmeta-v">Tape, Nano, Micro, LA Weave</div></div></div>
+      <a href="https://www.essencehairtreatment.com/booking-calendar/hair-extensions-4-method" class="cbook" target="_blank">Enrol Now</a>
+    </div>
+
+    <div class="course">
+      <div class="cnum">08</div><div class="ctag">Colour Foundation · 2 Days</div><div class="cname">Basics of Colour</div>
+      <p class="cdesc">The essential foundation for any colourist. Over two intensive days: colour theory, developer selection, application techniques, highlighting, and professional toning. Ideal for those starting their colour journey or formalising existing skills with an accredited certificate.</p>
+      <div class="cmeta"><div><div class="cmeta-l">Duration</div><div class="cmeta-v">2 Days · 18 hrs</div></div><div><div class="cmeta-l">Investment</div><div class="cmeta-v">£800</div></div><div><div class="cmeta-l">Certification</div><div class="cmeta-v">ABT Accredited</div></div><div><div class="cmeta-l">Level</div><div class="cmeta-v">Beginner–Intermediate</div></div></div>
+      <a href="https://www.essencehairtreatment.com/booking-calendar/basics-of-colour-2-days" class="cbook" target="_blank">Enrol Now</a>
+    </div>
+
+    <div class="course">
+      <div class="cnum">09</div><div class="ctag">Colour Advanced · 2 Days</div><div class="cname">Advanced Colour</div>
+      <p class="cdesc">Take your colour work to a professional level. Colour correction, vivids, grey blending, complex balayage variations, and editorial techniques — for experienced stylists ready to offer a genuinely premium colour service.</p>
+      <div class="cmeta"><div><div class="cmeta-l">Duration</div><div class="cmeta-v">2 Days · 18 hrs</div></div><div><div class="cmeta-l">Investment</div><div class="cmeta-v">£800</div></div><div><div class="cmeta-l">Certification</div><div class="cmeta-v">ABT Accredited</div></div><div><div class="cmeta-l">Level</div><div class="cmeta-v">Intermediate–Advanced</div></div></div>
+      <a href="https://www.essencehairtreatment.com/booking-calendar/advanced-colour" class="cbook" target="_blank">Enrol Now</a>
+    </div>
+
+    <div class="course">
+      <div class="cnum">10</div><div class="ctag">Cutting · 2 Days</div><div class="cname">Cutting Basics</div>
+      <p class="cdesc">A thorough introduction to professional cutting techniques. Precision cutting, scissor over comb, layering, graduation, and how to tailor a cut to face shape and hair density. The technical foundation every stylist needs.</p>
+      <div class="cmeta"><div><div class="cmeta-l">Duration</div><div class="cmeta-v">2 Days · 18 hrs</div></div><div><div class="cmeta-l">Investment</div><div class="cmeta-v">£500</div></div><div><div class="cmeta-l">Certification</div><div class="cmeta-v">ABT Accredited</div></div><div><div class="cmeta-l">Level</div><div class="cmeta-v">Beginner–Intermediate</div></div></div>
+      <a href="https://www.essencehairtreatment.com/booking-calendar/cutting-basics" class="cbook" target="_blank">Enrol Now</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ENROL CTA -->
+<section class="ecta">
+  <div class="se">Ready to Train?</div>
+  <h2>Invest in your <em>future</em> today.</h2>
+  <div class="emeta">
+    <div class="em"><div class="emn">10</div><div class="eml">Accredited Courses</div></div>
+    <div class="em"><div class="emn">1</div><div class="eml">Free Shadowing Day</div></div>
+    <div class="em"><div class="emn">∞</div><div class="eml">Online Support</div></div>
+  </div>
+  <p>Payment plans available. All courses include materials, certificate, a free shadowing day, and ongoing online support. Spaces are limited — secure yours today.</p>
+  <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="bp" target="_blank">Enrol Now</a>
+</section>
+
+<footer>
+  <div class="fgrid">
+    <div><a href="index.html" class="logo" style="text-decoration:none;"><span class="lw" style="color:var(--beige);">Essence</span><span class="ls" style="color:var(--gold);">Hair Treatment · Luton</span></a><p class="ftag">A cosy hair studio in Luton specialising in bespoke colour, smoothing treatments, and accredited hair education.</p></div>
+    <div><div class="fct">Services</div><ul class="fl"><li><a href="services.html">Balayage & Colour</a></li><li><a href="services.html">Hair Treatments</a></li><li><a href="services.html">Head Spa</a></li><li><a href="services.html">Cut & Style</a></li><li><a href="services.html">Extensions</a></li></ul></div>
+    <div><div class="fct">Academy</div><ul class="fl"><li><a href="#courses">Balayage Masterclass</a></li><li><a href="#courses">Keratin Course</a></li><li><a href="#courses">Advanced Colour</a></li><li><a href="#courses">Extensions</a></li><li><a href="#courses">All Courses</a></li></ul></div>
+    <div><div class="fct">Contact</div><ul class="fl"><li><a href="tel:+447375956131">07375 956 131</a></li><li><a href="#">WhatsApp</a></li><li><a href="#">33 Hasketon Drive</a></li><li><a href="#">Luton, LU4 9EZ</a></li></ul></div>
+  </div>
+  <div class="fbot"><div class="fcopy">© 2025 Essence Hair Treatment & Academy. All rights reserved.</div><div class="fsoc"><a href="https://www.instagram.com/essence.keratin/" target="_blank">IG</a><a href="https://www.tiktok.com/@essencehairtreatment" target="_blank">TK</a><a href="https://www.facebook.com/essencekeratinluton" target="_blank">FB</a><a href="tel:+447375956131">WA</a></div></div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity=1;x.target.style.transform='translateY(0)';}});},{threshold:.07});
+document.querySelectorAll('.course,.pi,.lcard,.sbox').forEach(el=>{el.style.opacity=0;el.style.transform='translateY(18px)';el.style.transition='opacity .65s ease,transform .65s ease';obs.observe(el);});
+</script>
+</body></html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Services — Essence Hair Treatment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--beige:#F5EFE6;--bd:#EAE0D0;--bdp:#D6C9B5;--esp:#2C1F14;--gold:#B8935A;--gl:#D4AA72;--wh:#FDFAF6;--mu:#7A6A56;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--beige);color:var(--esp);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 56px;background:rgba(245,239,230,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,147,90,.18);}
+.logo{display:flex;flex-direction:column;text-decoration:none;}
+.lw{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;letter-spacing:.2em;color:var(--esp);text-transform:uppercase;line-height:1;}
+.ls{font-size:7.5px;font-weight:200;letter-spacing:.48em;color:var(--gold);text-transform:uppercase;margin-top:1px;}
+.nl{display:flex;gap:32px;list-style:none;}
+.nl a{font-size:10px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--esp);text-decoration:none;transition:color .2s;}
+.nl a:hover,.nl a.on{color:var(--gold);}
+.nl a.ac{color:var(--gold);}
+.nb{font-size:9.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;background:var(--esp);color:var(--beige);padding:11px 24px;text-decoration:none;transition:background .2s;}
+.nb:hover{background:var(--gold);}
+.ban{background:var(--gold);padding:11px 56px;text-align:center;}
+.ban span{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--esp);}
+/* PAGE HERO */
+.ph{padding:148px 56px 80px;text-align:center;background:var(--wh);}
+.eye{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.pht{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.5vw,72px);font-weight:300;line-height:1.04;margin-bottom:14px;}
+.pht em{font-style:italic;color:var(--gold);}
+.phr{width:52px;height:1px;background:var(--gold);margin:0 auto;}
+.phs{font-size:14px;line-height:1.82;color:var(--mu);max-width:480px;margin:16px auto 0;}
+/* TABS */
+.tabs{background:var(--bd);border-bottom:1px solid var(--bdp);display:flex;padding:0 56px;position:sticky;top:87px;z-index:50;overflow-x:auto;}
+.tab{padding:15px 26px;font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--mu);border-bottom:2px solid transparent;cursor:pointer;transition:all .2s;text-decoration:none;white-space:nowrap;}
+.tab:hover,.tab.on{color:var(--esp);border-bottom-color:var(--gold);}
+/* SECTION */
+.sec{padding:88px 56px;}
+.sec.alt{background:var(--wh);}
+.sec.pal{background:var(--bd);}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;padding-bottom:24px;border-bottom:1px solid var(--bdp);}
+.sl .st{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.sl h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.4vw,48px);font-weight:300;line-height:1.1;}
+.sl h2 em{font-style:italic;}
+.sr p{font-size:13.5px;line-height:1.78;color:var(--mu);max-width:340px;}
+/* COLOUR GRID */
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--bdp);}
+.cc{background:var(--wh);overflow:hidden;cursor:pointer;transition:transform .3s;}
+.cc:hover{transform:scale(1.004);z-index:2;}
+.cc.feat{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;}
+.si2{height:260px;overflow:hidden;position:relative;}
+.cc.feat .si2{height:100%;}
+.si2 img{width:100%;height:100%;object-fit:cover;transition:transform .55s;}
+.cc:hover .si2 img{transform:scale(1.04);}
+.ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,31,20,.4) 0%,transparent 55%);}
+.sc{padding:34px;}
+.stag{font-size:8.5px;letter-spacing:.36em;text-transform:uppercase;color:var(--gold);margin-bottom:9px;}
+.sn{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--esp);margin-bottom:12px;}
+.sd2{font-size:13px;line-height:1.76;color:var(--mu);margin-bottom:20px;}
+.slist{list-style:none;margin-bottom:20px;}
+.slist li{font-size:12.5px;color:var(--mu);padding:5px 0;border-bottom:1px solid var(--bd);display:flex;gap:10px;}
+.slist li::before{content:'–';color:var(--gold);flex-shrink:0;}
+.sl2{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--esp);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s;}
+.sl2::after{content:'→';transition:transform .2s;}
+.sl2:hover{color:var(--gold);}
+.sl2:hover::after{transform:translateX(4px);}
+/* TREATMENTS 3 col */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--bdp);}
+.tcard{background:var(--wh);overflow:hidden;}
+.ti{height:210px;overflow:hidden;position:relative;}
+.ti img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.tcard:hover .ti img{transform:scale(1.05);}
+.tc2{padding:30px;}
+/* HEAD SPA */
+.spalay{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.spaimg{height:460px;overflow:hidden;}
+.spaimg img{width:100%;height:100%;object-fit:cover;}
+.concerns{display:flex;flex-direction:column;gap:0;margin:28px 0;}
+.con{padding:18px 0;border-bottom:1px solid var(--bdp);}
+.con:first-child{border-top:1px solid var(--bdp);}
+.contt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--esp);margin-bottom:7px;}
+.coni{font-size:13px;line-height:1.74;color:var(--mu);}
+/* CUT */
+.cutlay{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--bdp);}
+/* EXT */
+.extlay{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
+/* BOOK CTA */
+.bcta{padding:88px 56px;background:var(--esp);text-align:center;}
+.bcta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,3.8vw,56px);font-weight:300;color:var(--beige);margin-bottom:18px;}
+.bcta h2 em{font-style:italic;color:var(--gold);}
+.bcta p{font-size:14px;color:#7a6a5a;max-width:440px;margin:0 auto 36px;line-height:1.82;}
+.bg{font-size:9.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;background:var(--gold);color:var(--esp);padding:14px 40px;text-decoration:none;display:inline-block;transition:background .2s;}
+.bg:hover{background:var(--gl);}
+footer{background:var(--esp);padding:68px 56px 32px;}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px;}
+.ftag{font-size:13px;line-height:1.8;color:#5a4a3a;margin-top:20px;max-width:250px;}
+.fct{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.fl{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fl a{font-size:12.5px;color:#5a4a3a;text-decoration:none;transition:color .2s;}
+.fl a:hover{color:var(--beige);}
+.fbot{border-top:1px solid rgba(184,147,90,.12);padding-top:26px;display:flex;justify-content:space-between;align-items:center;}
+.fcopy{font-size:10px;color:#3a2a1a;}
+.fsoc{display:flex;gap:10px;}
+.fsoc a{width:32px;height:32px;border:1px solid rgba(184,147,90,.22);display:flex;align-items:center;justify-content:center;color:#5a4a3a;font-size:12px;text-decoration:none;transition:all .2s;}
+.fsoc a:hover{background:var(--gold);border-color:var(--gold);color:var(--esp);}
+@media(max-width:860px){
+  nav{padding:16px 20px;}.nl{display:none;}
+  .ban,.ph,.sec,.bcta{padding-left:20px;padding-right:20px;}
+  .tabs{padding:0 12px;}
+  .cc.feat,.cgrid,.tgrid,.spalay,.cutlay,.extlay{grid-template-columns:1fr;}
+  .cc.feat{grid-column:span 1;}
+  footer{padding:52px 20px 24px;}.fgrid{grid-template-columns:1fr 1fr;}
+  .sh{flex-direction:column;gap:14px;align-items:flex-start;}.sr p{max-width:100%;}
+}
+</style>
+</head>
+<body>
+<div class="ban"><span>✦ Concept Design — Essence Hair Treatment · For Presentation Only ✦</span></div>
+<nav>
+  <a href="index.html" class="logo"><span class="lw">Essence</span><span class="ls">Hair Treatment · Luton</span></a>
+  <ul class="nl">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="on">Services</a></li>
+    <li><a href="toptips.html">Top Tips</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="academy.html" class="ac">Essence Academy</a></li>
+  </ul>
+  <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="nb" target="_blank">Book Now</a>
+</nav>
+
+<div class="ph">
+  <div class="eye">Our Services</div>
+  <h1 class="pht">Expert Care,<br><em>Tailored to You</em></h1>
+  <div class="phr"></div>
+  <p class="phs">Every treatment is personalised to your hair type, your goals, and your lifestyle. Premium results — every single time.</p>
+</div>
+
+<div class="tabs">
+  <a href="#colour" class="tab on">Colour Services</a>
+  <a href="#treatments" class="tab">Hair Treatments</a>
+  <a href="#spa" class="tab">Head Spa</a>
+  <a href="#cut" class="tab">Cut & Style</a>
+  <a href="#extensions" class="tab">Extensions</a>
+</div>
+
+<!-- COLOUR -->
+<section class="sec alt" id="colour">
+  <div class="sh">
+    <div class="sl"><div class="st">Colour</div><h2>Balayage &<br><em>Colour Services</em></h2></div>
+    <div class="sr"><p>Transform your hair with expert colour techniques that enhance your natural beauty and grow out effortlessly. All colour services include a complimentary bonding treatment for integrity and shine.</p></div>
+  </div>
+  <div class="cgrid">
+    <div class="cc feat">
+      <div class="si2"><img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=800&q=85" alt="Balayage"/><div class="ov"></div></div>
+      <div class="sc">
+        <div class="stag">Signature Service</div>
+        <div class="sn">Balayage</div>
+        <p class="sd2">A freehand hair colouring technique that creates a natural, sun-kissed look with soft, blended highlights. Ideal for those seeking a low-maintenance, beautiful colour that gradually fades from dark to light with no harsh regrowth lines.</p>
+        <p class="sd2">We work with your natural base to create something that genuinely looks like you were born with it — every time.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="sl2" target="_blank">Book Balayage</a>
+      </div>
+    </div>
+    <div class="cc">
+      <div class="si2"><img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&q=80" alt="Highlights"/><div class="ov"></div></div>
+      <div class="sc">
+        <div class="stag">Colour</div>
+        <div class="sn">Highlights & Toning</div>
+        <p class="sd2">Adding lightness to selected sections of hair to create depth and dimension. Whether you want subtle brightness or bold contrast, our highlights are customised to suit your style. Paired with professional toning to neutralise brassiness and deliver a polished finish.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="sl2" target="_blank">Book Now</a>
+      </div>
+    </div>
+    <div class="cc">
+      <div class="si2"><img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=600&q=80" alt="Colour correction"/><div class="ov"></div></div>
+      <div class="sc">
+        <div class="stag">Correction & Coverage</div>
+        <div class="sn">Colour Correction & Grey Root Coverage</div>
+        <p class="sd2">Fixing previous colour mistakes or adjusting uneven tones, ensuring a flawless and vibrant result. Also includes seamless grey root coverage — blending perfectly with your existing colour for a natural, youthful finish.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="sl2" target="_blank">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section class="sec" id="treatments">
+  <div class="sh">
+    <div class="sl"><div class="st">Treatments</div><h2>Smoothing &<br><em>Restoration</em></h2></div>
+    <div class="sr"><p>Our premium hair treatments are expertly designed to restore, nourish, and rejuvenate. Advanced organic, formaldehyde-free treatments that deliver lasting results — with no compromise on the health of your hair.</p></div>
+  </div>
+  <div class="tgrid">
+    <div class="tcard">
+      <div class="ti"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Nanoplastia"/><div class="ov"></div></div>
+      <div class="tc2">
+        <div class="stag">Organic · Formaldehyde-Free</div>
+        <div class="sn">Nanoplastia</div>
+        <p class="sd2">This cutting-edge, organic treatment deeply hydrates and smooths your hair, leaving it silky, frizz-free, and effortlessly manageable. Unlike traditional straightening, Nanoplastia works on a molecular level to repair and protect — improving both texture and shine without harsh chemicals or formaldehyde. Safe for all hair types including colour-treated hair.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="sl2" target="_blank">Book Treatment</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="ti"><img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&q=80" alt="Keratin"/><div class="ov"></div></div>
+      <div class="tc2">
+        <div class="stag">Organic · Formaldehyde-Free</div>
+        <div class="sn">Keratin Treatment</div>
+        <p class="sd2">A popular smoothing treatment that eliminates frizz while adding incredible shine. This organic keratin treatment replenishes hair with essential keratin, strengthening each strand and leaving it smooth, glossy, and easy to manage — without the use of formaldehyde, making it a safer option for all hair types.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="sl2" target="_blank">Book Treatment</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="ti"><img src="https://images.unsplash.com/photo-1522338140262-f46f5913618a?w=600&q=80" alt="Hair Botox"/><div class="ov"></div></div>
+      <div class="tc2">
+        <div class="stag">Deep Restoration · Formaldehyde-Free</div>
+        <div class="sn">Hair Botox</div>
+        <p class="sd2">An intensive, restorative treatment that rejuvenates and revitalises damaged hair. Hair Botox nourishes the hair shaft, filling in gaps and restoring volume, softness and smoothness. It helps to reduce frizz and makes your hair look healthier and more vibrant — completely free from formaldehyde.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="sl2" target="_blank">Book Treatment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEAD SPA -->
+<section class="sec pal" id="spa">
+  <div class="sh">
+    <div class="sl"><div class="st">Wellness</div><h2>Head Spa &<br><em>Scalp Treatments</em></h2></div>
+    <div class="sr"><p>Treatments that address various hair and scalp concerns. Each is tailored to your specific concern — using argan oil, amino acid, and aloe-infused formulas to restore balance from root to tip.</p></div>
+  </div>
+  <div class="spalay">
+    <div class="spaimg"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=700&q=80" alt="Head spa treatment"/></div>
+    <div>
+      <p style="font-size:14px;line-height:1.85;color:var(--mu);margin-bottom:8px;">Each Head Spa treatment begins with a thorough scalp analysis and is tailored to your hair and scalp type. We address the root cause of your concern — not just the symptoms.</p>
+      <div class="concerns">
+        <div class="con">
+          <div class="contt">Thinning Hair / Hair Loss</div>
+          <div class="coni">Scalp Detox — removes build-up to improve scalp health and encourage better growth. Hair Growth Stimulation Therapy — gentle massage using oils to stimulate blood circulation. Micronutrient Infusion — treatments infused with amino acids to strengthen thinning hair.</div>
+        </div>
+        <div class="con">
+          <div class="contt">Dandruff / Itchy Scalp</div>
+          <div class="coni">Hydrating Scalp Masks with aloe vera to hydrate and soothe itchiness. Exfoliating Scalp Treatment to remove dead skin cells and dandruff for a clean, balanced scalp.</div>
+        </div>
+        <div class="con">
+          <div class="contt">Dry Hair</div>
+          <div class="coni">Deep Conditioning Treatment enriched with argan oil to restore moisture. Hot Oil Treatment — a blend of oils to nourish and seal the hair shaft. Steam Treatment — opens the hair cuticle to allow intensive hydration to penetrate deeply.</div>
+        </div>
+      </div>
+      <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="nb" style="display:inline-block;margin-top:0;" target="_blank">Book Head Spa</a>
+    </div>
+  </div>
+</section>
+
+<!-- CUT & STYLE -->
+<section class="sec alt" id="cut">
+  <div class="sh">
+    <div class="sl"><div class="st">Everyday Luxury</div><h2>Cut, Blow Dry<br><em>& Styling</em></h2></div>
+    <div class="sr"><p>A full wash, expert cut, and style tailored to your hair type. Blow drying styles are tailored to your hair type including various wave styles, volume straight, or a bouncy blow dry.</p></div>
+  </div>
+  <div class="cutlay">
+    <div style="height:360px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=700&q=80" alt="Blowdry" style="width:100%;height:100%;object-fit:cover;"/></div>
+    <div style="background:var(--beige);padding:52px 44px;display:flex;flex-direction:column;justify-content:center;">
+      <div class="stag">This Service Includes</div>
+      <ul class="slist" style="margin-bottom:28px;">
+        <li>Wash using professional products and relaxing head massage</li>
+        <li>Expert cut tailored to your face shape and hair texture</li>
+        <li>Blow dry styled to your preferred finish — bouncy, sleek, or waves</li>
+        <li>Style advice and product recommendations for at-home care</li>
+      </ul>
+      <p style="font-size:13.5px;line-height:1.78;color:var(--mu);margin-bottom:28px;">Whether you want a classic blowout, a sleek straight finish, or relaxed natural waves — we tailor every style to complement your look, your life, and your routine.</p>
+      <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="sl2" target="_blank">Book Cut & Style</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXTENSIONS -->
+<section class="sec" id="extensions">
+  <div class="sh">
+    <div class="sl"><div class="st">Volume & Length</div><h2>Tape Hair<br><em>Extensions</em></h2></div>
+    <div class="sr"><p>A semi-permanent, lightweight, and virtually invisible method to add length, volume, and thickness to your hair — with no compromise on quality or comfort.</p></div>
+  </div>
+  <div class="extlay">
+    <div>
+      <p style="font-size:14px;line-height:1.85;color:var(--mu);margin-bottom:28px;">Tape hair extensions are made with high-quality, natural-looking hair and discreetly applied using medical-grade adhesive that lies flat against your scalp, ensuring a seamless blend with your natural hair. They move exactly like your own hair — no one will know.</p>
+      <ul class="slist" style="margin-bottom:32px;">
+        <li>Medical-grade adhesive — gentle on your natural hair</li>
+        <li>Available in a full range of shades and lengths</li>
+        <li>Can be worn up, down, or in any style</li>
+        <li>Reusable and repositionable at maintenance visits</li>
+        <li>Lasts 6–8 weeks between maintenance appointments</li>
+      </ul>
+      <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="nb" style="display:inline-block;" target="_blank">Book a Consultation</a>
+    </div>
+    <div style="height:440px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=700&q=80" alt="Hair extensions" style="width:100%;height:100%;object-fit:cover;"/></div>
+  </div>
+</section>
+
+<div class="bcta">
+  <h2>Ready for your <em>transformation?</em></h2>
+  <p>All appointments are by booking only. Book online, call, or WhatsApp us — we'll take care of the rest.</p>
+  <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="bg" target="_blank">Book Your Appointment</a>
+</div>
+
+<footer>
+  <div class="fgrid">
+    <div>
+      <a href="index.html" class="logo" style="text-decoration:none;"><span class="lw" style="color:var(--beige);">Essence</span><span class="ls" style="color:var(--gold);">Hair Treatment · Luton</span></a>
+      <p class="ftag">A cosy hair studio in Luton specialising in bespoke colour, smoothing treatments, and accredited hair education.</p>
+    </div>
+    <div><div class="fct">Services</div><ul class="fl"><li><a href="services.html">Balayage & Colour</a></li><li><a href="services.html">Hair Treatments</a></li><li><a href="services.html">Head Spa</a></li><li><a href="services.html">Cut & Style</a></li><li><a href="services.html">Extensions</a></li></ul></div>
+    <div><div class="fct">Info</div><ul class="fl"><li><a href="toptips.html">Top Tips</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="academy.html">Essence Academy</a></li></ul></div>
+    <div><div class="fct">Contact</div><ul class="fl"><li><a href="tel:+447375956131">07375 956 131</a></li><li><a href="#">WhatsApp</a></li><li><a href="#">33 Hasketon Drive</a></li><li><a href="#">Luton, LU4 9EZ</a></li></ul></div>
+  </div>
+  <div class="fbot">
+    <div class="fcopy">© 2025 Essence Hair Treatment. All rights reserved.</div>
+    <div class="fsoc"><a href="https://www.instagram.com/essence.keratin/" target="_blank">IG</a><a href="https://www.tiktok.com/@essencehairtreatment" target="_blank">TK</a><a href="https://www.facebook.com/essencekeratinluton" target="_blank">FB</a><a href="tel:+447375956131">WA</a></div>
+  </div>
+</footer>
+<script>
+const tabs=document.querySelectorAll('.tab');
+const secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-200)c=s.id;});tabs.forEach(t=>{t.classList.toggle('on',t.getAttribute('href')==='#'+c);});});
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity=1;x.target.style.transform='translateY(0)';}});},{threshold:.08});
+document.querySelectorAll('.cc,.tcard,.con').forEach(el=>{el.style.opacity=0;el.style.transform='translateY(18px)';el.style.transition='opacity .6s ease,transform .6s ease';obs.observe(el);});
+</script>
+</body></html>

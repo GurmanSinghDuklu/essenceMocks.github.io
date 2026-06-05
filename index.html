@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Essence Hair Treatment — Luton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--beige:#F5EFE6;--bd:#EAE0D0;--bdp:#D6C9B5;--esp:#2C1F14;--gold:#B8935A;--gl:#D4AA72;--wh:#FDFAF6;--mu:#7A6A56;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--beige);color:var(--esp);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 56px;background:rgba(245,239,230,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,147,90,.18);}
+.logo{display:flex;flex-direction:column;text-decoration:none;}
+.lw{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;letter-spacing:.2em;color:var(--esp);text-transform:uppercase;line-height:1;}
+.ls{font-size:7.5px;font-weight:200;letter-spacing:.48em;color:var(--gold);text-transform:uppercase;margin-top:1px;}
+.nl{display:flex;gap:32px;list-style:none;}
+.nl a{font-size:10px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--esp);text-decoration:none;transition:color .2s;}
+.nl a:hover,.nl a.on{color:var(--gold);}
+.nl a.ac{color:var(--gold);}
+.nb{font-size:9.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;background:var(--esp);color:var(--beige);padding:11px 24px;text-decoration:none;transition:background .2s;}
+.nb:hover{background:var(--gold);}
+/* BANNER */
+.ban{background:var(--gold);padding:11px 56px;text-align:center;}
+.ban span{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--esp);}
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:87px;}
+.hl{display:flex;flex-direction:column;justify-content:center;padding:80px 56px;}
+.eye{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:26px;display:flex;align-items:center;gap:14px;}
+.eye::before{content:'';display:block;width:34px;height:1px;background:var(--gold);}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,5.5vw,80px);font-weight:300;line-height:1.04;margin-bottom:28px;}
+h1 em{font-style:italic;color:var(--gold);}
+.hb{font-size:14.5px;line-height:1.85;color:var(--mu);max-width:420px;margin-bottom:40px;}
+.acts{display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
+.bp{font-size:9.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;background:var(--esp);color:var(--beige);padding:14px 36px;text-decoration:none;transition:background .2s;display:inline-block;}
+.bp:hover{background:var(--gold);}
+.bo{font-size:9.5px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;background:transparent;color:var(--esp);padding:13px 34px;border:1px solid var(--esp);text-decoration:none;transition:all .2s;display:inline-block;}
+.bo:hover{background:var(--esp);color:var(--beige);}
+.hr{position:relative;overflow:hidden;background:var(--bd);}
+.hr img{width:100%;height:100%;object-fit:cover;object-position:center top;opacity:.88;}
+.hstat{position:absolute;bottom:44px;left:-32px;background:var(--wh);padding:24px 32px;border-left:3px solid var(--gold);box-shadow:0 18px 54px rgba(44,31,20,.12);}
+.hn{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:var(--esp);line-height:1;}
+.hlb{font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--mu);margin-top:5px;}
+/* STRIP */
+.strip{background:var(--esp);padding:17px 56px;display:flex;gap:44px;overflow:hidden;}
+.si{display:flex;align-items:center;gap:11px;white-space:nowrap;}
+.sd{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;}
+.si span{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--beige);}
+/* WHY CHOOSE */
+.why{padding:112px 56px;background:var(--wh);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.wi{position:relative;}
+.wi img{width:100%;height:500px;object-fit:cover;display:block;}
+.wbadge{position:absolute;bottom:-22px;right:-22px;background:var(--esp);padding:28px 32px;text-align:center;}
+.wbn{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--gold);line-height:1;}
+.wbl{font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--beige);margin-top:4px;}
+.wr{}
+.se{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.6vw,52px);font-weight:300;line-height:1.1;margin-bottom:22px;}
+h2 em{font-style:italic;}
+.wb{font-size:14px;line-height:1.85;color:var(--mu);margin-bottom:34px;}
+.pillars{display:flex;flex-direction:column;gap:18px;}
+.pill{display:flex;gap:16px;align-items:flex-start;}
+.pic{width:36px;height:36px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.pt strong{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;margin-bottom:3px;}
+.pt span{font-size:13px;color:var(--mu);}
+/* TESTIMONIALS */
+.testi{padding:112px 56px;background:var(--bd);}
+.shdr{text-align:center;margin-bottom:60px;}
+.stitle{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.8vw,52px);font-weight:300;line-height:1.1;}
+.stitle em{font-style:italic;}
+.srule{width:52px;height:1px;background:var(--gold);margin:20px auto 0;}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.tc{background:var(--wh);padding:42px 30px;}
+.tq{font-family:'Cormorant Garamond',serif;font-size:60px;line-height:.5;color:var(--gold);opacity:.28;margin-bottom:20px;}
+.tt{font-family:'Cormorant Garamond',serif;font-size:17.5px;font-weight:300;font-style:italic;line-height:1.72;color:var(--esp);margin-bottom:22px;}
+.ta{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);}
+.tsv{font-size:11px;color:var(--mu);margin-top:3px;}
+.stars{color:var(--gold);font-size:11px;margin-bottom:16px;}
+/* BRANDS */
+.brands{padding:52px 56px;background:var(--beige);border-top:1px solid var(--bdp);border-bottom:1px solid var(--bdp);}
+.bl{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--mu);text-align:center;margin-bottom:28px;}
+.brow{display:flex;gap:48px;align-items:center;justify-content:center;flex-wrap:wrap;}
+.brow img{height:36px;opacity:.45;filter:grayscale(1);transition:all .3s;}
+.brow img:hover{opacity:.75;filter:grayscale(0);}
+/* CONTACT */
+.contact{padding:112px 56px;background:var(--wh);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.cl{}
+.cl .se{margin-bottom:18px;}
+.cl h2{margin-bottom:20px;}
+.cl p{font-size:14px;line-height:1.85;color:var(--mu);margin-bottom:32px;}
+.cdetails{display:flex;flex-direction:column;gap:16px;}
+.cd{display:flex;gap:16px;align-items:flex-start;}
+.cdic{width:36px;height:36px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.cdt strong{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;margin-bottom:2px;}
+.cdt span,.cdt a{font-size:13px;color:var(--mu);text-decoration:none;}
+.cdt a:hover{color:var(--gold);}
+.cmap{background:var(--bd);height:400px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.cmap iframe{width:100%;height:100%;border:0;}
+/* FOOTER */
+footer{background:var(--esp);padding:68px 56px 32px;}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px;}
+.ftag{font-size:13px;line-height:1.8;color:#5a4a3a;margin-top:20px;max-width:250px;}
+.fct{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.fl{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fl a{font-size:12.5px;color:#5a4a3a;text-decoration:none;transition:color .2s;}
+.fl a:hover{color:var(--beige);}
+.fbot{border-top:1px solid rgba(184,147,90,.12);padding-top:26px;display:flex;justify-content:space-between;align-items:center;}
+.fcopy{font-size:10px;color:#3a2a1a;}
+.fsoc{display:flex;gap:10px;}
+.fsoc a{width:32px;height:32px;border:1px solid rgba(184,147,90,.22);display:flex;align-items:center;justify-content:center;color:#5a4a3a;font-size:12px;text-decoration:none;transition:all .2s;}
+.fsoc a:hover{background:var(--gold);border-color:var(--gold);color:var(--esp);}
+@keyframes fu{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}
+.hl>*:nth-child(1){animation:fu .8s .08s both;}
+.hl>*:nth-child(2){animation:fu .8s .22s both;}
+.hl>*:nth-child(3){animation:fu .8s .36s both;}
+.hl>*:nth-child(4){animation:fu .8s .5s both;}
+@media(max-width:860px){
+  nav{padding:16px 20px;} .nl{display:none;}
+  .ban,.strip,.why,.testi,.brands,.contact{padding-left:20px;padding-right:20px;}
+  .hero{grid-template-columns:1fr;} .hr{height:55vw;} .hstat{left:12px;bottom:12px;}
+  .why,.contact{grid-template-columns:1fr;} .wbadge{right:0;bottom:-12px;}
+  .tg{grid-template-columns:1fr;} footer{padding:52px 20px 24px;} .fgrid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="ban"><span>✦ Concept Design — Essence Hair Treatment · For Presentation Only ✦</span></div>
+
+<nav>
+  <a href="index.html" class="logo"><span class="lw">Essence</span><span class="ls">Hair Treatment · Luton</span></a>
+  <ul class="nl">
+    <li><a href="index.html" class="on">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="toptips.html">Top Tips</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="academy.html" class="ac">Essence Academy</a></li>
+  </ul>
+  <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="nb" target="_blank">Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hl">
+    <div class="eye">Your Hair, Your Story, My Passion</div>
+    <h1>A studio built<br>around <em>you.</em></h1>
+    <p class="hb">A cosy hair studio in Luton offering professional haircuts, vibrant colour services, and nourishing hair treatments. Specialising in personalised care — every style is bespoke, every client is valued.</p>
+    <div class="acts">
+      <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="bp" target="_blank">Book a Treatment</a>
+      <a href="services.html" class="bo">Our Services</a>
+    </div>
+  </div>
+  <div class="hr">
+    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=85" alt="Balayage hair transformation at Essence" />
+    <div class="hstat">
+      <div class="hn">500+</div>
+      <div class="hlb">Happy Clients</div>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="si"><div class="sd"></div><span>ABT Accredited Academy</span></div>
+  <div class="si"><div class="sd"></div><span>Organic & Formaldehyde-Free Treatments</span></div>
+  <div class="si"><div class="sd"></div><span>Appointments by Booking Only</span></div>
+  <div class="si"><div class="sd"></div><span>Luton · LU4 9EZ</span></div>
+  <div class="si"><div class="sd"></div><span>07375 956 131</span></div>
+  <div class="si"><div class="sd"></div><span>ABT Accredited Academy</span></div>
+  <div class="si"><div class="sd"></div><span>Organic & Formaldehyde-Free Treatments</span></div>
+</div>
+
+<!-- WHY CHOOSE ESSENCE -->
+<section class="why">
+  <div class="wi">
+    <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=700&q=80" alt="Essence studio" />
+    <div class="wbadge"><div class="wbn">10+</div><div class="wbl">Years Experience</div></div>
+  </div>
+  <div class="wr">
+    <div class="se">Why Choose Essence</div>
+    <h2>More than a salon.<br><em>A relationship.</em></h2>
+    <p class="wb">At our small hair business, every client is treated as an individual. We offer tailored consultations to understand your specific needs, ensuring that the service you receive is designed just for you. Whether you're looking for a new style or need advice on maintenance, we take the time to listen and provide expert guidance.</p>
+    <div class="pillars">
+      <div class="pill">
+        <div class="pic">✦</div>
+        <div class="pt"><strong>Bespoke Consultations</strong><span>Every visit begins with a thorough consultation. Your hair goals, your lifestyle, your rules.</span></div>
+      </div>
+      <div class="pill">
+        <div class="pic">◈</div>
+        <div class="pt"><strong>Relaxed, Cosy Environment</strong><span>More than just a hair appointment — a genuinely refreshing experience in a welcoming space.</span></div>
+      </div>
+      <div class="pill">
+        <div class="pic">◇</div>
+        <div class="pt"><strong>Expert Aftercare Guidance</strong><span>We help you maintain your look long after you leave — products, tips, and ongoing advice.</span></div>
+      </div>
+      <div class="pill">
+        <div class="pic">○</div>
+        <div class="pt"><strong>You're Not Just a Number</strong><span>As a small business, we give every client the full attention and care they deserve. Always.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="shdr">
+    <div class="se">What Our Clients Say</div>
+    <h2 class="stitle">Real Stories, Real <em>Results</em></h2>
+    <div class="srule"></div>
+  </div>
+  <div class="tg">
+    <div class="tc">
+      <div class="tq">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="tt">Went in for a keratin treatment before my holiday as my hair is very curly and frizzy. They did such an amazing job — no frizz and my hair is so much easier to maintain. Will be a regular from now on.</p>
+      <div class="ta">Anonymous</div>
+      <div class="tsv">Keratin Treatment</div>
+    </div>
+    <div class="tc">
+      <div class="tq">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="tt">Amazing salon, plenty of parking and easy to get to. I had a wash, cut and blow dry and I love my new hair — it feels so much healthier. I'm definitely coming back to Essence next time.</p>
+      <div class="ta">Henna</div>
+      <div class="tsv">Cut, Wash & Blow Dry</div>
+    </div>
+    <div class="tc">
+      <div class="tq">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="tt">I highly recommend the Nanoplastia treatment if you struggle with unmanageable hair. I have thick, frizzy, curly hair and this has drastically reduced my styling time — cutting it in half. Exactly what I was looking for.</p>
+      <div class="ta">Tamanna</div>
+      <div class="tsv">Nanoplastia Treatment</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED BRANDS -->
+<div class="brands">
+  <div class="bl">Trusted Products We Use</div>
+  <div class="brow">
+    <img src="https://static.wixstatic.com/media/a08d06_b780ded0dc4946509071d2cbec4351f8~mv2.jpg" alt="Color Wow" />
+    <img src="https://static.wixstatic.com/media/a08d06_48957b412cd14d029aaf73c68052b3e1~mv2.png" alt="Brand" />
+    <img src="https://static.wixstatic.com/media/a08d06_243ce773139943e5a740328832e90c79~mv2.png" alt="Brand" />
+    <img src="https://static.wixstatic.com/media/a08d06_441a4b33f2c74d309dc027d44f94aabd~mv2.jpeg" alt="Brand" />
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="cl">
+    <div class="se">Get in Touch</div>
+    <h2>Find <em>Us</em></h2>
+    <p>All appointments are by booking only. Book via our online system or get in touch by phone or WhatsApp. Please allow 48–72 hours for a reply.</p>
+    <div class="cdetails">
+      <div class="cd">
+        <div class="cdic">📍</div>
+        <div class="cdt"><strong>Address</strong><span>33 Hasketon Drive, Luton, LU4 9EZ</span></div>
+      </div>
+      <div class="cd">
+        <div class="cdic">📞</div>
+        <div class="cdt"><strong>Phone / WhatsApp</strong><a href="tel:+447375956131">07375 956 131</a></div>
+      </div>
+      <div class="cd">
+        <div class="cdic">🕐</div>
+        <div class="cdt"><strong>Bookings</strong><span>By appointment only. Please allow 4 weeks notice, 6 weeks for Saturdays.</span></div>
+      </div>
+      <div class="cd">
+        <div class="cdic">💳</div>
+        <div class="cdt"><strong>Deposits</strong><span>Appointments are only confirmed once a deposit has been paid.</span></div>
+      </div>
+    </div>
+    <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="bp" style="margin-top:32px;" target="_blank">Book Online</a>
+  </div>
+  <div class="cmap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2464.5!2d-0.4600!3d51.8850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s33+Hasketon+Drive+Luton!5e0!3m2!1sen!2suk!4v1" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="fgrid">
+    <div>
+      <a href="index.html" class="logo" style="text-decoration:none;">
+        <span class="lw" style="color:var(--beige);">Essence</span>
+        <span class="ls" style="color:var(--gold);">Hair Treatment · Luton</span>
+      </a>
+      <p class="ftag">A cosy hair studio in Luton specialising in bespoke colour, smoothing treatments, and accredited hair education.</p>
+    </div>
+    <div>
+      <div class="fct">Services</div>
+      <ul class="fl">
+        <li><a href="services.html">Balayage & Colour</a></li>
+        <li><a href="services.html">Hair Treatments</a></li>
+        <li><a href="services.html">Head Spa</a></li>
+        <li><a href="services.html">Cut & Style</a></li>
+        <li><a href="services.html">Extensions</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fct">Info</div>
+      <ul class="fl">
+        <li><a href="toptips.html">Top Tips</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="academy.html">Essence Academy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fct">Contact</div>
+      <ul class="fl">
+        <li><a href="tel:+447375956131">07375 956 131</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">33 Hasketon Drive</a></li>
+        <li><a href="#">Luton, LU4 9EZ</a></li>
+        <li><a href="#">By Appointment Only</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <div class="fcopy">© 2025 Essence Hair Treatment. All rights reserved.</div>
+    <div class="fsoc">
+      <a href="https://www.instagram.com/essence.keratin/" target="_blank">IG</a>
+      <a href="https://www.tiktok.com/@essencehairtreatment" target="_blank">TK</a>
+      <a href="https://www.facebook.com/essencekeratinluton" target="_blank">FB</a>
+      <a href="tel:+447375956131">WA</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity=1;x.target.style.transform='translateY(0)';}});},{threshold:.1});
+document.querySelectorAll('.tc,.pill,.cd').forEach(el=>{el.style.opacity=0;el.style.transform='translateY(18px)';el.style.transition='opacity .6s ease,transform .6s ease';obs.observe(el);});
+</script>
+</body>
+</html>

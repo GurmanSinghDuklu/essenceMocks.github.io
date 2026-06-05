@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Top Tips — Essence Hair Treatment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--beige:#F5EFE6;--bd:#EAE0D0;--bdp:#D6C9B5;--esp:#2C1F14;--gold:#B8935A;--gl:#D4AA72;--wh:#FDFAF6;--mu:#7A6A56;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--beige);color:var(--esp);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 56px;background:rgba(245,239,230,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,147,90,.18);}
+.logo{display:flex;flex-direction:column;text-decoration:none;}
+.lw{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;letter-spacing:.2em;color:var(--esp);text-transform:uppercase;line-height:1;}
+.ls{font-size:7.5px;font-weight:200;letter-spacing:.48em;color:var(--gold);text-transform:uppercase;margin-top:1px;}
+.nl{display:flex;gap:32px;list-style:none;}
+.nl a{font-size:10px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--esp);text-decoration:none;transition:color .2s;}
+.nl a:hover,.nl a.on{color:var(--gold);}
+.nl a.ac{color:var(--gold);}
+.nb{font-size:9.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;background:var(--esp);color:var(--beige);padding:11px 24px;text-decoration:none;transition:background .2s;}
+.nb:hover{background:var(--gold);}
+.ban{background:var(--gold);padding:11px 56px;text-align:center;}
+.ban span{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--esp);}
+
+/* ── PAGE HERO ── */
+.ph{padding:148px 56px 80px;text-align:center;background:var(--wh);}
+.eye{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.pht{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.5vw,72px);font-weight:300;line-height:1.04;margin-bottom:14px;}
+.pht em{font-style:italic;color:var(--gold);}
+.phr{width:52px;height:1px;background:var(--gold);margin:0 auto;}
+.phs{font-size:14px;line-height:1.82;color:var(--mu);max-width:480px;margin:16px auto 0;}
+
+/* ── AI CHATBOT SECTION ── */
+.ai-section{padding:96px 56px;background:var(--bd);}
+.ai-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1240px;margin:0 auto;}
+.ai-left{}
+.ai-eyebrow{font-size:9px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.ai-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,3.4vw,50px);font-weight:300;line-height:1.1;margin-bottom:20px;}
+.ai-title em{font-style:italic;color:var(--gold);}
+.ai-body{font-size:14px;line-height:1.85;color:var(--mu);margin-bottom:32px;}
+.ai-features{display:flex;flex-direction:column;gap:14px;margin-bottom:36px;}
+.ai-feat{display:flex;gap:14px;align-items:flex-start;}
+.af-icon{width:34px;height:34px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.af-text strong{display:block;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;margin-bottom:3px;color:var(--esp);}
+.af-text span{font-size:13px;color:var(--mu);}
+.ai-note{font-size:11px;letter-spacing:.12em;color:var(--mu);font-style:italic;}
+
+/* ── CHATBOT UI RENDER ── */
+.chatbot-render{box-shadow:0 32px 80px rgba(44,31,20,.14);border-radius:2px;overflow:hidden;border:1px solid var(--bdp);}
+
+/* Header bar */
+.cb-header{background:var(--esp);padding:0;}
+.cb-header-top{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid rgba(184,147,90,.15);}
+.cb-identity{display:flex;align-items:center;gap:12px;}
+.cb-avatar{width:38px;height:38px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--wh);font-style:italic;flex-shrink:0;}
+.cb-name{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--beige);line-height:1;}
+.cb-status{font-size:9.5px;color:var(--gold);margin-top:3px;display:flex;align-items:center;gap:5px;}
+.cb-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.cb-actions{display:flex;gap:8px;}
+.cb-action-btn{width:28px;height:28px;border:1px solid rgba(184,147,90,.25);background:transparent;display:flex;align-items:center;justify-content:center;color:var(--bdp);font-size:12px;cursor:pointer;}
+.cb-header-sub{padding:10px 20px;display:flex;align-items:center;justify-content:space-between;}
+.cb-powered{font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:rgba(184,147,90,.55);display:flex;align-items:center;gap:6px;}
+.cb-powered svg{opacity:.5;}
+.cb-topics{display:flex;gap:6px;}
+.cb-topic-chip{font-size:8px;letter-spacing:.1em;text-transform:uppercase;background:rgba(184,147,90,.12);color:var(--gold);padding:4px 10px;border:1px solid rgba(184,147,90,.2);cursor:pointer;white-space:nowrap;}
+
+/* Messages */
+.cb-messages{background:var(--wh);padding:22px 18px;display:flex;flex-direction:column;gap:14px;min-height:320px;}
+.msg{max-width:84%;display:flex;flex-direction:column;gap:4px;}
+.msg-ai{align-self:flex-start;}
+.msg-user{align-self:flex-end;}
+.msg-label{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--mu);padding:0 4px;}
+.msg-label.right{text-align:right;}
+.bubble{padding:12px 16px;font-size:13px;line-height:1.65;border-radius:2px;}
+.bubble-ai{background:var(--beige);color:var(--esp);border-left:2px solid var(--gold);}
+.bubble-ai strong{color:var(--esp);}
+.bubble-user{background:var(--esp);color:var(--beige);}
+.msg-time{font-size:8px;color:var(--bdp);padding:0 4px;}
+.msg-time.right{text-align:right;}
+
+/* Suggested replies */
+.cb-suggestions{background:var(--beige);padding:12px 18px;border-top:1px solid var(--bdp);display:flex;gap:6px;flex-wrap:wrap;}
+.sugg{font-size:10px;letter-spacing:.08em;color:var(--esp);background:var(--wh);border:1px solid var(--bdp);padding:7px 12px;cursor:pointer;transition:all .2s;white-space:nowrap;}
+.sugg:hover{background:var(--esp);color:var(--beige);border-color:var(--esp);}
+
+/* Input bar */
+.cb-input-bar{background:var(--wh);padding:14px 18px;border-top:1px solid var(--bdp);display:flex;gap:10px;align-items:center;}
+.cb-input{flex:1;border:1px solid var(--bdp);background:var(--beige);padding:11px 14px;font-family:'Jost',sans-serif;font-size:12.5px;color:var(--esp);outline:none;}
+.cb-input::placeholder{color:var(--mu);opacity:.65;}
+.cb-send{background:var(--gold);border:none;width:38px;height:38px;display:flex;align-items:center;justify-content:center;color:var(--wh);font-size:15px;cursor:pointer;flex-shrink:0;transition:background .2s;}
+.cb-send:hover{background:var(--esp);}
+
+/* Footer of chatbot */
+.cb-footer{background:var(--esp);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;}
+.cb-footer-brand{font-size:7.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(184,147,90,.45);}
+.cb-footer-links{display:flex;gap:14px;}
+.cb-footer-links a{font-size:7.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(184,147,90,.35);text-decoration:none;}
+
+/* Typing indicator */
+.typing{display:flex;align-items:center;gap:4px;padding:10px 14px;background:var(--beige);border-left:2px solid var(--gold);align-self:flex-start;}
+.typing span{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:bounce .9s infinite;}
+.typing span:nth-child(2){animation-delay:.18s;}
+.typing span:nth-child(3){animation-delay:.36s;}
+@keyframes bounce{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-5px);}}
+
+/* ── TIPS CONTENT ── */
+.tips-wrap{padding:88px 56px;max-width:1000px;margin:0 auto;}
+.tip-section{margin-bottom:68px;}
+.tip-section:last-child{margin-bottom:0;}
+.tsec-eye{font-size:9px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:13px;}
+.tsec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,2.8vw,38px);font-weight:300;line-height:1.1;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid var(--bdp);}
+.tsec-title em{font-style:italic;}
+.tip-body{font-size:14px;line-height:1.85;color:var(--mu);margin-bottom:18px;}
+.tip-list{list-style:none;display:flex;flex-direction:column;}
+.tip-list li{font-size:13.5px;line-height:1.75;color:var(--mu);display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--bd);}
+.tip-list li:first-child{border-top:1px solid var(--bd);}
+.tip-list li::before{content:'–';color:var(--gold);flex-shrink:0;margin-top:2px;}
+.tip-note{background:var(--wh);border-left:3px solid var(--gold);padding:16px 22px;font-size:13px;line-height:1.75;color:var(--mu);margin-top:16px;}
+.tip-note strong{color:var(--esp);}
+
+/* Aftercare cards */
+.ac-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--bdp);margin-top:24px;}
+.ac-card{background:var(--wh);padding:32px 26px;}
+.ac-icon{font-size:21px;margin-bottom:13px;}
+.ac-title{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--esp);margin-bottom:10px;}
+.ac-items{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.ac-items li{font-size:12.5px;line-height:1.7;color:var(--mu);display:flex;gap:9px;}
+.ac-items li::before{content:'–';color:var(--gold);flex-shrink:0;}
+
+/* CTA strip */
+.cta-strip{background:var(--esp);padding:52px 56px;display:flex;justify-content:space-between;align-items:center;gap:32px;}
+.cta-strip h3{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,2.5vw,34px);font-weight:300;color:var(--beige);}
+.cta-strip h3 em{font-style:italic;color:var(--gold);}
+.bg{font-size:9.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;background:var(--gold);color:var(--esp);padding:14px 36px;text-decoration:none;display:inline-block;transition:background .2s;white-space:nowrap;}
+.bg:hover{background:var(--gl);}
+
+/* FOOTER */
+footer{background:var(--esp);padding:68px 56px 32px;}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px;}
+.ftag{font-size:13px;line-height:1.8;color:#5a4a3a;margin-top:20px;max-width:250px;}
+.fct{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.fl{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fl a{font-size:12.5px;color:#5a4a3a;text-decoration:none;transition:color .2s;}
+.fl a:hover{color:var(--beige);}
+.fbot{border-top:1px solid rgba(184,147,90,.12);padding-top:26px;display:flex;justify-content:space-between;align-items:center;}
+.fcopy{font-size:10px;color:#3a2a1a;}
+.fsoc{display:flex;gap:10px;}
+.fsoc a{width:32px;height:32px;border:1px solid rgba(184,147,90,.22);display:flex;align-items:center;justify-content:center;color:#5a4a3a;font-size:12px;text-decoration:none;transition:all .2s;}
+.fsoc a:hover{background:var(--gold);border-color:var(--gold);color:var(--esp);}
+
+@media(max-width:860px){
+  nav{padding:16px 20px;}.nl{display:none;}
+  .ban,.ph,.ai-section,.tips-wrap,.cta-strip{padding-left:20px;padding-right:20px;}
+  .ai-inner{grid-template-columns:1fr;}
+  .ac-grid{grid-template-columns:1fr;}
+  .cta-strip{flex-direction:column;text-align:center;}
+  .cb-topics{display:none;}
+  footer{padding:52px 20px 24px;}.fgrid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="ban"><span>✦ Concept Design — Essence Hair Treatment · For Presentation Only ✦</span></div>
+
+<nav>
+  <a href="index.html" class="logo"><span class="lw">Essence</span><span class="ls">Hair Treatment · Luton</span></a>
+  <ul class="nl">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="toptips.html" class="on">Top Tips</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="faqs.html">FAQs</a></li>
+    <li><a href="academy.html" class="ac">Essence Academy</a></li>
+  </ul>
+  <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="nb" target="_blank">Book Now</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="ph">
+  <div class="eye">Advice & Guidance</div>
+  <h1 class="pht">Top <em>Tips</em></h1>
+  <div class="phr"></div>
+  <p class="phs">Everything you need to know before, during, and after your appointment — and a smarter way to get answers any time.</p>
+</div>
+
+<!-- ── AI CHATBOT SECTION ── -->
+<section class="ai-section">
+  <div class="ai-inner">
+
+    <!-- LEFT: Description -->
+    <div class="ai-left">
+      <div class="ai-eyebrow">Coming Soon · AI Hair Advisor</div>
+      <h2 class="ai-title">Meet <em>Essie</em> — your personal hair advisor, available 24/7.</h2>
+      <p class="ai-body">Not sure which treatment is right for your hair type? Wondering how to care for your balayage between visits? Essie is our AI-powered hair advisor — trained specifically on Essence's services, treatments, and expert knowledge.</p>
+      <p class="ai-body">Ask anything. Get instant, accurate, personalised answers — without waiting for a reply on WhatsApp.</p>
+      <div class="ai-features">
+        <div class="ai-feat">
+          <div class="af-icon">💬</div>
+          <div class="af-text">
+            <strong>Instant Expert Answers</strong>
+            <span>From balayage aftercare to treatment suitability — real knowledge, any time of day or night.</span>
+          </div>
+        </div>
+        <div class="ai-feat">
+          <div class="af-icon">🎯</div>
+          <div class="af-text">
+            <strong>Tailored to Your Hair</strong>
+            <span>Describe your hair type and goals — Essie recommends the right service and explains why.</span>
+          </div>
+        </div>
+        <div class="ai-feat">
+          <div class="af-icon">📅</div>
+          <div class="af-text">
+            <strong>Guides You to Book</strong>
+            <span>Every conversation ends with a clear next step — directly to Essence's booking system.</span>
+          </div>
+        </div>
+        <div class="ai-feat">
+          <div class="af-icon">🔒</div>
+          <div class="af-text">
+            <strong>Powered by Anthropic AI</strong>
+            <span>Built on Claude — one of the world's most trusted and capable AI systems.</span>
+          </div>
+        </div>
+      </div>
+      <p class="ai-note">Essie is a concept design for Essence Hair Treatment. Coming soon.</p>
+    </div>
+
+    <!-- RIGHT: Chatbot UI Render -->
+    <div class="chatbot-render">
+
+      <!-- Header -->
+      <div class="cb-header">
+        <div class="cb-header-top">
+          <div class="cb-identity">
+            <div class="cb-avatar">E</div>
+            <div>
+              <div class="cb-name">Essie · Essence Hair Advisor</div>
+              <div class="cb-status"><div class="cb-dot"></div> Online — ready to help</div>
+            </div>
+          </div>
+          <div class="cb-actions">
+            <div class="cb-action-btn">—</div>
+            <div class="cb-action-btn">✕</div>
+          </div>
+        </div>
+        <div class="cb-header-sub">
+          <div class="cb-powered">
+            <!-- Anthropic-style wordmark -->
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 19h20L12 2z" fill="#B8935A" opacity="0.7"/>
+            </svg>
+            Powered by Anthropic
+          </div>
+          <div class="cb-topics">
+            <div class="cb-topic-chip">Balayage</div>
+            <div class="cb-topic-chip">Treatments</div>
+            <div class="cb-topic-chip">Booking</div>
+            <div class="cb-topic-chip">Aftercare</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div class="cb-messages" id="chatMessages">
+
+        <div class="msg msg-ai">
+          <div class="msg-label">Essie</div>
+          <div class="bubble bubble-ai">
+            Hello! I'm Essie, your personal hair advisor at Essence. 👋<br><br>
+            I can help with everything from choosing the right treatment for your hair type, to aftercare advice, booking info, and more. What can I help you with today?
+          </div>
+          <div class="msg-time">Just now</div>
+        </div>
+
+        <div class="msg msg-user">
+          <div class="msg-label right">You</div>
+          <div class="bubble bubble-user">
+            I have really frizzy, curly hair and I want it smoother but I don't want to lose my curl completely. What do you recommend?
+          </div>
+          <div class="msg-time right">Just now</div>
+        </div>
+
+        <div class="msg msg-ai">
+          <div class="msg-label">Essie</div>
+          <div class="bubble bubble-ai">
+            That's a great question — and actually a really common one! For your goal, I'd recommend <strong>Nanoplastia</strong> over a standard keratin treatment.<br><br>
+            Unlike keratin which smooths hair more dramatically, Nanoplastia works at a molecular level to <strong>reduce frizz and hydrate</strong> while still preserving your natural curl pattern. You get the softness and manageability without losing your personality.<br><br>
+            It's also 100% organic and formaldehyde-free, so it's safe for regular use. Results typically last 3–4 months. ✨<br><br>
+            Would you like me to help you book a consultation?
+          </div>
+          <div class="msg-time">Just now</div>
+        </div>
+
+        <!-- Typing indicator -->
+        <div class="typing" id="typingIndicator" style="display:none;">
+          <span></span><span></span><span></span>
+        </div>
+
+      </div>
+
+      <!-- Suggested replies -->
+      <div class="cb-suggestions">
+        <div class="sugg" onclick="sendSugg(this)">Yes, book me in</div>
+        <div class="sugg" onclick="sendSugg(this)">How much does it cost?</div>
+        <div class="sugg" onclick="sendSugg(this)">What's the aftercare?</div>
+        <div class="sugg" onclick="sendSugg(this)">Can I colour after?</div>
+      </div>
+
+      <!-- Input bar -->
+      <div class="cb-input-bar">
+        <input class="cb-input" id="chatInput" type="text" placeholder="Ask Essie anything about your hair..." />
+        <button class="cb-send" onclick="sendMessage()">→</button>
+      </div>
+
+      <!-- Footer -->
+      <div class="cb-footer">
+        <span class="cb-footer-brand">Essie · Essence Hair Treatment · Luton</span>
+        <div class="cb-footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Powered by Anthropic</a>
+        </div>
+      </div>
+
+    </div><!-- end chatbot-render -->
+  </div>
+</section>
+
+<!-- ── TOP TIPS CONTENT ── -->
+<div class="tips-wrap">
+
+  <!-- PATCH TEST -->
+  <div class="tip-section">
+    <div class="tsec-eye">Before Your Appointment</div>
+    <h2 class="tsec-title">Do I need a <em>patch test?</em></h2>
+    <p class="tip-body">Yes — a patch test and consultation is required if any of the following apply to you:</p>
+    <ul class="tip-list">
+      <li>You are a new client booking any colour service</li>
+      <li>You have had a change in any medication</li>
+      <li>It has been over 12 months since your last appointment</li>
+    </ul>
+    <div class="tip-note"><strong>Please note:</strong> Patch tests and consultations take no more than 5–10 minutes and must be pre-booked. They cannot be carried out on the day of your appointment.</div>
+  </div>
+
+  <!-- BOOKING -->
+  <div class="tip-section">
+    <div class="tsec-eye">Booking</div>
+    <h2 class="tsec-title">How to book an <em>appointment</em></h2>
+    <p class="tip-body">Appointments can be booked via our <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" style="color:var(--gold);" target="_blank">online booking system</a>. For any questions or enquiries, contact us on <a href="tel:+447375956131" style="color:var(--gold);">07375 956 131</a>. Please allow 48–72 hours for a reply.</p>
+    <ul class="tip-list">
+      <li>For a specific date, please allow at least 4 weeks' notice</li>
+      <li>Saturday appointments require a minimum of 6 weeks' notice</li>
+      <li>Appointments are only confirmed once a deposit has been paid</li>
+    </ul>
+  </div>
+
+  <!-- PREPARE -->
+  <div class="tip-section">
+    <div class="tsec-eye">Preparation</div>
+    <h2 class="tsec-title">How to prepare for your <em>appointment</em></h2>
+    <ul class="tip-list">
+      <li>Wear comfortable clothes you don't mind getting stained. Avoid hooded tops.</li>
+      <li>Bring inspiration photos — the more specific, the better.</li>
+      <li>Ensure your hair is freshly washed for all colour services.</li>
+    </ul>
+  </div>
+
+  <!-- AFTERCARE -->
+  <div class="tip-section">
+    <div class="tsec-eye">Aftercare</div>
+    <h2 class="tsec-title">Looking after your <em>results</em></h2>
+    <p class="tip-body">The care you give your hair at home directly affects how long your results last. Follow these guidelines to protect your investment and keep your hair looking its best.</p>
+    <div class="ac-grid">
+      <div class="ac-card">
+        <div class="ac-icon">🎨</div>
+        <div class="ac-title">Hair Colour Aftercare</div>
+        <ul class="ac-items">
+          <li>Wait at least 48 hours before washing after a colour treatment</li>
+          <li>Use sulphate-free shampoos designed for colour-treated hair</li>
+          <li>Rinse with lukewarm or cool water to preserve colour</li>
+          <li>Use a deep conditioner or hair mask once a week</li>
+          <li>Always apply heat protection before styling</li>
+          <li>Book regular trims and toner appointments to keep colour fresh</li>
+          <li>Use UV-protective products in prolonged sun exposure</li>
+        </ul>
+      </div>
+      <div class="ac-card">
+        <div class="ac-icon">✂️</div>
+        <div class="ac-title">Haircut & Style Aftercare</div>
+        <ul class="ac-items">
+          <li>Schedule regular trims every 6–8 weeks to maintain shape</li>
+          <li>Always use a heat protectant before styling tools</li>
+          <li>Detangle gently with a wide-tooth comb — start from the tips up</li>
+          <li>Use a nourishing conditioner or leave-in conditioner regularly</li>
+        </ul>
+      </div>
+      <div class="ac-card">
+        <div class="ac-icon">✨</div>
+        <div class="ac-title">Hair Treatment Aftercare</div>
+        <ul class="ac-items">
+          <li>Use sulphate-free shampoos and conditioners</li>
+          <li><strong>Keratin only:</strong> Do not wash for 72 hours after treatment</li>
+          <li>Avoid tight hairstyles (buns, ponytails) for the first few days</li>
+          <li>No swimming or excessive sweating for the first 72 hours</li>
+          <li>Avoid moisture and humidity in the first 72 hours post-keratin</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end tips-wrap -->
+
+<!-- CTA -->
+<div class="cta-strip">
+  <h3>Ready to book your next <em>appointment?</em></h3>
+  <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="bg" target="_blank">Book Online Now</a>
+</div>
+
+<footer>
+  <div class="fgrid">
+    <div>
+      <a href="index.html" class="logo" style="text-decoration:none;">
+        <span class="lw" style="color:var(--beige);">Essence</span>
+        <span class="ls" style="color:var(--gold);">Hair Treatment · Luton</span>
+      </a>
+      <p class="ftag">A cosy hair studio in Luton specialising in bespoke colour, smoothing treatments, and accredited hair education.</p>
+    </div>
+    <div>
+      <div class="fct">Services</div>
+      <ul class="fl">
+        <li><a href="services.html">Balayage & Colour</a></li>
+        <li><a href="services.html">Hair Treatments</a></li>
+        <li><a href="services.html">Head Spa</a></li>
+        <li><a href="services.html">Cut & Style</a></li>
+        <li><a href="services.html">Extensions</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fct">Info</div>
+      <ul class="fl">
+        <li><a href="toptips.html">Top Tips</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="academy.html">Essence Academy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fct">Contact</div>
+      <ul class="fl">
+        <li><a href="tel:+447375956131">07375 956 131</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">33 Hasketon Drive</a></li>
+        <li><a href="#">Luton, LU4 9EZ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <div class="fcopy">© 2025 Essence Hair Treatment. All rights reserved.</div>
+    <div class="fsoc">
+      <a href="https://www.instagram.com/essence.keratin/" target="_blank">IG</a>
+      <a href="https://www.tiktok.com/@essencehairtreatment" target="_blank">TK</a>
+      <a href="https://www.facebook.com/essencekeratinluton" target="_blank">FB</a>
+      <a href="tel:+447375956131">WA</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Demo chat interaction
+const responses = {
+  "yes, book me in": "Brilliant! You can book your Nanoplastia consultation directly here: <a href='https://bookings.gettimely.com/essencehairtreatment/bb/book' target='_blank' style='color:var(--gold)'>Book Online →</a><br><br>Remember to allow 48–72 hours for a reply if you have any questions. We look forward to seeing you! 🤍",
+  "how much does it cost?": "The Nanoplastia treatment is priced based on hair length and thickness — pricing is confirmed during your consultation. You can also check our <a href='services.html' style='color:var(--gold)'>Services page</a> for a full overview of treatments.<br><br>Would you like to book a free consultation to discuss pricing in person?",
+  "what's the aftercare?": "After your Nanoplastia treatment:<br><br>— Use <strong>sulphate-free</strong> shampoo and conditioner only<br>— Avoid tight hairstyles for the first few days<br>— No swimming or excessive sweating for 72 hours<br>— No moisture or humidity for 72 hours<br><br>Follow these and your results can last 3–4 months! Any other questions?",
+  "can i colour after?": "Great question! We always recommend doing your colour <strong>before</strong> your smoothing treatment, not after. This way the treatment seals in your colour beautifully and enhances shine.<br><br>If you're planning both, we can discuss the best timing during your consultation. Want me to help you book? 😊"
+};
+
+function sendSugg(el) {
+  const text = el.textContent.trim();
+  addUserMessage(text);
+  el.parentElement.querySelectorAll('.sugg').forEach(s => s.style.opacity = '0.4');
+  showTyping();
+  setTimeout(() => {
+    hideTyping();
+    const key = text.toLowerCase();
+    const reply = responses[key] || "That's a great question! For the most accurate answer tailored to your specific hair, I'd recommend booking a free consultation. You can also call us on 07375 956 131. 😊";
+    addAIMessage(reply);
+  }, 1400);
+}
+
+function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+  addUserMessage(text);
+  showTyping();
+  setTimeout(() => {
+    hideTyping();
+    addAIMessage("Thanks for your question! For personalised advice specific to your hair, I'd recommend booking a free consultation with us — or call us on <a href='tel:+447375956131' style='color:var(--gold)'>07375 956 131</a>. We're always happy to chat! 🤍");
+  }, 1600);
+}
+
+function addUserMessage(text) {
+  const msgs = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'msg msg-user';
+  div.innerHTML = `<div class="msg-label right">You</div><div class="bubble bubble-user">${text}</div><div class="msg-time right">Just now</div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function addAIMessage(text) {
+  const msgs = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'msg msg-ai';
+  div.innerHTML = `<div class="msg-label">Essie</div><div class="bubble bubble-ai">${text}</div><div class="msg-time">Just now</div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function showTyping() {
+  const t = document.getElementById('typingIndicator');
+  t.style.display = 'flex';
+  document.getElementById('chatMessages').scrollTop = 9999;
+}
+
+function hideTyping() {
+  document.getElementById('typingIndicator').style.display = 'none';
+}
+
+// Enter key to send
+document.getElementById('chatInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') sendMessage();
+});
+
+// Scroll animations
+const obs = new IntersectionObserver(e => {
+  e.forEach(x => { if(x.isIntersecting){x.target.style.opacity=1;x.target.style.transform='translateY(0)';} });
+},{threshold:.08});
+document.querySelectorAll('.ac-card,.ai-feat,.tip-section').forEach(el => {
+  el.style.opacity=0;el.style.transform='translateY(18px)';el.style.transition='opacity .6s ease,transform .6s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>

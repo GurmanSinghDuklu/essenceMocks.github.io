@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAQs — Essence Hair Treatment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--beige:#F5EFE6;--bd:#EAE0D0;--bdp:#D6C9B5;--esp:#2C1F14;--gold:#B8935A;--gl:#D4AA72;--wh:#FDFAF6;--mu:#7A6A56;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--beige);color:var(--esp);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 56px;background:rgba(245,239,230,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,147,90,.18);}
+.logo{display:flex;flex-direction:column;text-decoration:none;}
+.lw{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;letter-spacing:.2em;color:var(--esp);text-transform:uppercase;line-height:1;}
+.ls{font-size:7.5px;font-weight:200;letter-spacing:.48em;color:var(--gold);text-transform:uppercase;margin-top:1px;}
+.nl{display:flex;gap:32px;list-style:none;}
+.nl a{font-size:10px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--esp);text-decoration:none;transition:color .2s;}
+.nl a:hover,.nl a.on{color:var(--gold);}
+.nl a.ac{color:var(--gold);}
+.nb{font-size:9.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;background:var(--esp);color:var(--beige);padding:11px 24px;text-decoration:none;transition:background .2s;}
+.nb:hover{background:var(--gold);}
+.ban{background:var(--gold);padding:11px 56px;text-align:center;}
+.ban span{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--esp);}
+.ph{padding:148px 56px 80px;text-align:center;background:var(--wh);}
+.eye{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.pht{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.5vw,72px);font-weight:300;line-height:1.04;margin-bottom:14px;}
+.pht em{font-style:italic;color:var(--gold);}
+.phr{width:52px;height:1px;background:var(--gold);margin:0 auto;}
+.phs{font-size:14px;line-height:1.82;color:var(--mu);max-width:480px;margin:16px auto 0;}
+/* FAQ LAYOUT */
+.faq-wrap{padding:88px 56px;display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;}
+.faq-nav{position:sticky;top:120px;}
+.faq-nav-title{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.faq-nav ul{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.faq-nav a{font-size:13px;color:var(--mu);text-decoration:none;padding:8px 0;display:block;border-bottom:1px solid var(--bd);transition:color .2s;}
+.faq-nav a:hover{color:var(--gold);}
+.faq-content{}
+.faq-group{margin-bottom:60px;}
+.faq-group-title{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,2.6vw,36px);font-weight:300;margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--bdp);}
+.faq-group-title em{font-style:italic;}
+.faq-item{border-bottom:1px solid var(--bd);overflow:hidden;}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;gap:16px;}
+.faq-q span{font-size:14px;font-weight:400;color:var(--esp);}
+.faq-icon{width:24px;height:24px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--gold);flex-shrink:0;transition:transform .3s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-a{font-size:13.5px;line-height:1.82;color:var(--mu);max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
+.faq-item.open .faq-a{max-height:400px;padding-bottom:20px;}
+.faq-a ul{list-style:none;margin-top:10px;}
+.faq-a ul li{display:flex;gap:10px;margin-bottom:8px;font-size:13.5px;color:var(--mu);}
+.faq-a ul li::before{content:'–';color:var(--gold);flex-shrink:0;}
+.faq-a a{color:var(--gold);}
+/* CTA */
+.cta-strip{background:var(--esp);padding:52px 56px;display:flex;justify-content:space-between;align-items:center;gap:32px;}
+.cta-strip h3{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,2.6vw,36px);font-weight:300;color:var(--beige);}
+.cta-strip h3 em{font-style:italic;color:var(--gold);}
+.bg{font-size:9.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;background:var(--gold);color:var(--esp);padding:14px 36px;text-decoration:none;display:inline-block;transition:background .2s;white-space:nowrap;}
+.bg:hover{background:var(--gl);}
+footer{background:var(--esp);padding:68px 56px 32px;}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px;}
+.ftag{font-size:13px;line-height:1.8;color:#5a4a3a;margin-top:20px;max-width:250px;}
+.fct{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.fl{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fl a{font-size:12.5px;color:#5a4a3a;text-decoration:none;transition:color .2s;}
+.fl a:hover{color:var(--beige);}
+.fbot{border-top:1px solid rgba(184,147,90,.12);padding-top:26px;display:flex;justify-content:space-between;align-items:center;}
+.fcopy{font-size:10px;color:#3a2a1a;}
+.fsoc{display:flex;gap:10px;}
+.fsoc a{width:32px;height:32px;border:1px solid rgba(184,147,90,.22);display:flex;align-items:center;justify-content:center;color:#5a4a3a;font-size:12px;text-decoration:none;transition:all .2s;}
+.fsoc a:hover{background:var(--gold);border-color:var(--gold);color:var(--esp);}
+@media(max-width:860px){
+  nav{padding:16px 20px;}.nl{display:none;}
+  .ban,.ph,.cta-strip{padding-left:20px;padding-right:20px;}
+  .faq-wrap{grid-template-columns:1fr;padding:52px 20px;}
+  .faq-nav{position:static;}
+  .cta-strip{flex-direction:column;text-align:center;}
+  footer{padding:52px 20px 24px;}.fgrid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+<div class="ban"><span>✦ Concept Design — Essence Hair Treatment · For Presentation Only ✦</span></div>
+<nav>
+  <a href="index.html" class="logo"><span class="lw">Essence</span><span class="ls">Hair Treatment · Luton</span></a>
+  <ul class="nl">
+    <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="toptips.html">Top Tips</a></li><li><a href="gallery.html">Gallery</a></li>
+    <li><a href="faqs.html" class="on">FAQs</a></li><li><a href="academy.html" class="ac">Essence Academy</a></li>
+  </ul>
+  <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="nb" target="_blank">Book Now</a>
+</nav>
+
+<div class="ph">
+  <div class="eye">Got Questions?</div>
+  <h1 class="pht">Frequently Asked <em>Questions</em></h1>
+  <div class="phr"></div>
+  <p class="phs">Everything you need to know before getting in touch. Can't find your answer? Call or WhatsApp us on 07375 956 131.</p>
+</div>
+
+<div class="faq-wrap">
+  <div class="faq-nav">
+    <div class="faq-nav-title">Jump to</div>
+    <ul>
+      <li><a href="#booking">Booking & Appointments</a></li>
+      <li><a href="#colour">Colour Services</a></li>
+      <li><a href="#treatments">Hair Treatments</a></li>
+      <li><a href="#extensions">Extensions</a></li>
+      <li><a href="#general">General</a></li>
+    </ul>
+  </div>
+  <div class="faq-content">
+
+    <div class="faq-group" id="booking">
+      <h2 class="faq-group-title">Booking & <em>Appointments</em></h2>
+
+      <div class="faq-item open">
+        <div class="faq-q"><span>How can I book an appointment?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Appointments can be booked via our <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" target="_blank">online booking system</a>. For questions or enquiries, contact us on <a href="tel:+447375956131">07375 956 131</a>. Please allow 48–72 hours for a reply.<br><br>If you are looking for a specific date, please allow at least 4 weeks' notice, and 6 weeks for a Saturday appointment. Appointments are only confirmed once a deposit has been paid.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Do I need to pay a deposit?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Yes — appointments are only confirmed once a deposit has been paid. This secures your booking and helps us manage our diary effectively. The deposit will be deducted from the total cost of your service.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>How far in advance should I book?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">For a specific date, please allow at least 4 weeks' notice. Saturday appointments require a minimum of 6 weeks' notice. We recommend booking as early as possible to avoid disappointment, especially around school holidays and peak periods.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>What is your cancellation policy?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Please give as much notice as possible if you need to cancel or reschedule. Late cancellations or no-shows may result in your deposit being retained. We appreciate your understanding — last-minute gaps are difficult to fill in a small business.</div>
+      </div>
+    </div>
+
+    <div class="faq-group" id="colour">
+      <h2 class="faq-group-title">Colour <em>Services</em></h2>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Do I need a patch test before a colour service?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Yes — a patch test and consultation is required if:
+          <ul><li>You are a new client booking any colour service</li><li>You have had a change in any medication</li><li>It has been over 12 months since your last appointment</li></ul>
+          Patch tests and consultations take no more than 5–10 minutes and must be pre-booked. They cannot be done on the day of your appointment.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>What is balayage and is it right for me?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Balayage is a freehand colouring technique that creates a natural, sun-kissed look with soft blended highlights. It's ideal for low-maintenance colour that grows out beautifully without harsh regrowth lines. It works on almost all hair types and lengths. We'll advise during your consultation whether it's the right technique for your hair and goals.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>How should I prepare my hair for a colour service?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Please ensure your hair is freshly washed on the day of your colour appointment. Bring inspiration photos if you have them — the more specific, the better. Wear comfortable clothing you don't mind getting stained, and avoid hooded tops.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>How long does colour last?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">This varies depending on the technique, your hair type, and how you care for it at home. Balayage typically needs refreshing every 3–5 months. Regular toner appointments every 6–8 weeks will keep the tone looking fresh and vibrant. We'll give you personalised aftercare advice after every colour service.</div>
+      </div>
+    </div>
+
+    <div class="faq-group" id="treatments">
+      <h2 class="faq-group-title">Hair <em>Treatments</em></h2>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>What is the difference between Nanoplastia and Keratin?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Both are smoothing treatments but they work differently. Keratin replenishes your hair's natural protein, creating a smooth, frizz-free finish that typically lasts 3–5 months. Nanoplastia works at a molecular level to restructure and hydrate the hair — it's gentler, organic, and doesn't fully eliminate curl; it refines it. Both are 100% formaldehyde-free. We'll advise which is better suited for your hair type during consultation.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Are the treatments safe? Do they contain formaldehyde?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">All of our treatments — Keratin, Nanoplastia, and Hair Botox — are 100% organic and completely formaldehyde-free. We only use professional-grade, safe formulations that deliver exceptional results without compromising your health or hair integrity.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>How long do smoothing treatments last?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Results typically last 3–5 months depending on your hair type, how often you wash your hair, and the products you use at home. Using sulphate-free shampoos and conditioners significantly extends the life of all smoothing treatments.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Can I have a smoothing treatment on coloured hair?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Yes — our organic treatments are safe for colour-treated hair. We recommend having colour done before your smoothing treatment, not after. We'll always assess your hair's condition before proceeding and advise on the best approach for your individual hair.</div>
+      </div>
+    </div>
+
+    <div class="faq-group" id="extensions">
+      <h2 class="faq-group-title">Hair <em>Extensions</em></h2>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>What types of extensions do you offer?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">We offer tape hair extensions as our client-facing service — a semi-permanent, lightweight method that lies flat against the scalp and blends seamlessly with natural hair. They're held in place with medical-grade adhesive and last 6–8 weeks before requiring a maintenance appointment.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Will extensions damage my natural hair?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">When applied correctly and maintained properly, tape extensions cause no damage to natural hair. We use medical-grade adhesive that is gentle on the hair shaft. We'll always assess your natural hair condition before fitting and advise on the best maintenance routine to keep your hair healthy.</div>
+      </div>
+    </div>
+
+    <div class="faq-group" id="general">
+      <h2 class="faq-group-title">General <em>Questions</em></h2>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Where are you located?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">We are based at 33 Hasketon Drive, Luton, LU4 9EZ. There is plenty of parking available and we are easy to find. We operate by appointment only — walk-ins are not available.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Do you offer consultations?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Yes — consultations are available and for new colour clients they are required. Consultations take 5–10 minutes and must be pre-booked. This is your opportunity to discuss your hair goals, ask questions, and ensure the right treatment is planned for you.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Do you offer training courses?</span><div class="faq-icon">+</div></div>
+        <div class="faq-a">Yes — through <a href="academy.html">Essence Academy</a> we offer a full range of ABT accredited training courses including Balayage Masterclass, Keratin, Nanoplastia, Hair Botox, Extensions, and Colour courses. All courses include a free shadowing day and ongoing online support.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="cta-strip">
+  <h3>Still have a question? <em>Get in touch.</em></h3>
+  <a href="tel:+447375956131" class="bg">Call 07375 956 131</a>
+</div>
+
+<footer>
+  <div class="fgrid">
+    <div><a href="index.html" class="logo" style="text-decoration:none;"><span class="lw" style="color:var(--beige);">Essence</span><span class="ls" style="color:var(--gold);">Hair Treatment · Luton</span></a><p class="ftag">A cosy hair studio in Luton specialising in bespoke colour, smoothing treatments, and accredited hair education.</p></div>
+    <div><div class="fct">Services</div><ul class="fl"><li><a href="services.html">Balayage & Colour</a></li><li><a href="services.html">Hair Treatments</a></li><li><a href="services.html">Head Spa</a></li><li><a href="services.html">Cut & Style</a></li><li><a href="services.html">Extensions</a></li></ul></div>
+    <div><div class="fct">Info</div><ul class="fl"><li><a href="toptips.html">Top Tips</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="academy.html">Essence Academy</a></li></ul></div>
+    <div><div class="fct">Contact</div><ul class="fl"><li><a href="tel:+447375956131">07375 956 131</a></li><li><a href="#">WhatsApp</a></li><li><a href="#">33 Hasketon Drive</a></li><li><a href="#">Luton, LU4 9EZ</a></li></ul></div>
+  </div>
+  <div class="fbot"><div class="fcopy">© 2025 Essence Hair Treatment. All rights reserved.</div><div class="fsoc"><a href="https://www.instagram.com/essence.keratin/" target="_blank">IG</a><a href="https://www.tiktok.com/@essencehairtreatment" target="_blank">TK</a><a href="https://www.facebook.com/essencekeratinluton" target="_blank">FB</a><a href="tel:+447375956131">WA</a></div></div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.parentElement;
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen)item.classList.add('open');
+  });
+});
+</script>
+</body></html>

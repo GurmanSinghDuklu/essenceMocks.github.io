@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gallery — Essence Hair Treatment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--beige:#F5EFE6;--bd:#EAE0D0;--bdp:#D6C9B5;--esp:#2C1F14;--gold:#B8935A;--gl:#D4AA72;--wh:#FDFAF6;--mu:#7A6A56;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--beige);color:var(--esp);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 56px;background:rgba(245,239,230,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(184,147,90,.18);}
+.logo{display:flex;flex-direction:column;text-decoration:none;}
+.lw{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:25px;letter-spacing:.2em;color:var(--esp);text-transform:uppercase;line-height:1;}
+.ls{font-size:7.5px;font-weight:200;letter-spacing:.48em;color:var(--gold);text-transform:uppercase;margin-top:1px;}
+.nl{display:flex;gap:32px;list-style:none;}
+.nl a{font-size:10px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--esp);text-decoration:none;transition:color .2s;}
+.nl a:hover,.nl a.on{color:var(--gold);}
+.nl a.ac{color:var(--gold);}
+.nb{font-size:9.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;background:var(--esp);color:var(--beige);padding:11px 24px;text-decoration:none;transition:background .2s;}
+.nb:hover{background:var(--gold);}
+.ban{background:var(--gold);padding:11px 56px;text-align:center;}
+.ban span{font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--esp);}
+.ph{padding:148px 56px 80px;text-align:center;background:var(--wh);}
+.eye{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.pht{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,5.5vw,72px);font-weight:300;line-height:1.04;margin-bottom:14px;}
+.pht em{font-style:italic;color:var(--gold);}
+.phr{width:52px;height:1px;background:var(--gold);margin:0 auto;}
+.phs{font-size:14px;line-height:1.82;color:var(--mu);max-width:480px;margin:16px auto 0;}
+/* MASONRY GALLERY */
+.gal-wrap{padding:72px 56px;background:var(--beige);}
+.gal-note{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mu);text-align:center;margin-bottom:40px;}
+.masonry{columns:3;column-gap:6px;}
+.gal-item{break-inside:avoid;margin-bottom:6px;overflow:hidden;position:relative;cursor:pointer;}
+.gal-item img{width:100%;display:block;transition:transform .5s;}
+.gal-item:hover img{transform:scale(1.04);}
+.gal-item .ov{position:absolute;inset:0;background:rgba(44,31,20,0);transition:background .3s;}
+.gal-item:hover .ov{background:rgba(44,31,20,.15);}
+/* INSTAGRAM SECTION */
+.ig-sec{padding:72px 56px;background:var(--wh);text-align:center;}
+.ig-title{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.2vw,46px);font-weight:300;margin-bottom:12px;}
+.ig-title em{font-style:italic;color:var(--gold);}
+.ig-handle{font-size:9.5px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:40px;}
+.ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:40px;}
+.ig-item{aspect-ratio:1;overflow:hidden;position:relative;}
+.ig-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.ig-item:hover img{transform:scale(1.06);}
+.ig-cta{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;background:var(--esp);color:var(--beige);padding:14px 36px;text-decoration:none;display:inline-block;transition:background .2s;}
+.ig-cta:hover{background:var(--gold);}
+footer{background:var(--esp);padding:68px 56px 32px;}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:52px;}
+.ftag{font-size:13px;line-height:1.8;color:#5a4a3a;margin-top:20px;max-width:250px;}
+.fct{font-size:8.5px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.fl{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fl a{font-size:12.5px;color:#5a4a3a;text-decoration:none;transition:color .2s;}
+.fl a:hover{color:var(--beige);}
+.fbot{border-top:1px solid rgba(184,147,90,.12);padding-top:26px;display:flex;justify-content:space-between;align-items:center;}
+.fcopy{font-size:10px;color:#3a2a1a;}
+.fsoc{display:flex;gap:10px;}
+.fsoc a{width:32px;height:32px;border:1px solid rgba(184,147,90,.22);display:flex;align-items:center;justify-content:center;color:#5a4a3a;font-size:12px;text-decoration:none;transition:all .2s;}
+.fsoc a:hover{background:var(--gold);border-color:var(--gold);color:var(--esp);}
+@media(max-width:860px){
+  nav{padding:16px 20px;}.nl{display:none;}
+  .ban,.ph,.gal-wrap,.ig-sec{padding-left:20px;padding-right:20px;}
+  .masonry{columns:2;}
+  .ig-grid{grid-template-columns:repeat(2,1fr);}
+  footer{padding:52px 20px 24px;}.fgrid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+<div class="ban"><span>✦ Concept Design — Essence Hair Treatment · For Presentation Only ✦</span></div>
+<nav>
+  <a href="index.html" class="logo"><span class="lw">Essence</span><span class="ls">Hair Treatment · Luton</span></a>
+  <ul class="nl">
+    <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="toptips.html">Top Tips</a></li><li><a href="gallery.html" class="on">Gallery</a></li>
+    <li><a href="faqs.html">FAQs</a></li><li><a href="academy.html" class="ac">Essence Academy</a></li>
+  </ul>
+  <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="nb" target="_blank">Book Now</a>
+</nav>
+
+<div class="ph">
+  <div class="eye">Our Work</div>
+  <h1 class="pht">The <em>Gallery</em></h1>
+  <div class="phr"></div>
+  <p class="phs">Real results, real clients. Every transformation is bespoke — designed around your hair, your goals, and your life.</p>
+</div>
+
+<div class="gal-wrap">
+  <div class="gal-note">Real client transformations from Essence Hair Treatment, Luton</div>
+  <div class="masonry">
+    <!-- Using the real Wix gallery images from the site -->
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_70cc8ce8307145879bd6420cf9e12dfe~mv2.png/v1/fit/w_480,h_640,q_90,enc_avif,quality_auto/a08d06_70cc8ce8307145879bd6420cf9e12dfe~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_998f01ed85db4f64b103e718b2871047~mv2.jpg/v1/fit/w_480,h_643,q_90,enc_avif,quality_auto/a08d06_998f01ed85db4f64b103e718b2871047~mv2.jpg" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_d97a966c69e342368f00df6032cabb33~mv2.png/v1/fit/w_480,h_639,q_90,enc_avif,quality_auto/a08d06_d97a966c69e342368f00df6032cabb33~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_dc6d43b1db3f4867a07d4773dbbffa31~mv2.png/v1/fit/w_480,h_643,q_90,enc_avif,quality_auto/a08d06_dc6d43b1db3f4867a07d4773dbbffa31~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_c61e425e063d442db467bc0cc17aece9~mv2.png/v1/fit/w_480,h_639,q_90,enc_avif,quality_auto/a08d06_c61e425e063d442db467bc0cc17aece9~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_fd04ea57922c4c3b8cdd4f43a5b131a3~mv2.png/v1/fit/w_480,h_640,q_90,enc_avif,quality_auto/a08d06_fd04ea57922c4c3b8cdd4f43a5b131a3~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_213cd41547474b8397f525fe4ed910a0~mv2.png/v1/fit/w_480,h_643,q_90,enc_avif,quality_auto/a08d06_213cd41547474b8397f525fe4ed910a0~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_21555aaf0ff6457596cdaff00b320e8e~mv2.png/v1/fit/w_480,h_639,q_90,enc_avif,quality_auto/a08d06_21555aaf0ff6457596cdaff00b320e8e~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_8cade18bbd0149e58464c0d72a06b344~mv2.png/v1/fit/w_480,h_640,q_90,enc_avif,quality_auto/a08d06_8cade18bbd0149e58464c0d72a06b344~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_378753a2b2374f4ea2611baa1fa2e3a9~mv2.png/v1/fit/w_480,h_641,q_90,enc_avif,quality_auto/a08d06_378753a2b2374f4ea2611baa1fa2e3a9~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_1763bde5a6404e47a1160ba51aa627b0~mv2.png/v1/fit/w_480,h_597,q_90,enc_avif,quality_auto/a08d06_1763bde5a6404e47a1160ba51aa627b0~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_eaa002c6ba844e17bbaee2f1a905401f~mv2.png/v1/fit/w_480,h_639,q_90,enc_avif,quality_auto/a08d06_eaa002c6ba844e17bbaee2f1a905401f~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_7274e29d417e46049faff6e0c7571af2~mv2.png/v1/fit/w_480,h_640,q_90,enc_avif,quality_auto/a08d06_7274e29d417e46049faff6e0c7571af2~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_578f6b3bcb354813948f2548baa19802~mv2.png/v1/fit/w_480,h_643,q_90,enc_avif,quality_auto/a08d06_578f6b3bcb354813948f2548baa19802~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_62413a11fe014906a4af5d1b2456a5c1~mv2.png/v1/fit/w_480,h_639,q_90,enc_avif,quality_auto/a08d06_62413a11fe014906a4af5d1b2456a5c1~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_2fb28258999942a18c7420fd75bd039e~mv2.png/v1/fit/w_480,h_640,q_90,enc_avif,quality_auto/a08d06_2fb28258999942a18c7420fd75bd039e~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+    <div class="gal-item"><img src="https://static.wixstatic.com/media/a08d06_4fc682119912407395f242e76bb21e8b~mv2.png/v1/fit/w_480,h_643,q_90,enc_avif,quality_auto/a08d06_4fc682119912407395f242e76bb21e8b~mv2.png" alt="Hair transformation"/><div class="ov"></div></div>
+  </div>
+</div>
+
+<!-- INSTAGRAM -->
+<div class="ig-sec">
+  <h2 class="ig-title">Follow us on <em>Instagram</em></h2>
+  <div class="ig-handle">@essence.keratin</div>
+  <div class="ig-grid">
+    <div class="ig-item"><img src="https://scontent.cdninstagram.com/v/t51.71878-15/717248179_3935829050059205_6658817328774378056_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&_nc_ohc=Wxs6Uy175u8Q7kNvwEp_nwf&_nc_ht=scontent.cdninstagram.com&oh=00_Af8ETpDrAwiGwSLztX3baOK8aHWrONHiDuE4Tiu7Ww_Euw&oe=6A288F21" alt="Instagram post"/></div>
+    <div class="ig-item"><img src="https://scontent.cdninstagram.com/v/t51.82787-15/714881511_18237086920308014_4644627142602614100_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&_nc_ohc=9rOYzt48toUQ7kNvwG6QoxQ&_nc_ht=scontent.cdninstagram.com&oh=00_Af9rWLWrWbcw1Gi7qGZN3zKbxjBk_14NwpB3C1gWcj4ekw&oe=6A28712E" alt="Instagram post"/></div>
+    <div class="ig-item"><img src="https://scontent.cdninstagram.com/v/t51.71878-15/710848759_996986239966236_1582480797820934569_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ccb=7-5&_nc_sid=18de74&_nc_ohc=vV1q1U8tiWMQ7kNvwErun3O&_nc_ht=scontent.cdninstagram.com&oh=00_Af8ijNsW4_stmcKQjkuQy58NlqfIVc5SkB2J_v-7DxUpuA&oe=6A2884F9" alt="Instagram post"/></div>
+    <div class="ig-item"><img src="https://scontent.cdninstagram.com/v/t51.71878-15/707269380_1269379925279391_1243274400147259920_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&_nc_ohc=2gHRrF-0Q2YQ7kNvwHWaszC&_nc_ht=scontent.cdninstagram.com&oh=00_Af8eG3LMDePCPI0kCbrros3LFunD95ajdbcgc3EP13TXKA&oe=6A2873CB" alt="Instagram post"/></div>
+  </div>
+  <a href="https://www.instagram.com/essence.keratin/" class="ig-cta" target="_blank">Follow @essence.keratin</a>
+</div>
+
+<footer>
+  <div class="fgrid">
+    <div><a href="index.html" class="logo" style="text-decoration:none;"><span class="lw" style="color:var(--beige);">Essence</span><span class="ls" style="color:var(--gold);">Hair Treatment · Luton</span></a><p class="ftag">A cosy hair studio in Luton specialising in bespoke colour, smoothing treatments, and accredited hair education.</p></div>
+    <div><div class="fct">Services</div><ul class="fl"><li><a href="services.html">Balayage & Colour</a></li><li><a href="services.html">Hair Treatments</a></li><li><a href="services.html">Head Spa</a></li><li><a href="services.html">Cut & Style</a></li><li><a href="services.html">Extensions</a></li></ul></div>
+    <div><div class="fct">Info</div><ul class="fl"><li><a href="toptips.html">Top Tips</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="academy.html">Essence Academy</a></li></ul></div>
+    <div><div class="fct">Contact</div><ul class="fl"><li><a href="tel:+447375956131">07375 956 131</a></li><li><a href="#">WhatsApp</a></li><li><a href="#">33 Hasketon Drive</a></li><li><a href="#">Luton, LU4 9EZ</a></li></ul></div>
+  </div>
+  <div class="fbot"><div class="fcopy">© 2025 Essence Hair Treatment. All rights reserved.</div><div class="fsoc"><a href="https://www.instagram.com/essence.keratin/" target="_blank">IG</a><a href="https://www.tiktok.com/@essencehairtreatment" target="_blank">TK</a><a href="https://www.facebook.com/essencekeratinluton" target="_blank">FB</a><a href="tel:+447375956131">WA</a></div></div>
+</footer>
+</body></html>
