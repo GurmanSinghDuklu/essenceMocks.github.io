@@ -9,16 +9,7 @@
 :root{--blk:#0a0a0a;--off:#1a1a1a;--chr:#2d2d2d;--beige:#F2EDE6;--bm:#E8E0D6;--bd:#D4C9BB;--wh:#FFFFFF;--ow:#FAF8F5;--wg:#9A9087;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
 body{background:var(--wh);color:var(--blk);font-family:'Raleway',sans-serif;font-weight:300;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(10,10,10,.08);}
-.nav-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:22px 56px;}
-.nav-left{display:flex;gap:36px;list-style:none;}.nav-right{display:flex;gap:36px;list-style:none;justify-content:flex-end;align-items:center;}
-.nav-left a,.nav-right a{font-size:9.5px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:var(--blk);text-decoration:none;transition:color .2s;}
-.nav-left a:hover,.nav-right a:hover,.nav-left a.on,.nav-right a.on{color:var(--wg);}
-.nav-logo{text-align:center;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:2px;}
-.nl-word{font-family:'Playfair Display',serif;font-weight:300;font-size:22px;letter-spacing:.18em;color:var(--blk);text-transform:uppercase;line-height:1;}
-.nl-sub{font-size:7px;font-weight:300;letter-spacing:.55em;text-transform:uppercase;color:var(--wg);}
-.nav-book{font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;background:var(--blk);color:var(--wh);padding:10px 22px;text-decoration:none;transition:all .2s;}
-.nav-book:hover{background:var(--beige);color:var(--blk);}
+
 /* PAGE HERO */
 .page-hero{height:70vh;min-height:500px;position:relative;overflow:hidden;display:flex;align-items:flex-end;}
 .ph-img{position:absolute;inset:0;}.ph-img img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
@@ -40,34 +31,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .sh-left h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,42px);font-weight:300;line-height:1.1;}
 .sh-left h2 em{font-style:italic;}
 .sh-right{font-size:13px;line-height:1.82;color:var(--wg);max-width:320px;text-align:right;}
-/* FEATURED CARD */
-.feat-card{display:grid;grid-template-columns:1fr 1fr;background:var(--wh);margin-bottom:3px;}
-.feat-img{overflow:hidden;}.feat-img img{width:100%;height:100%;min-height:460px;object-fit:cover;display:block;transition:transform .7s;}
-.feat-card:hover .feat-img img{transform:scale(1.03);}
-.feat-content{padding:72px 64px;display:flex;flex-direction:column;justify-content:center;}
-.svc-num{font-size:9px;letter-spacing:.3em;color:var(--wg);margin-bottom:14px;}
-.svc-name{font-family:'Playfair Display',serif;font-size:clamp(26px,2.8vw,38px);font-weight:300;line-height:1.1;margin-bottom:20px;}
+/* SERVICE CARDS */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+.svc-card{background:var(--wh);overflow:hidden;}
+.svc-card-img{overflow:hidden;height:280px;}
+.svc-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
+.svc-card:hover .svc-card-img img{transform:scale(1.04);}
+.svc-card-body{padding:32px 28px;}
+.svc-num{font-size:9px;letter-spacing:.3em;color:var(--wg);margin-bottom:10px;}
+.svc-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:300;line-height:1.15;margin-bottom:14px;}
 .svc-name em{font-style:italic;}
-.svc-desc{font-size:13.5px;line-height:1.85;color:var(--chr);margin-bottom:24px;}
-.svc-list{list-style:none;margin-bottom:28px;}
-.svc-list li{font-size:13px;color:var(--chr);padding:8px 0;border-bottom:1px solid var(--bm);display:flex;gap:12px;}
+.svc-desc{font-size:13px;line-height:1.82;color:var(--chr);margin-bottom:20px;}
+.svc-list{list-style:none;margin-bottom:20px;}
+.svc-list li{font-size:12.5px;color:var(--chr);padding:7px 0;border-bottom:1px solid var(--bm);display:flex;gap:10px;}
 .svc-list li::before{content:'—';color:var(--wg);flex-shrink:0;}
 .book-link{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--blk);text-decoration:none;display:inline-flex;align-items:center;gap:10px;border-bottom:1px solid var(--blk);padding-bottom:3px;transition:color .2s,border-color .2s;}
 .book-link:hover{color:var(--wg);border-color:var(--wg);}
-/* 2-col grid */
-.two-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
-/* 3-col grid */
-.three-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
-.grid-card{background:var(--wh);overflow:hidden;}
-.gc-img{overflow:hidden;height:280px;}
-.gc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
-.grid-card:hover .gc-img img{transform:scale(1.04);}
-.gc-content{padding:32px 28px;}
-/* SPLIT LAYOUT */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:0;}
-.split-img{overflow:hidden;}.split-img img{width:100%;height:100%;min-height:500px;object-fit:cover;display:block;}
-.split-content{padding:80px 64px;display:flex;flex-direction:column;justify-content:center;}
-.concerns{margin:28px 0;}
 .concern{padding:18px 0;border-bottom:1px solid var(--bm);}
 .concern:first-child{border-top:1px solid var(--bm);}
 .c-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin-bottom:7px;}
@@ -82,47 +61,38 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .btn-blk{font-size:9px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;background:var(--blk);color:var(--wh);padding:13px 34px;text-decoration:none;transition:all .25s;display:inline-block;}
 .btn-blk:hover{background:var(--beige);color:var(--blk);}
 /* FOOTER */
-footer{background:var(--ow);padding:64px 56px 36px;border-top:1px solid var(--bm);}
-.f-logo-word{font-family:'Playfair Display',serif;font-weight:300;font-size:20px;letter-spacing:.18em;color:var(--blk);text-transform:uppercase;}
-.f-logo-sub{font-size:7px;letter-spacing:.55em;text-transform:uppercase;color:var(--wg);margin-top:3px;}
-.footer-logo-wrap{text-align:center;margin-bottom:44px;}
-.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;margin-bottom:44px;}
-.footer-col-title{font-size:8.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--wg);margin-bottom:16px;}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:8px;}
-.footer-links a{font-size:12.5px;color:var(--chr);text-decoration:none;transition:color .2s;}
-.footer-links a:hover{color:var(--blk);}
-.footer-bottom{border-top:1px solid var(--bm);padding-top:22px;display:flex;justify-content:space-between;align-items:center;}
-.footer-copy{font-size:10px;letter-spacing:.1em;color:var(--wg);}
-.footer-soc{display:flex;gap:20px;}
-.footer-soc a{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--wg);text-decoration:none;transition:color .2s;}
-.footer-soc a:hover{color:var(--blk);}
-@media(max-width:900px){
-  .nav-inner{padding:16px 20px;grid-template-columns:auto 1fr auto;}.nav-left{display:none;}.nav-right li:not(:last-child){display:none;}
+
   .ph-content{padding:0 20px 56px;}
   .stabs{padding:0 12px;}
   .svc-section{padding:64px 20px;}
   .feat-card,.split,.two-grid,.three-grid{grid-template-columns:1fr;}
-  .feat-img img{min-height:280px;}.split-img img{min-height:280px;}
+  .svc-grid{grid-template-columns:1fr;}.svc-card-img{height:220px;}
   .feat-content,.split-content{padding:44px 28px;}
   .sec-head{flex-direction:column;gap:14px;align-items:flex-start;}.sh-right{text-align:left;max-width:100%;}
-  .cta-strip{padding:64px 20px;}
-  footer{padding:52px 20px 28px;}.footer-grid{grid-template-columns:1fr 1fr;}
-  .footer-bottom{flex-direction:column;gap:14px;text-align:center;}
+  .cta-strip{padding:64px 20px;}}
+
+/* ── NAV ── */
+
+@media(max-width:960px){
+  .nav-shell{grid-template-columns:auto 1fr auto;padding:14px 20px;min-height:64px;}
+  .nav-left{display:none;}.nav-right{display:none;}
+  .nav-hamburger{display:flex;}
+  .logo-word{font-size:20px;letter-spacing:.28em;}
+  .logo-sub-text{font-size:6px;letter-spacing:.5em;}
 }
+
 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(10,10,10,.07);}
 .nav-shell{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 56px;min-height:76px;}
 .nav-left,.nav-right{display:flex;gap:32px;list-style:none;}
 .nav-right{justify-content:flex-end;align-items:center;}
-.nav-left a,.nav-right a{font-size:9px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;transition:color .2s;}
+.nav-left a,.nav-right a{font-family:'Cormorant Garamond',serif;font-size:11px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:#0a0a0a;text-decoration:none;transition:color .2s;}
 .nav-left a:hover,.nav-right a:hover,.nav-left a.on,.nav-right a.on{color:#9A9087;}
-.nav-logo{text-decoration:none;display:flex;flex-direction:column;align-items:center;}
-.logo-word{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;letter-spacing:.36em;color:#0a0a0a;text-transform:uppercase;line-height:1;}
-.logo-rule{width:100%;height:1px;background:rgba(10,10,10,.12);margin:5px 0 4px;}
-.logo-sub-text{font-family:'Raleway',sans-serif;font-size:6.5px;font-weight:400;letter-spacing:.62em;color:#9A9087;text-transform:uppercase;white-space:nowrap;}
-.nav-book{font-size:8.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;background:#0a0a0a;color:#fff;padding:9px 20px;text-decoration:none;transition:all .22s;white-space:nowrap;}
-.nav-book:hover{background:#F2EDE6;color:#0a0a0a;}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}
+.nav-logo img{height:72px;width:auto;display:block;mix-blend-mode:multiply;}
+.nav-book,.nav-right a.nav-book{font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;background:#0a0a0a;color:#fff !important;padding:9px 20px;border:1px solid #0a0a0a;text-decoration:none;transition:all .22s;white-space:nowrap;}
+.nav-book:hover,.nav-right a.nav-book:hover{background:#8B7355;border-color:#8B7355;color:#fff !important;}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;margin-left:auto;}
 .nav-hamburger span{display:block;width:22px;height:1.5px;background:#0a0a0a;transition:all .3s;}
 .nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
@@ -137,13 +107,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
   .nav-shell{grid-template-columns:auto 1fr auto;padding:14px 20px;min-height:64px;}
   .nav-left{display:none;}.nav-right{display:none;}
   .nav-hamburger{display:flex;}
-  .logo-word{font-size:20px;letter-spacing:.28em;}
-  .logo-sub-text{font-size:6px;letter-spacing:.5em;}
+  .nav-logo img{height:52px;}
+}
+
+/* ── FOOTER ── */
+footer{background:var(--ow);padding:64px 56px 36px;border-top:1px solid var(--bm);}
+.footer-logo{text-align:center;margin-bottom:48px;}
+.footer-logo img{height:72px;width:auto;display:block;margin:0 auto;mix-blend-mode:multiply;}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:48px;}
+.footer-col-title{font-size:8.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--wg);margin-bottom:18px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.footer-links a{font-size:12.5px;color:var(--chr);text-decoration:none;transition:color .2s,padding-left .2s;display:inline-block;}
+.footer-links a:hover{color:var(--blk);padding-left:6px;}
+.footer-bottom{border-top:1px solid var(--bm);padding-top:24px;display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-size:10px;letter-spacing:.1em;color:var(--wg);}
+.footer-soc{display:flex;gap:20px;}
+.footer-soc a{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--wg);text-decoration:none;transition:color .2s,letter-spacing .2s;}
+.footer-soc a:hover{color:var(--blk);letter-spacing:.36em;}
+@media(max-width:900px){
+  footer{padding:52px 20px 28px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .footer-bottom{flex-direction:column;gap:16px;text-align:center;}
 }
 
 </style>
 </head>
 <body>
+<!-- NAV -->
 <nav>
   <div class="nav-shell">
     <ul class="nav-left">
@@ -152,9 +142,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
       <li><a href="toptips.html">Top Tips</a></li>
     </ul>
     <a href="index.html" class="nav-logo">
-      <span class="logo-word">Essence</span>
-      <div class="logo-rule"></div>
-      <span class="logo-sub-text">Hair Treatment</span>
+      <img src="essencelogo.jpg" alt="Essence Hair Treatment" />
     </a>
     <ul class="nav-right">
       <li><a href="gallery.html">Gallery</a></li>
@@ -187,7 +175,7 @@ function toggleMenu(){
 </script>
 
 <div class="page-hero">
-  <div class="ph-img"><img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1600&q=85" alt="Services"/></div>
+  <div class="ph-img"><img src="1000076203.jpg" alt="Services"/></div>
   <div class="ph-ov"></div>
   <div class="ph-content">
     <div class="ph-tag">What We Offer</div>
@@ -206,35 +194,43 @@ function toggleMenu(){
 <!-- COLOUR -->
 <section class="svc-section" id="colour">
   <div class="sec-head">
-    <div class="sh-left"><div class="st">Colour Services</div><h2>Balayage &amp; <em>Colour</em></h2></div>
+    <div class="sh-left"><div class="st">Colour Services</div><h2><em>Colour Services</em></h2></div>
     <div class="sh-right">Expert colour techniques that enhance your natural beauty and grow out effortlessly. All colour services include a bonding treatment for integrity and shine.</div>
   </div>
-  <div class="feat-card">
-    <div class="feat-img"><img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=800&q=85" alt="Balayage"/></div>
-    <div class="feat-content">
-      <div class="svc-num">01 — Signature Service</div>
-      <h2 class="svc-name">Balayage</h2>
-      <p class="svc-desc">A freehand hair colouring technique that creates a natural, sun-kissed look with soft, blended highlights. Ideal for those seeking low-maintenance colour that gradually fades from dark to light — no harsh regrowth lines, no heavy upkeep.</p>
-      <p class="svc-desc">We work with your natural base to create something that genuinely looks like you were born with it.</p>
-      <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Balayage →</a>
-    </div>
-  </div>
-  <div class="two-grid" style="margin-top:3px;">
-    <div class="grid-card">
-      <div class="gc-img"><img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=600&q=80" alt="Highlights"/></div>
-      <div class="gc-content">
-        <div class="svc-num">02</div>
-        <h3 class="svc-name" style="font-size:22px;">Highlights &amp; <em>Toning</em></h3>
-        <p class="svc-desc">Precision highlights to add depth, dimension, and brightness — customised to your skin tone. Paired with professional toning to neutralise brassiness and deliver a polished, true-to-tone finish.</p>
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076204.jpg" alt="Balayage"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">01</div>
+        <h3 class="svc-name"><em>Balayage</em></h3>
+        <p class="svc-desc">A freehand technique creating a natural, sun-kissed look with soft blended highlights. Low-maintenance colour with no harsh regrowth lines.</p>
         <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
       </div>
     </div>
-    <div class="grid-card">
-      <div class="gc-img"><img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=600&q=80" alt="Colour correction"/></div>
-      <div class="gc-content">
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076203.jpg" alt="Highlights"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">02</div>
+        <h3 class="svc-name"><em>Highlights</em></h3>
+        <p class="svc-desc">Precision highlights to add depth, dimension, and brightness — customised to your skin tone and hair type for a seamless, natural finish.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076198.jpg" alt="Tint"/></div>
+      <div class="svc-card-body">
         <div class="svc-num">03</div>
-        <h3 class="svc-name" style="font-size:22px;">Colour Correction &amp; <em>Grey Coverage</em></h3>
-        <p class="svc-desc">Restoring previous colour mistakes or uneven tones, ensuring a flawless and vibrant result. Also includes seamless grey root coverage — blending naturally with your existing colour.</p>
+        <h3 class="svc-name"><em>Tint</em></h3>
+        <p class="svc-desc">Full head or root tint for rich, all-over colour. Bespoke shade mixing to achieve your perfect tone with lasting vibrancy.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076209.jpg" alt="Grey Coverage"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">04</div>
+        <h3 class="svc-name">Grey <em>Coverage</em></h3>
+        <p class="svc-desc">Seamless grey root coverage blending naturally with your existing colour. Long-lasting results that grow out gracefully without harsh lines.</p>
         <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
       </div>
     </div>
@@ -244,34 +240,34 @@ function toggleMenu(){
 <!-- TREATMENTS -->
 <section class="svc-section bg-beige" id="treatments">
   <div class="sec-head">
-    <div class="sh-left"><div class="st">Hair Treatments</div><h2>Smoothing &amp; <em>Restoration</em></h2></div>
+    <div class="sh-left"><div class="st">Hair Treatments</div><h2>&amp; <em>Restoration</em></h2></div>
     <div class="sh-right">100% organic and formaldehyde-free treatments that deliver lasting, transformative results without compromising the health of your hair.</div>
   </div>
-  <div class="three-grid">
-    <div class="grid-card">
-      <div class="gc-img"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Nanoplastia"/></div>
-      <div class="gc-content">
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076209.jpg" alt="Nanoplastia"/></div>
+      <div class="svc-card-body">
         <div class="svc-num">01 — Organic · Formaldehyde-Free</div>
-        <h3 class="svc-name" style="font-size:22px;"><em>Nanoplastia</em></h3>
-        <p class="svc-desc">Works at a molecular level to deeply hydrate and smooth the hair shaft. Reduces frizz while preserving your natural curl pattern — silky, manageable, and genuinely transformative. Safe for all hair types including colour-treated hair.</p>
+        <h3 class="svc-name"><em>Nanoplastia</em></h3>
+        <p class="svc-desc">Works at a molecular level to deeply hydrate and smooth the hair shaft. Reduces frizz while preserving your natural curl pattern. Safe for all hair types including colour-treated hair.</p>
         <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Treatment →</a>
       </div>
     </div>
-    <div class="grid-card">
-      <div class="gc-img"><img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&q=80" alt="Keratin"/></div>
-      <div class="gc-content">
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076208.jpg" alt="Keratin"/></div>
+      <div class="svc-card-body">
         <div class="svc-num">02 — Organic · Formaldehyde-Free</div>
-        <h3 class="svc-name" style="font-size:22px;">Keratin <em>Treatment</em></h3>
-        <p class="svc-desc">Replenishes the hair's natural protein structure — eliminating frizz, adding extraordinary shine, and leaving hair smooth and effortlessly manageable. Our organic formula is completely free from formaldehyde.</p>
+        <h3 class="svc-name">Keratin <em>Treatment</em></h3>
+        <p class="svc-desc">Replenishes the hair's natural protein structure — eliminating frizz, adding extraordinary shine, and leaving hair smooth and effortlessly manageable.</p>
         <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Treatment →</a>
       </div>
     </div>
-    <div class="grid-card">
-      <div class="gc-img"><img src="https://images.unsplash.com/photo-1522338140262-f46f5913618a?w=600&q=80" alt="Hair Botox"/></div>
-      <div class="gc-content">
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076207.jpg" alt="Hair Botox"/></div>
+      <div class="svc-card-body">
         <div class="svc-num">03 — Deep Restoration</div>
-        <h3 class="svc-name" style="font-size:22px;">Hair <em>Botox</em></h3>
-        <p class="svc-desc">An intensive treatment that fills damaged gaps in the hair shaft, rebuilding volume, softness, and smoothness from within. Ideal for over-processed or colour-damaged hair. Zero formaldehyde, lasting results.</p>
+        <h3 class="svc-name">Hair <em>Botox</em></h3>
+        <p class="svc-desc">An intensive treatment that fills damaged gaps in the hair shaft, rebuilding volume, softness, and smoothness from within. Ideal for over-processed or colour-damaged hair.</p>
         <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Treatment →</a>
       </div>
     </div>
@@ -284,18 +280,33 @@ function toggleMenu(){
     <div class="sh-left"><div class="st">Wellness</div><h2>Head Spa &amp; <em>Scalp Care</em></h2></div>
     <div class="sh-right">Therapeutic rituals tailored to your specific scalp concern. Using argan oil, amino acid, and aloe-infused formulas to restore balance from root to tip.</div>
   </div>
-  <div class="split">
-    <div class="split-img"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80" alt="Head spa"/></div>
-    <div class="split-content">
-      <div class="svc-num">— Tailored to You</div>
-      <h2 class="svc-name">Scalp <em>Health</em></h2>
-      <p class="svc-desc" style="margin-bottom:0;">Each Head Spa treatment begins with a thorough scalp analysis. We address the root cause of your concern — not just the symptoms.</p>
-      <div class="concerns">
-        <div class="concern"><div class="c-title">Thinning Hair &amp; Hair Loss</div><div class="c-body">Scalp Detox · Hair Growth Stimulation Therapy · Micronutrient Infusion with amino acids.</div></div>
-        <div class="concern"><div class="c-title">Dandruff &amp; Itchy Scalp</div><div class="c-body">Hydrating Scalp Masks with aloe vera · Exfoliating Scalp Treatment to remove build-up.</div></div>
-        <div class="concern"><div class="c-title">Dry &amp; Damaged Hair</div><div class="c-body">Deep Conditioning with argan oil · Hot Oil Treatment · Steam Treatment for deep hydration.</div></div>
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076199.jpg" alt="Head spa"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">01 — Thinning &amp; Hair Loss</div>
+        <h3 class="svc-name">Scalp <em>Detox</em></h3>
+        <p class="svc-desc">Scalp Detox · Hair Growth Stimulation Therapy · Micronutrient Infusion with amino acids to stimulate and nourish from the root.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
       </div>
-      <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Head Spa →</a>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076197.jpg" alt="Scalp treatment"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">02 — Dandruff &amp; Itchy Scalp</div>
+        <h3 class="svc-name">Scalp <em>Hydration</em></h3>
+        <p class="svc-desc">Hydrating Scalp Masks with aloe vera · Exfoliating Scalp Treatment to remove build-up and restore comfort.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076195.jpg" alt="Deep conditioning"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">03 — Dry &amp; Damaged Hair</div>
+        <h3 class="svc-name">Deep <em>Conditioning</em></h3>
+        <p class="svc-desc">Deep Conditioning with argan oil · Hot Oil Treatment · Steam Treatment for deep hydration and restored softness.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -306,19 +317,34 @@ function toggleMenu(){
     <div class="sh-left"><div class="st">Everyday Luxury</div><h2>Cut, Blow Dry &amp; <em>Style</em></h2></div>
     <div class="sh-right">A full wash, expert cut, and style tailored precisely to your hair type and preferred finish — bouncy, sleek, or waves.</div>
   </div>
-  <div class="split">
-    <div class="split-content" style="background:var(--beige);">
-      <div class="svc-num">— What's Included</div>
-      <h2 class="svc-name">Your Perfect <em>Finish</em></h2>
-      <ul class="svc-list" style="margin-bottom:28px;">
-        <li>Professional wash with salon-grade products and relaxing head massage</li>
-        <li>Expert cut tailored to your face shape and hair texture</li>
-        <li>Blow dry to your preferred finish — bouncy, straight, or wave</li>
-        <li>Style advice and product recommendations for at-home care</li>
-      </ul>
-      <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Cut &amp; Style →</a>
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076208.jpg" alt="Cut &amp; Blowdry"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">01</div>
+        <h3 class="svc-name">Cut &amp; <em>Blow Dry</em></h3>
+        <p class="svc-desc">Expert cut tailored to your face shape and hair texture, finished with a blow dry to your preferred style — bouncy, sleek, or waves.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
+      </div>
     </div>
-    <div class="split-img"><img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800&q=80" alt="Blowdry"/></div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076209.jpg" alt="Wash &amp; Style"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">02</div>
+        <h3 class="svc-name">Wash &amp; <em>Style</em></h3>
+        <p class="svc-desc">Professional wash with salon-grade products and a relaxing scalp massage, followed by a full style finish of your choice.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076210.jpg" alt="Consultation"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">03</div>
+        <h3 class="svc-name">Style <em>Consultation</em></h3>
+        <p class="svc-desc">Not sure what suits you? Book a consultation for personalised style advice, product recommendations, and a tailored hair plan.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -328,20 +354,33 @@ function toggleMenu(){
     <div class="sh-left"><div class="st">Volume &amp; Length</div><h2>Tape Hair <em>Extensions</em></h2></div>
     <div class="sh-right">Lightweight, virtually invisible extensions that move exactly like your own hair. Applied with medical-grade adhesive for a seamless, natural-looking blend.</div>
   </div>
-  <div class="split">
-    <div class="split-img"><img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?w=800&q=80" alt="Extensions"/></div>
-    <div class="split-content">
-      <div class="svc-num">— Semi-Permanent</div>
-      <h2 class="svc-name">Seamless <em>Length</em></h2>
-      <p class="svc-desc">Tape hair extensions are made with high-quality, natural-looking hair and applied using medical-grade adhesive that lies flat against the scalp — completely undetectable even when your hair is up.</p>
-      <ul class="svc-list" style="margin-bottom:28px;">
-        <li>Medical-grade adhesive — gentle on your natural hair</li>
-        <li>Available in a full range of shades and lengths</li>
-        <li>Can be worn up, down, or in any style</li>
-        <li>Reusable and repositionable at maintenance visits</li>
-        <li>Lasts 6–8 weeks between appointments</li>
-      </ul>
-      <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Consultation →</a>
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076195.jpg" alt="Extensions"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">01 — Semi-Permanent</div>
+        <h3 class="svc-name">Hair<em>Extensions</em></h3>
+        <p class="svc-desc">Applied with medical-grade adhesive that lies flat against the scalp — completely undetectable even when your hair is up. Lasts 6–8 weeks between appointments.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076197.jpg" alt="Extension fitting"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">02 — Volume &amp; Length</div>
+        <h3 class="svc-name">Fitting &amp; <em>Blend</em></h3>
+        <p class="svc-desc">Available in a full range of shades and lengths. Can be worn up, down, or in any style. Reusable and repositionable at maintenance visits.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Now →</a>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-img"><img src="1000076211.jpg" alt="Extension consultation"/></div>
+      <div class="svc-card-body">
+        <div class="svc-num">03 — First Time?</div>
+        <h3 class="svc-name">Extension <em>Consultation</em></h3>
+        <p class="svc-desc">New to extensions? Start with a consultation to match your shade, discuss length goals, and get a full rundown of aftercare and maintenance.</p>
+        <a href="https://bookings.gettimely.com/essencehairtreatment/bb/book" class="book-link" target="_blank">Book Consultation →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -353,14 +392,56 @@ function toggleMenu(){
 </div>
 
 <footer>
-  <div class="footer-logo-wrap"><div class="f-logo-word">Essence</div><div class="f-logo-sub">Hair Treatment · Luton</div></div>
-  <div class="footer-grid">
-    <div><div class="footer-col-title">Services</div><ul class="footer-links"><li><a href="services.html">Balayage &amp; Colour</a></li><li><a href="services.html">Hair Treatments</a></li><li><a href="services.html">Head Spa</a></li><li><a href="services.html">Cut &amp; Style</a></li><li><a href="services.html">Extensions</a></li></ul></div>
-    <div><div class="footer-col-title">Info</div><ul class="footer-links"><li><a href="toptips.html">Top Tips</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="academy.html">Essence Academy</a></li></ul></div>
-    <div><div class="footer-col-title">Academy</div><ul class="footer-links"><li><a href="academy.html">Balayage Masterclass</a></li><li><a href="academy.html">Keratin Course</a></li><li><a href="academy.html">All Courses</a></li></ul></div>
-    <div><div class="footer-col-title">Contact</div><ul class="footer-links"><li><a href="tel:+447375956131">07375 956 131</a></li><li><a>WhatsApp</a></li><li><a>33 Hasketon Drive, Luton</a></li></ul></div>
+  <div class="footer-logo">
+    <img src="essencelogo.jpg" alt="Essence Hair Treatment" />
   </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2025 Essence Hair Treatment. All rights reserved.</span><div class="footer-soc"><a href="https://www.instagram.com/essence.keratin/" target="_blank">Instagram</a><a href="https://www.tiktok.com/@essencehairtreatment" target="_blank">TikTok</a><a href="https://www.facebook.com/essencekeratinluton" target="_blank">Facebook</a></div></div>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="services.html">Balayage &amp; Colour</a></li>
+        <li><a href="services.html">Hair Treatments</a></li>
+        <li><a href="services.html">Head Spa</a></li>
+        <li><a href="services.html">Cut &amp; Style</a></li>
+        <li><a href="services.html">Extensions</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Info</div>
+      <ul class="footer-links">
+        <li><a href="toptips.html">Top Tips</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="academy.html">Essence Academy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Academy</div>
+      <ul class="footer-links">
+        <li><a href="academy.html">Balayage Masterclass</a></li>
+        <li><a href="academy.html">Keratin Course</a></li>
+        <li><a href="academy.html">Advanced Colour</a></li>
+        <li><a href="academy.html">All Courses</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:+447375956131">07375 956 131</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">6 Woodmere, Luton</a></li>
+        <li><a href="#">Bedfordshire</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2025 Essence Hair Treatment. All rights reserved.</span>
+    <div class="footer-soc">
+      <a href="https://www.instagram.com/essence.keratin/" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@essencehairtreatment" target="_blank">TikTok</a>
+      <a href="https://www.facebook.com/essencekeratinluton" target="_blank">Facebook</a>
+    </div>
+  </div>
 </footer>
 <script>
 const tabs=document.querySelectorAll('.stab'),secs=document.querySelectorAll('section[id]');
