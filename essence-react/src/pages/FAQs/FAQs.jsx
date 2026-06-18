@@ -23,7 +23,15 @@ const FAQ_GROUPS = [
       },
       {
         q: 'What is your cancellation policy?',
-        a: 'Please give as much notice as possible if you need to cancel or reschedule. Late cancellations or no-shows may result in your deposit being retained. We appreciate your understanding — last-minute gaps are difficult to fill in a small business.',
+        a: 'No cancellations or changes are allowed within 2 days of the appointment. A minimum of 48 hours notice is required to cancel or rearrange. Failure to give sufficient notice will result in your deposit being forfeited, and a new deposit will be required to book again.',
+      },
+      {
+        q: 'What happens if I am late?',
+        a: 'If you are more than 10 minutes late, a £10 late fee will be charged. If you are 20 minutes or more late, your appointment may be cancelled. A new deposit will then be required to rebook.',
+      },
+      {
+        q: 'How do I pay?',
+        a: 'All payments on the day must be made in cash. Full payment is required before leaving your appointment.',
       },
     ],
   },
@@ -58,6 +66,10 @@ const FAQ_GROUPS = [
         q: 'How long does colour last?',
         a: "Balayage typically needs refreshing every 3–5 months. Regular toner appointments every 6–8 weeks will keep the tone looking fresh. We'll give you personalised aftercare advice after every service.",
       },
+      {
+        q: 'Can you guarantee my colour results?',
+        a: 'Whilst we provide expert treatments using only the best products, colour results can vary between individuals and cannot be guaranteed. We do not offer refunds if results fail to meet expectations. We always carry out a thorough consultation beforehand to align on what is achievable for your hair.',
+      },
     ],
   },
   {
@@ -81,6 +93,10 @@ const FAQ_GROUPS = [
         q: 'Can I have a smoothing treatment on coloured hair?',
         a: "Yes — our organic treatments are safe for colour-treated hair. We recommend having colour done before your smoothing treatment, not after. We always assess your hair's condition before proceeding.",
       },
+      {
+        q: 'Are results guaranteed?',
+        a: 'Treatment results vary depending on individual hair type and condition. Aftercare instructions must be strictly followed to maintain results. We do not offer refunds where results vary due to hair type or failure to follow aftercare guidance.',
+      },
     ],
   },
   {
@@ -95,6 +111,10 @@ const FAQ_GROUPS = [
       {
         q: 'Will extensions damage my natural hair?',
         a: 'When applied correctly and maintained properly, tape extensions cause no damage to natural hair. We use medical-grade adhesive that is gentle on the hair shaft, and always assess your hair condition before fitting.',
+      },
+      {
+        q: 'What is the aftercare and warranty policy for extensions?',
+        a: 'Aftercare instructions must be strictly followed. Maintenance appointments must be booked within the provided time frame. Self-removal of extensions will invalidate any warranty on the hair.',
       },
     ],
   },

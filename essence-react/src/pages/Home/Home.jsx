@@ -170,7 +170,7 @@ export default function Home() {
           <div style={{display:'flex',flexDirection:'column',gap:'20px',marginBottom:'36px'}}>
             <div className="cs-detail"><div className="cs-detail-icon">📍</div><div className="cs-detail-text"><strong>Address</strong>6 Woodmere, Luton, Bedfordshire · Free street parking available</div></div>
             <div className="cs-detail"><div className="cs-detail-icon">📞</div><div className="cs-detail-text"><strong>Phone / WhatsApp</strong><a href="tel:+447375956131">07375 956 131</a></div></div>
-            <div className="cs-detail"><div className="cs-detail-icon">🕐</div><div className="cs-detail-text"><strong>Booking</strong>By appointment only. 4 weeks notice min, 6 for Saturdays. Deposit required to confirm.</div></div>
+            <div className="cs-detail"><div className="cs-detail-icon">🕐</div><div className="cs-detail-text"><strong>Booking</strong>By appointment only. 4 weeks notice min, 6 for Saturdays. Deposit required to confirm. Cash payments only on the day.</div></div>
           </div>
           <a href={BOOK_URL} className="btn-blk" target="_blank" rel="noreferrer">Book Online</a>
         </div>
