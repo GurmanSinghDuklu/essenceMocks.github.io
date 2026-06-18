@@ -1,0 +1,65 @@
+/* ── TopTips page ── */
+
+/* HERO */
+.tt-hero { height: 60vh; min-height: 420px; position: relative; overflow: hidden; display: flex; align-items: flex-end; }
+.tt-ph-img { position: absolute; inset: 0; }
+.tt-ph-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.tt-ph-ov { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,.65) 0%, rgba(10,10,10,.1) 60%, transparent 100%); }
+.tt-ph-content { position: relative; z-index: 1; padding: 0 56px 72px; }
+.tt-ph-tag { font-size: 9px; letter-spacing: .5em; text-transform: uppercase; color: rgba(255,255,255,.65); margin-bottom: 14px; }
+.tt-ph-title { font-family: 'Playfair Display', serif; font-size: clamp(44px, 5.5vw, 70px); font-weight: 300; color: #fff; line-height: 1.05; }
+.tt-ph-title em { font-style: italic; }
+
+/* TIPS GRID */
+.tt-section { padding: 88px 56px; }
+.tt-section.bg-off { background: #FAF8F5; }
+.tt-section.bg-wh { background: #fff; }
+
+.tt-inner { max-width: 960px; margin: 0 auto; }
+
+.tt-card { display: grid; grid-template-columns: 72px 1fr; gap: 0 40px; padding: 56px 0; border-bottom: 1px solid #E8E0D6; }
+.tt-card:first-child { padding-top: 0; }
+.tt-card:last-child { border-bottom: none; padding-bottom: 0; }
+
+.tt-num { font-family: 'Playfair Display', serif; font-size: clamp(42px, 5vw, 64px); font-weight: 300; color: #E8E0D6; line-height: 1; padding-top: 4px; }
+
+.tt-body {}
+.tt-card-tag { font-size: 8.5px; letter-spacing: .52em; text-transform: uppercase; color: #9A9087; margin-bottom: 14px; }
+.tt-card-title { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.4vw, 32px); font-weight: 300; line-height: 1.12; margin-bottom: 20px; color: #0a0a0a; }
+.tt-card-title em { font-style: italic; }
+.tt-card-body { font-size: 14px; line-height: 1.88; color: #2d2d2d; margin-bottom: 16px; }
+.tt-card-body a { color: #0a0a0a; }
+
+.tt-list { list-style: none; margin: 0 0 16px; }
+.tt-list li { font-size: 13.5px; line-height: 1.78; color: #2d2d2d; display: flex; gap: 14px; padding: 13px 0; border-bottom: 1px solid #E8E0D6; }
+.tt-list li:first-child { border-top: 1px solid #E8E0D6; }
+.tt-list li::before { content: '—'; color: #9A9087; flex-shrink: 0; margin-top: 2px; }
+
+.tt-note { background: #fff; border-left: 2px solid #0a0a0a; padding: 16px 22px; font-size: 13px; line-height: 1.75; color: #9A9087; margin-top: 16px; }
+.tt-note strong { color: #0a0a0a; }
+
+/* Aftercare cards */
+.tt-ac-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #D4C9BB; margin-top: 24px; }
+.tt-ac-card { background: #fff; padding: 36px 28px; }
+.tt-ac-icon { font-size: 22px; margin-bottom: 14px; }
+.tt-ac-title { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; margin-bottom: 12px; color: #0a0a0a; }
+.tt-ac-items { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.tt-ac-items li { font-size: 12.5px; line-height: 1.7; color: #2d2d2d; display: flex; gap: 9px; }
+.tt-ac-items li::before { content: '—'; color: #9A9087; flex-shrink: 0; }
+
+/* CTA */
+.tt-cta { background: #0a0a0a; padding: 80px 56px; display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+.tt-cta h3 { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.5vw, 34px); font-weight: 300; color: #fff; }
+.tt-cta h3 em { font-style: italic; color: #F2EDE6; }
+.tt-cta-btn { font-size: 9px; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; background: #fff; color: #0a0a0a; padding: 13px 34px; text-decoration: none; transition: all .25s; display: inline-block; white-space: nowrap; }
+.tt-cta-btn:hover { background: #F2EDE6; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .tt-ph-content { padding: 0 20px 56px; }
+  .tt-section { padding: 56px 20px; }
+  .tt-card { grid-template-columns: 1fr; gap: 0; }
+  .tt-num { font-size: 36px; margin-bottom: 12px; }
+  .tt-ac-grid { grid-template-columns: 1fr; }
+  .tt-cta { flex-direction: column; text-align: center; padding: 56px 20px; }
+}

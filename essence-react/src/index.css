@@ -1,0 +1,26 @@
+:root {
+  --blk: #0a0a0a;
+  --off: #1a1a1a;
+  --chr: #2d2d2d;
+  --beige: #F2EDE6;
+  --bm: #E8E0D6;
+  --bd: #D4C9BB;
+  --wh: #FFFFFF;
+  --ow: #FAF8F5;
+  --wg: #9A9087;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--wh);
+  color: var(--blk);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+.reveal.revealed { opacity: 1; transform: none; }
+.reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity .65s ease, transform .65s ease; }
+.reveal-left.revealed { opacity: 1; transform: none; }
