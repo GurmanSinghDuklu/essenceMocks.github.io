@@ -8,6 +8,7 @@ import Gallery from './pages/Gallery/Gallery.jsx'
 import TopTips from './pages/TopTips/TopTips.jsx'
 import FAQs from './pages/FAQs/FAQs.jsx'
 import Academy from './pages/Academy/Academy.jsx'
+import Privacy from './pages/Privacy/Privacy.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/top-tips" element={<TopTips />} />
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/academy" element={<Academy />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
       <Footer />
     </>

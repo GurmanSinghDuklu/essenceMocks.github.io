@@ -1,0 +1,36 @@
+.privacy-hero { background: #0a0a0a; padding: 96px 56px 72px; }
+.privacy-hero-tag { font-size: 9px; letter-spacing: .5em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 16px; }
+.privacy-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px,5vw,64px); font-weight: 300; color: #fff; line-height: 1.05; }
+.privacy-hero h1 em { font-style: italic; }
+
+.privacy-body { max-width: 800px; margin: 0 auto; padding: 80px 56px; }
+
+.privacy-intro { font-size: 14px; line-height: 1.9; color: #2d2d2d; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid #E8E0D6; }
+
+.privacy-section { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid #E8E0D6; }
+.privacy-section:last-child { border-bottom: none; margin-bottom: 0; }
+
+.ps-tag { font-size: 8px; letter-spacing: .48em; text-transform: uppercase; color: #9A9087; margin-bottom: 10px; }
+.ps-title { font-family: 'Playfair Display', serif; font-size: clamp(20px,2.2vw,28px); font-weight: 300; margin-bottom: 20px; line-height: 1.15; }
+.ps-title em { font-style: italic; }
+.ps-body { font-size: 13.5px; line-height: 1.9; color: #2d2d2d; }
+.ps-body p { margin-bottom: 14px; }
+.ps-body p:last-child { margin-bottom: 0; }
+.ps-body ul { list-style: none; margin: 12px 0; display: flex; flex-direction: column; gap: 8px; }
+.ps-body ul li { display: flex; gap: 12px; font-size: 13.5px; color: #2d2d2d; line-height: 1.7; }
+.ps-body ul li::before { content: '—'; color: #D4C9BB; flex-shrink: 0; margin-top: 2px; }
+
+.privacy-highlight { background: #F2EDE6; padding: 20px 24px; margin: 20px 0; font-size: 13px; line-height: 1.8; color: #2d2d2d; border-left: 2px solid #0a0a0a; }
+
+.privacy-contact { background: #0a0a0a; padding: 64px 56px; text-align: center; }
+.privacy-contact h3 { font-family: 'Playfair Display', serif; font-size: clamp(22px,2.5vw,32px); font-weight: 300; color: #fff; margin-bottom: 12px; }
+.privacy-contact h3 em { font-style: italic; }
+.privacy-contact p { font-size: 13px; color: rgba(255,255,255,.55); margin-bottom: 28px; }
+.btn-wh { font-size: 9px; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; background: #fff; color: #0a0a0a; padding: 13px 34px; text-decoration: none; transition: all .25s; display: inline-block; }
+.btn-wh:hover { background: #F2EDE6; }
+
+@media (max-width: 768px) {
+  .privacy-hero { padding: 72px 20px 52px; }
+  .privacy-body { padding: 56px 20px; }
+  .privacy-contact { padding: 56px 20px; }
+}

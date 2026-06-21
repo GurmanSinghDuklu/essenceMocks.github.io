@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span className="footer-copy">&copy; 2026 Essence Hair Treatment. All rights reserved.</span>
+        <span className="footer-copy">&copy; 2026 Essence Hair Treatment. All rights reserved. · <Link to="/privacy" style={{color:'inherit',textDecoration:'none'}}>Privacy &amp; Policies</Link></span>
         <div className="footer-soc">
           <a href="https://www.instagram.com/essence.hairtreatment/" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://www.tiktok.com/@essencehairtreatment" target="_blank" rel="noreferrer">TikTok</a>
