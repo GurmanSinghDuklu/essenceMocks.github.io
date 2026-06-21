@@ -51,7 +51,7 @@ export default function Academy() {
           <div className="ac-pi">
             <div className="ac-pi-icon">🏅</div>
             <div className="ac-pi-title">ABT Accredited</div>
-            <p className="ac-pi-body">Every course carries full ABT accreditation — accepted by UK insurance providers and employers.</p>
+            <p className="ac-pi-body">Every course carries full ABT accreditation — Insurance discounts with ABT available</p>
           </div>
           <div className="ac-pi">
             <div className="ac-pi-icon">👁</div>
@@ -198,6 +198,7 @@ export default function Academy() {
           <a href={BOOK_URL} className="ac-btn-blk" target="_blank" rel="noreferrer">Enrol Now</a>
           <a href={BOOK_URL} className="ac-btn-outline" target="_blank" rel="noreferrer">Book Free Consultation</a>
         </div>
+        <p style={{fontSize:'11px',letterSpacing:'.18em',textTransform:'uppercase',color:'#9A9087',marginTop:'20px'}}>Price list available on request</p>
       </section>
     </main>
   )

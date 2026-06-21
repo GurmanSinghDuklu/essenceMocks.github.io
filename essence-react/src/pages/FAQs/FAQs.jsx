@@ -194,6 +194,7 @@ export default function FAQs() {
           <a href="tel:+447375956131" className="btn-wh">Call 07375 956 131</a>
           <a href={BOOK_URL} className="btn-wh btn-wh--outline" target="_blank" rel="noreferrer">Book Online</a>
         </div>
+        <p style={{fontSize:'11px',letterSpacing:'.18em',textTransform:'uppercase',color:'rgba(255,255,255,.3)',marginTop:'16px',width:'100%',textAlign:'center'}}>Price list available on request</p>
       </div>
     </main>
   )

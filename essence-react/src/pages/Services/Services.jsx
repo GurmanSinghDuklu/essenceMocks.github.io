@@ -106,6 +106,7 @@ export default function Services() {
         <h2>Ready for your <em>transformation?</em></h2>
         <p>Book online or WhatsApp us to discuss your treatment. Deposit required to confirm your appointment.</p>
         <a href={BOOK_URL} className="btn-wh" target="_blank" rel="noreferrer">Book Now</a>
+        <p style={{fontSize:'11px',letterSpacing:'.18em',textTransform:'uppercase',color:'rgba(255,255,255,.35)',marginTop:'16px'}}>Price list available on request</p>
       </div>
     </main>
   )

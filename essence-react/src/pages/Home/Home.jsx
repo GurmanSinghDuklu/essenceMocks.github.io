@@ -173,6 +173,7 @@ export default function Home() {
             <div className="cs-detail"><div className="cs-detail-icon">🕐</div><div className="cs-detail-text"><strong>Booking</strong>Appointments can be made via the booking link, or by calling/WhatsApp: <a href="tel:+447375956131">07375 956 131</a>. A deposit is required to confirm.</div></div>
           </div>
           <a href={BOOK_URL} className="btn-blk" target="_blank" rel="noreferrer">Book Online</a>
+          <p style={{fontSize:'11px',letterSpacing:'.18em',textTransform:'uppercase',color:'#9A9087',marginTop:'12px'}}>Price list available on request</p>
         </div>
         <div className="cs-map">
           <iframe
