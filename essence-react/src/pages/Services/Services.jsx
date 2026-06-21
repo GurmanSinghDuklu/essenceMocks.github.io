@@ -69,10 +69,8 @@ export default function Services() {
           <div className="sh-left"><div className="st">Wellness</div><h2>Head Spa &amp; <em>Scalp Care</em></h2></div>
           <div className="sh-right">Therapeutic rituals tailored to your specific scalp concern. Using argan oil, amino acid, and aloe-infused formulas to restore balance from root to tip.</div>
         </div>
-        <div className="svc-grid">
-          <ServiceCard num="01 — Thinning & Hair Loss" img="/1000076199.jpg" alt="Head spa" name={<>Scalp <em>Detox</em></>} desc="Scalp Detox · Hair Growth Stimulation Therapy · Micronutrient Infusion with amino acids to stimulate and nourish from the root." />
-          <ServiceCard num="02 — Dandruff & Itchy Scalp" img="/1000076197.jpg" alt="Scalp treatment" name={<>Scalp <em>Hydration</em></>} desc="Hydrating Scalp Masks with aloe vera · Exfoliating Scalp Treatment to remove build-up and restore comfort." />
-          <ServiceCard num="03 — Dry & Damaged Hair" img="/1000076195.jpg" alt="Deep conditioning" name={<>Deep <em>Conditioning</em></>} desc="Deep Conditioning with argan oil · Hot Oil Treatment · Steam Treatment for deep hydration and restored softness." />
+        <div className="svc-grid" style={{gridTemplateColumns:'1fr'}}>
+          <ServiceCard num="01" img="/1000076199.jpg" alt="Head spa" name={<>Head <em>Spa</em></>} desc="A therapeutic scalp and hair ritual tailored to your specific needs — from hair growth stimulation and scalp detox to deep conditioning and hydration. Using argan oil, amino acid, and aloe-infused formulas to restore balance from root to tip." />
         </div>
       </section>
 
@@ -82,10 +80,9 @@ export default function Services() {
           <div className="sh-left"><div className="st">Everyday Luxury</div><h2>Cut, Blow Dry &amp; <em>Style</em></h2></div>
           <div className="sh-right">A full wash, expert cut, and style tailored precisely to your hair type and preferred finish — bouncy, sleek, or waves.</div>
         </div>
-        <div className="svc-grid">
+        <div className="svc-grid" style={{gridTemplateColumns:'1fr 1fr'}}>
           <ServiceCard num="01" img="/1000076208.jpg" alt="Cut & Blowdry" name={<>Cut &amp; <em>Blow Dry</em></>} desc="Expert cut tailored to your face shape and hair texture, finished with a blow dry to your preferred style — bouncy, sleek, or waves." />
           <ServiceCard num="02" img="/1000076209.jpg" alt="Wash & Style" name={<>Wash &amp; <em>Style</em></>} desc="Professional wash with salon-grade products and a relaxing scalp massage, followed by a full style finish of your choice." />
-          <ServiceCard num="03" img="/1000076210.jpg" alt="Consultation" name={<>Style <em>Consultation</em></>} desc="Not sure what suits you? Book a consultation for personalised style advice, product recommendations, and a tailored hair plan." />
         </div>
       </section>
 
@@ -95,10 +92,9 @@ export default function Services() {
           <div className="sh-left"><div className="st">Volume &amp; Length</div><h2>Tape Hair <em>Extensions</em></h2></div>
           <div className="sh-right">Lightweight, virtually invisible extensions that move exactly like your own hair. Applied with medical-grade adhesive for a seamless, natural-looking blend.</div>
         </div>
-        <div className="svc-grid">
+        <div className="svc-grid" style={{gridTemplateColumns:'1fr 1fr'}}>
           <ServiceCard num="01 — Semi-Permanent" img="/1000076195.jpg" alt="Extensions" name={<>Hair <em>Extensions</em></>} desc="Applied with medical-grade adhesive that lies flat against the scalp — completely undetectable even when your hair is up. Lasts 6–8 weeks between appointments." />
-          <ServiceCard num="02 — Volume & Length" img="/1000076197.jpg" alt="Extension fitting" name={<>Fitting &amp; <em>Blend</em></>} desc="Available in a full range of shades and lengths. Can be worn up, down, or in any style. Reusable and repositionable at maintenance visits." />
-          <ServiceCard num="03 — First Time?" img="/1000076211.jpg" alt="Extension consultation" name={<>Extension <em>Consultation</em></>} desc="New to extensions? Start with a consultation to match your shade, discuss length goals, and get a full rundown of aftercare and maintenance." />
+          <ServiceCard num="02 — First Time?" img="/1000076211.jpg" alt="Extension consultation" name={<>Extension <em>Consultation</em></>} desc="New to extensions? Start with a consultation to match your shade, discuss length goals, and get a full rundown of aftercare and maintenance." />
         </div>
       </section>
 
