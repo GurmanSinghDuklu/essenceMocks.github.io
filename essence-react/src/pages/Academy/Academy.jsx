@@ -1,6 +1,7 @@
 import './Academy.css'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
+const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue'
 
 function CourseCard({ num, tag, name, desc, duration, investment, certification, extra, extraVal, bookHref }) {
   return (
@@ -78,7 +79,7 @@ export default function Academy() {
             <div className="ac-sec-tag">Our Courses</div>
             <h2>Fully Accredited <em>Training</em></h2>
           </div>
-          <div className="ac-ci-r">Every course is delivered hands-on, 1-to-1 — real models, real products, real feedback with undivided attention throughout. All include a free shadowing day, extensive training manual, and ongoing online support. Not sure which course is right for you? <strong>Book a free consultation</strong> and we'll help you find the perfect fit.</div>
+          <div className="ac-ci-r">Every course is delivered hands-on, 1-to-1 — real models, real products, real feedback with undivided attention throughout. All include a free shadowing day, extensive training manual, and ongoing online support. Not sure which course is right for you? <a href={CONSULT_URL} target="_blank" rel="noreferrer" style={{color:'inherit'}}><strong>Book a free consultation</strong></a> and we'll help you find the perfect fit.</div>
         </div>
 
         <div className="ac-courses-grid">
@@ -196,7 +197,7 @@ export default function Academy() {
         <p className="ac-e-body">Every course is personal 1-to-1 training — undivided attention, real models, real results. All courses include materials, certificate, a free shadowing day, and ongoing online support. Payment plans available. Spaces are limited.</p>
         <div style={{display:'flex',gap:'16px',justifyContent:'center',flexWrap:'wrap'}}>
           <a href={BOOK_URL} className="ac-btn-blk" target="_blank" rel="noreferrer">Enrol Now</a>
-          <a href={BOOK_URL} className="ac-btn-outline" target="_blank" rel="noreferrer">Book Free Consultation</a>
+          <a href={CONSULT_URL} className="ac-btn-outline" target="_blank" rel="noreferrer">Book Free Consultation</a>
         </div>
         <p style={{fontSize:'11px',letterSpacing:'.18em',textTransform:'uppercase',color:'#9A9087',marginTop:'20px'}}>Price list available on request</p>
       </section>

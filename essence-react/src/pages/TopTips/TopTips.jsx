@@ -1,6 +1,7 @@
 import './TopTips.css';
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book';
+const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue';
 
 const TIPS = [
   {
@@ -15,7 +16,8 @@ const TIPS = [
     note: (
       <>
         <strong>Please note:</strong> Patch tests and consultations take no more than 5–10 minutes
-        and must be pre-booked. They cannot be carried out on the day of your appointment.
+        and must be pre-booked. They cannot be carried out on the day of your appointment.{' '}
+        <a href={CONSULT_URL} target="_blank" rel="noreferrer">Book your consultation here.</a>
       </>
     ),
   },

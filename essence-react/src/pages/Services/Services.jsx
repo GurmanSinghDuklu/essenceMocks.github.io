@@ -1,8 +1,9 @@
 import './Services.css'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
+const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue'
 
-function ServiceCard({ num, img, alt, name, desc }) {
+function ServiceCard({ num, img, alt, name, desc, href }) {
   return (
     <div className="svc-card">
       <div className="svc-card-img"><img src={img} alt={alt} /></div>
@@ -10,7 +11,7 @@ function ServiceCard({ num, img, alt, name, desc }) {
         <div className="svc-num">{num}</div>
         <h3 className="svc-name">{name}</h3>
         <p className="svc-desc">{desc}</p>
-        <a href={BOOK_URL} className="book-link" target="_blank" rel="noreferrer">Book Now →</a>
+        <a href={href || BOOK_URL} className="book-link" target="_blank" rel="noreferrer">Book Now →</a>
       </div>
     </div>
   )
@@ -94,7 +95,7 @@ export default function Services() {
         </div>
         <div className="svc-grid" style={{gridTemplateColumns:'1fr 1fr'}}>
           <ServiceCard num="01 — Semi-Permanent" img="/img-new-04.jpg" alt="Extensions" name={<>Hair <em>Extensions</em></>} desc="Applied with medical-grade adhesive that lies flat against the scalp — completely undetectable even when your hair is up. Lasts 6–8 weeks between appointments." />
-          <ServiceCard num="02 — First Time?" img="/img-new-20.jpg" alt="Extension consultation" name={<>Extension <em>Consultation</em></>} desc="New to extensions? Start with a consultation to match your shade, discuss length goals, and get a full rundown of aftercare and maintenance." />
+          <ServiceCard num="02 — First Time?" img="/img-new-20.jpg" alt="Extension consultation" name={<>Extension <em>Consultation</em></>} desc="New to extensions? Start with a consultation to match your shade, discuss length goals, and get a full rundown of aftercare and maintenance." href={CONSULT_URL} />
         </div>
       </section>
 

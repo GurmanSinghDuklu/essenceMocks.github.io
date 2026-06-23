@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './FAQs.css'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
+const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue'
 
 const FAQ_GROUPS = [
   {
@@ -129,7 +130,7 @@ const FAQ_GROUPS = [
       },
       {
         q: 'Do you offer consultations?',
-        a: 'Yes — consultations are required for new colour clients and available for all. They take 5–10 minutes and must be pre-booked. This is your opportunity to discuss your goals and ensure the right treatment is planned.',
+        a: <><a href={CONSULT_URL} target="_blank" rel="noreferrer">Book a consultation here</a> — required for new colour clients and available for all. They take 5–10 minutes and must be pre-booked. This is your opportunity to discuss your goals and ensure the right treatment is planned.</>,
       },
       {
         q: 'Do you offer training courses?',
