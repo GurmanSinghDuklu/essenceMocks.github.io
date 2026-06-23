@@ -4,19 +4,20 @@ const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const IG_URL = 'https://www.instagram.com/essence.hairtreatment/'
 
 const galleryImages = [
-  '/1000076199.jpg','/1000076203.jpg','/1000076195.jpg','/1000076204.jpg',
-  '/1000076197.jpg','/1000076198.jpg','/1000076207.jpg','/1000076208.jpg',
-  '/1000076209.jpg','/1000076211.jpg','/1000076212.jpg','/1000076200.jpg',
-  '/1000076201.jpg','/1000076202.jpg','/1000076210.jpg',
+  '/img-new-01.jpg','/img-new-02.jpg','/img-new-03.jpg','/img-new-04.jpg',
+  '/img-new-06.jpg','/img-new-07.jpg','/img-new-08.jpg','/img-new-09.jpg',
+  '/img-new-10.jpg','/img-new-11.jpg','/img-new-12.jpg','/img-new-14.jpg',
+  '/img-new-15.jpg','/img-new-16.jpg','/img-new-18.jpg','/img-new-19.jpg',
+  '/img-new-20.jpg','/1000076210.jpg',
 ]
 
-const igImages = ['/1000076203.jpg','/1000076204.jpg','/1000076199.jpg','/1000076209.jpg']
+const igImages = ['/img-new-19.jpg','/img-new-06.jpg','/img-new-01.jpg','/img-new-18.jpg']
 
 export default function Gallery() {
   return (
     <main>
       <div className="page-hero">
-        <div className="ph-img"><img src="/1000076204.jpg" alt="Gallery" /></div>
+        <div className="ph-img"><img src="/img-new-19.jpg" alt="Gallery" /></div>
         <div className="ph-ov" />
         <div className="ph-content">
           <div className="ph-tag">Real Results</div>

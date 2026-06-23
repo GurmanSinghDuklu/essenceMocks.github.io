@@ -43,10 +43,10 @@ export default function Services() {
           <div className="sh-right">Expert colour techniques that enhance your natural beauty and grow out effortlessly. All colour services include a bonding treatment for integrity and shine.</div>
         </div>
         <div className="svc-grid-4">
-          <ServiceCard num="01" img="/1000076204.jpg" alt="Balayage" name={<><em>Balayage</em></>} desc="A freehand technique creating a natural, sun-kissed look with soft blended highlights. Low-maintenance colour with no harsh regrowth lines." />
-          <ServiceCard num="02" img="/1000076203.jpg" alt="Highlights" name={<><em>Highlights</em></>} desc="Precision highlights to add depth, dimension, and brightness — customised to your skin tone and hair type for a seamless, natural finish." />
-          <ServiceCard num="03" img="/1000076198.jpg" alt="Tint" name={<><em>Tint</em></>} desc="Full head or root tint for rich, all-over colour. Bespoke shade mixing to achieve your perfect tone with lasting vibrancy." />
-          <ServiceCard num="04" img="/1000076209.jpg" alt="Grey Coverage" name={<>Grey <em>Coverage</em></>} desc="Seamless grey root coverage blending naturally with your existing colour. Long-lasting results that grow out gracefully without harsh lines." />
+          <ServiceCard num="01" img="/img-new-06.jpg" alt="Balayage" name={<><em>Balayage</em></>} desc="A freehand technique creating a natural, sun-kissed look with soft blended highlights. Low-maintenance colour with no harsh regrowth lines." />
+          <ServiceCard num="02" img="/img-new-08.jpg" alt="Highlights" name={<><em>Highlights</em></>} desc="Precision highlights to add depth, dimension, and brightness — customised to your skin tone and hair type for a seamless, natural finish." />
+          <ServiceCard num="03" img="/img-new-10.jpg" alt="Tint" name={<><em>Tint</em></>} desc="Full head or root tint for rich, all-over colour. Bespoke shade mixing to achieve your perfect tone with lasting vibrancy." />
+          <ServiceCard num="04" img="/img-new-11.jpg" alt="Grey Coverage" name={<>Grey <em>Coverage</em></>} desc="Seamless grey root coverage blending naturally with your existing colour. Long-lasting results that grow out gracefully without harsh lines." />
         </div>
       </section>
 
@@ -57,9 +57,9 @@ export default function Services() {
           <div className="sh-right">100% organic and formaldehyde-free treatments that deliver lasting, transformative results without compromising the health of your hair.</div>
         </div>
         <div className="svc-grid">
-          <ServiceCard num="01 — Organic · Formaldehyde-Free" img="/1000076209.jpg" alt="Nanoplastia" name={<><em>Nanoplastia</em></>} desc="Works at a molecular level to deeply hydrate and smooth the hair shaft. Reduces frizz while preserving your natural curl pattern. Safe for all hair types including colour-treated hair." />
-          <ServiceCard num="02 — Organic · Formaldehyde-Free" img="/1000076208.jpg" alt="Keratin" name={<>Keratin <em>Treatment</em></>} desc="Replenishes the hair's natural protein structure — eliminating frizz, adding extraordinary shine, and leaving hair smooth and effortlessly manageable." />
-          <ServiceCard num="03 — Deep Restoration" img="/1000076207.jpg" alt="Hair Botox" name={<>Hair <em>Botox</em></>} desc="An intensive treatment that fills damaged gaps in the hair shaft, rebuilding volume, softness, and smoothness from within. Ideal for over-processed or colour-damaged hair." />
+          <ServiceCard num="01 — Organic · Formaldehyde-Free" img="/img-new-03.jpg" alt="Nanoplastia" name={<><em>Nanoplastia</em></>} desc="Works at a molecular level to deeply hydrate and smooth the hair shaft. Reduces frizz while preserving your natural curl pattern. Safe for all hair types including colour-treated hair." />
+          <ServiceCard num="02 — Organic · Formaldehyde-Free" img="/img-new-12.jpg" alt="Keratin" name={<>Keratin <em>Treatment</em></>} desc="Replenishes the hair's natural protein structure — eliminating frizz, adding extraordinary shine, and leaving hair smooth and effortlessly manageable." />
+          <ServiceCard num="03 — Deep Restoration" img="/img-new-14.jpg" alt="Hair Botox" name={<>Hair <em>Botox</em></>} desc="An intensive treatment that fills damaged gaps in the hair shaft, rebuilding volume, softness, and smoothness from within. Ideal for over-processed or colour-damaged hair." />
         </div>
       </section>
 
@@ -81,8 +81,8 @@ export default function Services() {
           <div className="sh-right">A full wash, expert cut, and style tailored precisely to your hair type and preferred finish — bouncy, sleek, or waves.</div>
         </div>
         <div className="svc-grid" style={{gridTemplateColumns:'1fr 1fr'}}>
-          <ServiceCard num="01" img="/1000076208.jpg" alt="Cut & Blowdry" name={<>Cut &amp; <em>Blow Dry</em></>} desc="Expert cut tailored to your face shape and hair texture, finished with a blow dry to your preferred style — bouncy, sleek, or waves." />
-          <ServiceCard num="02" img="/1000076209.jpg" alt="Wash & Style" name={<>Wash &amp; <em>Style</em></>} desc="Professional wash with salon-grade products and a relaxing scalp massage, followed by a full style finish of your choice." />
+          <ServiceCard num="01" img="/img-new-15.jpg" alt="Cut & Blowdry" name={<>Cut &amp; <em>Blow Dry</em></>} desc="Expert cut tailored to your face shape and hair texture, finished with a blow dry to your preferred style — bouncy, sleek, or waves." />
+          <ServiceCard num="02" img="/img-new-18.jpg" alt="Wash & Style" name={<>Wash &amp; <em>Style</em></>} desc="Professional wash with salon-grade products and a relaxing scalp massage, followed by a full style finish of your choice." />
         </div>
       </section>
 
@@ -93,8 +93,8 @@ export default function Services() {
           <div className="sh-right">Lightweight, virtually invisible extensions that move exactly like your own hair. Applied with medical-grade adhesive for a seamless, natural-looking blend.</div>
         </div>
         <div className="svc-grid" style={{gridTemplateColumns:'1fr 1fr'}}>
-          <ServiceCard num="01 — Semi-Permanent" img="/1000076195.jpg" alt="Extensions" name={<>Hair <em>Extensions</em></>} desc="Applied with medical-grade adhesive that lies flat against the scalp — completely undetectable even when your hair is up. Lasts 6–8 weeks between appointments." />
-          <ServiceCard num="02 — First Time?" img="/1000076211.jpg" alt="Extension consultation" name={<>Extension <em>Consultation</em></>} desc="New to extensions? Start with a consultation to match your shade, discuss length goals, and get a full rundown of aftercare and maintenance." />
+          <ServiceCard num="01 — Semi-Permanent" img="/img-new-04.jpg" alt="Extensions" name={<>Hair <em>Extensions</em></>} desc="Applied with medical-grade adhesive that lies flat against the scalp — completely undetectable even when your hair is up. Lasts 6–8 weeks between appointments." />
+          <ServiceCard num="02 — First Time?" img="/img-new-20.jpg" alt="Extension consultation" name={<>Extension <em>Consultation</em></>} desc="New to extensions? Start with a consultation to match your shade, discuss length goals, and get a full rundown of aftercare and maintenance." />
         </div>
       </section>
 

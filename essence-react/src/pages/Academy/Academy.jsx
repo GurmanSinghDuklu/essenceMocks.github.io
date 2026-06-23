@@ -25,7 +25,7 @@ export default function Academy() {
     <main>
       {/* HERO */}
       <div className="page-hero">
-        <div className="ph-img"><img src="/1000076195.jpg" alt="Essence Academy" /></div>
+        <div className="ph-img"><img src="/img-new-17.jpg" alt="Essence Academy" /></div>
         <div className="ph-ov" />
         <div className="ph-content">
           <div className="ph-tag">ABT Accredited</div>

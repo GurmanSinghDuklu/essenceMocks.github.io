@@ -6,10 +6,10 @@ const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const marqueeItems = ['Balayage','Nanoplastia','Keratin','Hair Botox','Head Spa','Extensions','Cut & Style','ABT Accredited Academy','Luton']
 
 const services = [
-  { num:'01', img:'/1000076204.jpg', name:<>Balayage &amp; <em>Colour Services</em></>, desc:'Sun-kissed, freehand colour that grows out beautifully. No harsh lines. Low maintenance. Bespoke to you.' },
-  { num:'02', img:'/1000076209.jpg', name:<>Hair <em>Treatments</em></>, desc:'Organic, formaldehyde-free Nanoplastia, Keratin and Hair Botox. Frizz-free results that last months.' },
-  { num:'03', img:'/1000076198.jpg', name:<>Head Spa &amp; <em>Scalp Care</em></>, desc:'Therapeutic rituals tailored to your scalp concern — from hair loss to deep hydration.' },
-  { num:'04', img:'/1000076211.jpg', name:<>Hair <em>Extensions</em></>, desc:'Lightweight, seamless, and undetectable. Medical-grade tape that moves like your own hair.' },
+  { num:'01', img:'/img-new-06.jpg', name:<>Balayage &amp; <em>Colour Services</em></>, desc:'Sun-kissed, freehand colour that grows out beautifully. No harsh lines. Low maintenance. Bespoke to you.' },
+  { num:'02', img:'/img-new-12.jpg', name:<>Hair <em>Treatments</em></>, desc:'Organic, formaldehyde-free Nanoplastia, Keratin and Hair Botox. Frizz-free results that last months.' },
+  { num:'03', img:'/img-new-14.jpg', name:<>Head Spa &amp; <em>Scalp Care</em></>, desc:'Therapeutic rituals tailored to your scalp concern — from hair loss to deep hydration.' },
+  { num:'04', img:'/img-new-02.jpg', name:<>Hair <em>Extensions</em></>, desc:'Lightweight, seamless, and undetectable. Medical-grade tape that moves like your own hair.' },
 ]
 
 const testimonials = [
@@ -18,7 +18,7 @@ const testimonials = [
   { text: 'I highly recommend the Nanoplastia treatment if you struggle with unmanageable hair. I have thick, frizzy, curly hair and this has drastically reduced my styling time — cutting it in half.', author: 'Tamanna', service: 'Nanoplastia Treatment' },
 ]
 
-const galleryImages = ['/1000076203.jpg','/1000076197.jpg','/1000076208.jpg','/1000076199.jpg']
+const galleryImages = ['/img-new-07.jpg','/img-new-06.jpg','/img-new-01.jpg','/img-new-19.jpg']
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-img">
-          <img src="/1000076199.jpg" alt="Essence Hair Treatment" />
+          <img src="/img-new-07.jpg" alt="Essence Hair Treatment" />
         </div>
         <div className="hero-overlay" />
         <div className="hero-content">
