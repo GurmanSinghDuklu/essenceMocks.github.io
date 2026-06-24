@@ -1,0 +1,23 @@
+.ig-feed { background: #FAF8F5; padding: 88px 56px; }
+.ig-feed-head { text-align: center; margin-bottom: 52px; }
+.ig-feed-tag { font-size: 8.5px; letter-spacing: .52em; text-transform: uppercase; color: #9A9087; margin-bottom: 18px; }
+.ig-feed-title { font-family: 'Playfair Display', serif; font-size: clamp(28px,3vw,42px); font-weight: 300; margin-bottom: 8px; line-height: 1.1; }
+.ig-feed-title em { font-style: italic; }
+.ig-feed-handle { font-size: 9px; letter-spacing: .38em; text-transform: uppercase; color: #9A9087; }
+.ig-feed-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; max-width: 1100px; margin: 0 auto 52px; }
+.ig-feed-card { overflow: hidden; position: relative; cursor: pointer; }
+.ig-feed-card-img { aspect-ratio: 1; overflow: hidden; }
+.ig-feed-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; display: block; }
+.ig-feed-card:hover .ig-feed-card-img img { transform: scale(1.05); }
+.ig-feed-card-caption { background: #fff; padding: 14px 16px; font-size: 12px; line-height: 1.6; color: #2d2d2d; }
+.ig-feed-footer { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.ig-feed-icon { display: flex; align-items: center; gap: 8px; color: #9A9087; font-size: 9px; letter-spacing: .3em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+.ig-feed-icon:hover { color: #0a0a0a; }
+.ig-feed-icon svg { width: 18px; height: 18px; }
+@media (max-width: 960px) {
+  .ig-feed { padding: 56px 16px; }
+  .ig-feed-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .ig-feed-grid { grid-template-columns: 1fr; }
+}
