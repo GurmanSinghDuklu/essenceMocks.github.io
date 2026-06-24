@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './Home.css'
+import InstagramFeed from '../../components/InstagramFeed/InstagramFeed'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 
@@ -17,8 +18,6 @@ const testimonials = [
   { text: "Amazing salon, plenty of parking and easy to get to. I had a wash, cut and blow dry and I love my new hair — it feels so much healthier. I'm definitely coming back to Essence next time.", author: 'Henna', service: 'Cut, Wash & Blow Dry' },
   { text: 'I highly recommend the Nanoplastia treatment if you struggle with unmanageable hair. I have thick, frizzy, curly hair and this has drastically reduced my styling time — cutting it in half.', author: 'Tamanna', service: 'Nanoplastia Treatment' },
 ]
-
-const galleryImages = ['/img-new-07.jpg','/img-new-06.jpg','/img-new-01.jpg','/img-new-19.jpg']
 
 export default function Home() {
   return (
@@ -145,21 +144,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* GALLERY STRIP */}
-      <section className="gallery-strip">
-        <div className="gs-head">
-          <div className="section-tag">Real Results</div>
-          <h2 className="section-title">Our <em>Work</em></h2>
-        </div>
-        <div className="gallery-scroll">
-          {galleryImages.map(src => (
-            <div className="gi" key={src}><img src={src} alt="Hair result" /></div>
-          ))}
-        </div>
-        <div className="gs-footer">
-          <Link to="/gallery" className="btn-blk">View Full Gallery</Link>
-        </div>
-      </section>
+      {/* INSTAGRAM FEED */}
+      <InstagramFeed />
 
       {/* CONTACT STRIP */}
       <section className="contact-strip">
