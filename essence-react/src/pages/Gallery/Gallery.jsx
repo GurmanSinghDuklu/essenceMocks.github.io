@@ -1,23 +1,19 @@
+import { useMemo } from 'react'
+import useInstagramPosts from '../../hooks/useInstagramPosts'
 import './Gallery.css'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const IG_URL = 'https://www.instagram.com/essence.hairtreatment/'
 
-const galleryImages = [
-  '/img-new-01.jpg','/img-new-02.jpg','/img-new-03.jpg','/img-new-04.jpg',
-  '/img-new-06.jpg','/img-new-07.jpg','/img-new-08.jpg','/img-new-09.jpg',
-  '/img-new-10.jpg','/img-new-11.jpg','/img-new-12.jpg','/img-new-14.jpg',
-  '/img-new-15.jpg','/img-new-16.jpg','/img-new-18.jpg','/img-new-19.jpg',
-  '/img-new-20.jpg','/1000076210.jpg',
-]
-
-const igImages = ['/img-new-19.jpg','/img-new-06.jpg','/img-new-01.jpg','/img-new-18.jpg']
-
 export default function Gallery() {
+  const posts = useInstagramPosts()
+  const galleryImages = useMemo(() => posts.map(p => `/instagram/${p.file}`), [posts])
+  const igImages = useMemo(() => [...posts].reverse().slice(0, 4).map(p => `/instagram/${p.file}`), [posts])
+
   return (
     <main>
       <div className="page-hero">
-        <div className="ph-img"><img src="/img-new-19.jpg" alt="Gallery" /></div>
+        <div className="ph-img"><img src="/instagram/img-new-19.jpg" alt="Gallery" /></div>
         <div className="ph-ov" />
         <div className="ph-content">
           <div className="ph-tag">Real Results</div>
