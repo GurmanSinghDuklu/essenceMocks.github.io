@@ -9,7 +9,7 @@ const marqueeItems = ['Balayage','Nanoplastia','Keratin','Hair Botox','Head Spa'
 const services = [
   { num:'01', img:'/img-new-06.jpg', name:<>Balayage &amp; <em>Colour Services</em></>, desc:'Sun-kissed, freehand colour that grows out beautifully. No harsh lines. Low maintenance. Bespoke to you.' },
   { num:'02', img:'/img-new-12.jpg', name:<>Hair <em>Treatments</em></>, desc:'Organic, formaldehyde-free Nanoplastia, Keratin and Hair Botox. Frizz-free results that last months.' },
-  { num:'03', img:'/img-new-14.jpg', name:<>Head Spa &amp; <em>Scalp Care</em></>, desc:'Therapeutic rituals tailored to your scalp concern — from hair loss to deep hydration.' },
+  { num:'03', img:'/img-new-08.jpg', name:<>Cut &amp; <em>Style</em></>, desc:'Precision cuts and blowouts tailored to your face shape, hair type, and lifestyle.' },
   { num:'04', img:'/img-new-02.jpg', name:<>Hair <em>Extensions</em></>, desc:'Lightweight, seamless, and undetectable. Medical-grade tape that moves like your own hair.' },
 ]
 
