@@ -29,7 +29,6 @@ export default function InstagramFeed() {
             <div className="ig-feed-card-img">
               <img src={`/instagram/${post.file}`} alt={post.caption} />
             </div>
-            <div className="ig-feed-card-caption">{post.caption}</div>
           </a>
         ))}
       </div>
