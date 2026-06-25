@@ -59,8 +59,8 @@ export default function Services() {
         </div>
         <div className="svc-grid">
           <ServiceCard num="01 — Organic · Formaldehyde-Free" img="/img-new-03.jpg" alt="Nanoplastia" name={<><em>Nanoplastia</em></>} desc="Works at a molecular level to deeply hydrate and smooth the hair shaft. Reduces frizz while preserving your natural curl pattern. Safe for all hair types including colour-treated hair." />
-          <ServiceCard num="02 — Organic · Formaldehyde-Free" img="/img-new-12.jpg" alt="Keratin" name={<>Keratin <em>Treatment</em></>} desc="Replenishes the hair's natural protein structure — eliminating frizz, adding extraordinary shine, and leaving hair smooth and effortlessly manageable." />
-          <ServiceCard num="03 — Deep Restoration" img="/img-new-14.jpg" alt="Hair Botox" name={<>Hair <em>Botox</em></>} desc="An intensive treatment that fills damaged gaps in the hair shaft, rebuilding volume, softness, and smoothness from within. Ideal for over-processed or colour-damaged hair." />
+          <ServiceCard num="02 — Organic · Formaldehyde-Free" img="/placeholder.svg" alt="Keratin" name={<>Keratin <em>Treatment</em></>} desc="Replenishes the hair's natural protein structure — eliminating frizz, adding extraordinary shine, and leaving hair smooth and effortlessly manageable." />
+          <ServiceCard num="03 — Deep Restoration" img="/placeholder.svg" alt="Hair Botox" name={<>Hair <em>Botox</em></>} desc="An intensive treatment that fills damaged gaps in the hair shaft, rebuilding volume, softness, and smoothness from within. Ideal for over-processed or colour-damaged hair." />
         </div>
       </section>
 
@@ -82,15 +82,15 @@ export default function Services() {
           <div className="sh-right">A full wash, expert cut, and style tailored precisely to your hair type and preferred finish — bouncy, sleek, or waves.</div>
         </div>
         <div className="svc-grid" style={{gridTemplateColumns:'1fr 1fr'}}>
-          <ServiceCard num="01" img="/img-new-15.jpg" alt="Cut & Blowdry" name={<>Cut &amp; <em>Blow Dry</em></>} desc="Expert cut tailored to your face shape and hair texture, finished with a blow dry to your preferred style — bouncy, sleek, or waves." />
-          <ServiceCard num="02" img="/img-new-18.jpg" alt="Wash & Style" name={<>Wash &amp; <em>Style</em></>} desc="Professional wash with salon-grade products and a relaxing scalp massage, followed by a full style finish of your choice." />
+          <ServiceCard num="01" img="/placeholder.svg" alt="Cut & Blowdry" name={<>Cut &amp; <em>Blow Dry</em></>} desc="Expert cut tailored to your face shape and hair texture, finished with a blow dry to your preferred style — bouncy, sleek, or waves." />
+          <ServiceCard num="02" img="/placeholder.svg" alt="Wash & Style" name={<>Wash &amp; <em>Style</em></>} desc="Professional wash with salon-grade products and a relaxing scalp massage, followed by a full style finish of your choice." />
         </div>
       </section>
 
       {/* EXTENSIONS */}
       <section className="svc-section" id="extensions">
         <div className="sec-head">
-          <div className="sh-left"><div className="st">Volume &amp; Length</div><h2>Tape Hair <em>Extensions</em></h2></div>
+          <div className="sh-left"><div className="st">Volume &amp; Length</div><h2>Hair <em>Extensions</em></h2></div>
           <div className="sh-right">Lightweight, virtually invisible extensions that move exactly like your own hair. Applied with medical-grade adhesive for a seamless, natural-looking blend.</div>
         </div>
         <div className="svc-grid" style={{gridTemplateColumns:'1fr 1fr'}}>

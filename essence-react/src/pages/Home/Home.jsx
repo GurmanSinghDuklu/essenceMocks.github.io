@@ -30,7 +30,7 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-content">
           <div className="hero-tag">Luton's Premier Hair Studio</div>
-          <h1 className="hero-title">Your Hair,<br />Your Story,<br /><em>My Passion.</em></h1>
+          <h1 className="hero-title">More Than Hair—A Place to Relax,<br />Refresh &amp; Feel Your Best.</h1>
           <div className="hero-cta">
             <a href={BOOK_URL} className="btn-wh" target="_blank" rel="noreferrer">Book a Treatment</a>
             <Link to="/services" className="btn-outline-wh">Explore Services</Link>
@@ -152,7 +152,7 @@ export default function Home() {
         <div className="cs-text">
           <div className="section-tag">Get in Touch</div>
           <h2 className="section-title" style={{marginBottom:'36px'}}>Find <em>Us</em></h2>
-          <p className="body-text" style={{marginBottom:'32px'}}>All appointments are by booking only. Book online, call, or WhatsApp us. Please allow 48–72 hours for a reply.</p>
+          <p className="body-text" style={{marginBottom:'32px'}}>All appointments are by booking only. Book online, call, or WhatsApp us.</p>
           <div style={{display:'flex',flexDirection:'column',gap:'20px',marginBottom:'36px'}}>
             <div className="cs-detail"><div className="cs-detail-icon">📍</div><div className="cs-detail-text"><strong>Address</strong>6 Woodmere, Luton, Bedfordshire · Free street parking available</div></div>
             <div className="cs-detail"><div className="cs-detail-icon">📞</div><div className="cs-detail-text"><strong>Phone / WhatsApp</strong><a href="tel:+447375956131">07375 956 131</a></div></div>
