@@ -25,7 +25,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-img">
-          <img src="/img-new-07.jpg" alt="Essence Hair Treatment" />
+          <img src="/instagram/WhatsApp Image 2026-06-25 at 22.36.46.jpeg" alt="Essence Hair Treatment" />
         </div>
         <div className="hero-overlay" />
         <div className="hero-content">
@@ -159,7 +159,7 @@ export default function Home() {
             <div className="cs-detail"><div className="cs-detail-icon">🕐</div><div className="cs-detail-text"><strong>Booking</strong>Appointments can be made via the booking link, or by calling/WhatsApp: <a href="tel:+447375956131">07375 956 131</a>. A deposit is required to confirm.</div></div>
           </div>
           <a href={BOOK_URL} className="btn-blk" target="_blank" rel="noreferrer">Book Online</a>
-          <p style={{fontSize:'11px',letterSpacing:'.18em',textTransform:'uppercase',color:'#9A9087',marginTop:'12px'}}>Price list available on request</p>
+          <p style={{fontSize:'11px',letterSpacing:'.18em',textTransform:'uppercase',color:'#9A9087',marginTop:'12px'}}>Price list available upon Booking link </p>
         </div>
         <div className="cs-map">
           <iframe

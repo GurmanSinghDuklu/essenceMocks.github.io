@@ -56,16 +56,8 @@ const FAQ_GROUPS = [
         ),
       },
       {
-        q: 'What is balayage and is it right for me?',
-        a: "Balayage is a freehand colouring technique that creates a natural, sun-kissed look with soft blended highlights. It's ideal for low-maintenance colour that grows out beautifully with no harsh regrowth lines. It works on almost all hair types and lengths. We'll advise during your consultation.",
-      },
-      {
         q: 'How should I prepare for a colour service?',
         a: "Please ensure your hair is freshly washed. Bring inspiration photos if you have them. Wear comfortable clothing you don't mind getting stained, and avoid hooded tops.",
-      },
-      {
-        q: 'How long does colour last?',
-        a: "Balayage typically needs refreshing every 3–5 months. Regular toner appointments every 6–8 weeks will keep the tone looking fresh. We'll give you personalised aftercare advice after every service.",
       },
       {
         q: 'Can you guarantee my colour results?',
@@ -84,7 +76,7 @@ const FAQ_GROUPS = [
       },
       {
         q: 'Are the treatments safe? Do they contain formaldehyde?',
-        a: 'All our treatments — Keratin, Nanoplastia, and Hair Botox — are 100% organic and completely formaldehyde-free. We use professional-grade, safe formulations that deliver exceptional results without compromising your health.',
+        a: 'All our treatments — Keratin, Nanoplastia, and Hair Botox - Formaldehyde-free. We use professional-grade, safe formulations that deliver exceptional results without compromising your health.',
       },
       {
         q: 'How long do smoothing treatments last?',
@@ -92,7 +84,7 @@ const FAQ_GROUPS = [
       },
       {
         q: 'Can I have a smoothing treatment on coloured hair?',
-        a: "Yes — our organic treatments are safe for colour-treated hair. We recommend having colour done before your smoothing treatment, not after. We always assess your hair's condition before proceeding.",
+        a: "Yes — our treatments are safe for colour-treated hair. We recommend having colour done before your smoothing treatment, not after. We always assess your hair's condition before proceeding.",
       },
       {
         q: 'Are results guaranteed?',

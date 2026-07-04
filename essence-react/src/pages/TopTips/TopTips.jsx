@@ -31,12 +31,11 @@ const TIPS = [
           online booking system
         </a>
         . For enquiries, contact us on{' '}
-        <a href="tel:+447375956131">07375 956 131</a> — please allow 48–72 hours for a reply.
+        <a href="tel:+447375956131">07375 956 131</a>
       </>
     ),
     list: [
       'For a specific date, please allow at least 4 weeks’ notice',
-      'Saturday appointments require a minimum of 6 weeks’ notice',
       'Appointments are only confirmed once a deposit has been paid',
     ],
   },
@@ -46,12 +45,13 @@ const TIPS = [
     list: [
       'Wear comfortable clothes you don’t mind getting stained. Avoid hooded tops.',
       'Bring inspiration photos — the more specific, the better.',
-      'Ensure your hair is freshly washed for all colour services.',
+      'Ensure your hair is freshly washed for all colour and extension services.',
+      'For new extension fittings, please ensure your hair has been straightened.'
     ],
   },
   {
     tag: 'Aftercare',
-    title: <>Looking after your <em>results</em></>,
+    title: <>Looking after your <em>hair at home</em></>,
     body: 'The care you give your hair at home directly affects how long your results last. Follow these guidelines to protect your investment.',
     aftercareCards: [
       {
@@ -59,7 +59,7 @@ const TIPS = [
         title: 'Hair Colour Aftercare',
         items: [
           'Wait at least 48 hours before washing after colour',
-          'Use sulphate-free shampoos for colour-treated hair',
+          'Use professional hair products',
           'Rinse with lukewarm or cool water',
           'Use a deep conditioner or hair mask weekly',
           'Always apply heat protection before styling',
@@ -74,12 +74,23 @@ const TIPS = [
           'Schedule trims every 6–8 weeks to maintain shape',
           'Always use heat protectant before styling tools',
           'Detangle gently — start from the tips upward',
-          'Use nourishing conditioner or leave-in regularly',
+          'Use nourishing conditioner or leave-in conditioner regularly',
         ],
       },
       {
         icon: '✨',
         title: 'Treatment Aftercare',
+        items: [
+          'Use sulphate-free shampoos and conditioners',
+          'Keratin only: no wash for 72 hours after treatment',
+          'Avoid tight hairstyles for the first few days',
+          'No swimming or excessive sweating for 72 hours',
+          'Avoid moisture and humidity in first 72 hours',
+        ],
+      },
+      {
+        icon: '✨',
+        title: 'Extensions Aftercare',
         items: [
           'Use sulphate-free shampoos and conditioners',
           'Keratin only: no wash for 72 hours after treatment',

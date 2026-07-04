@@ -54,18 +54,14 @@ export default function Services() {
       {/* TREATMENTS */}
       <section className="svc-section bg-beige" id="treatments">
         <div className="sec-head">
-          <div className="sh-left"><div className="st">Hair Treatments</div><h2>&amp; <em>Restoration</em></h2></div>
-          <div className="sh-right">100% organic and formaldehyde-free treatments that deliver lasting, transformative results without compromising the health of your hair.</div>
+          <div className="sh-left"><div className="st">Hair Treatments</div><h2>&amp; <em>Hair Treatments</em></h2></div>
+          <div className="sh-right">Formaldehyde-free treatments that deliver lasting, transformative results without compromising the health of your hair.</div>
         </div>
         <div className="svc-grid">
           <ServiceCard num="01 — Organic · Formaldehyde-Free" img="/img-new-03.jpg" alt="Nanoplastia" name={<><em>Nanoplastia</em></>} desc="Works at a molecular level to deeply hydrate and smooth the hair shaft. Reduces frizz while preserving your natural curl pattern. Safe for all hair types including colour-treated hair." />
           <ServiceCard num="02 — Organic · Formaldehyde-Free" img="/placeholder.svg" alt="Keratin" name={<>Keratin <em>Treatment</em></>} desc="Replenishes the hair's natural protein structure — eliminating frizz, adding extraordinary shine, and leaving hair smooth and effortlessly manageable." />
           <ServiceCard num="03 — Deep Restoration" img="/placeholder.svg" alt="Hair Botox" name={<>Hair <em>Botox</em></>} desc="An intensive treatment that fills damaged gaps in the hair shaft, rebuilding volume, softness, and smoothness from within. Ideal for over-processed or colour-damaged hair." />
         </div>
-      </section>
-
-      {/* HEAD SPA */}
-      <section className="svc-section" id="spa">
         <div className="sec-head">
           <div className="sh-left"><div className="st">Wellness</div><h2>Head Spa &amp; <em>Scalp Care</em></h2></div>
           <div className="sh-right">Therapeutic rituals tailored to your specific scalp concern. Using argan oil, amino acid, and aloe-infused formulas to restore balance from root to tip.</div>
@@ -74,7 +70,6 @@ export default function Services() {
           <ServiceCard num="01" img="/1000076199.jpg" alt="Head spa" name={<>Head <em>Spa</em></>} desc="A therapeutic scalp and hair ritual tailored to your specific needs — from hair growth stimulation and scalp detox to deep conditioning and hydration. Using argan oil, amino acid, and aloe-infused formulas to restore balance from root to tip." />
         </div>
       </section>
-
       {/* CUT & STYLE */}
       <section className="svc-section bg-ow" id="cut">
         <div className="sec-head">

@@ -10,7 +10,7 @@ export default function Privacy() {
 
       <div className="privacy-body">
         <p className="privacy-intro">
-          By booking with Essence Hair Treatment you agree to the following policies. Please read them carefully before your appointment. If you have any questions, contact us on <a href="tel:+447375956131">07375 956 131</a> or via WhatsApp.
+          By booking with Essence Hair you agree to the following policies. Please read them carefully before your appointment. If you have any questions, contact us on <a href="tel:+447375956131">07375 956 131</a> or via WhatsApp.
         </p>
 
         <div className="privacy-section">
