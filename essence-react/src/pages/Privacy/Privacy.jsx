@@ -1,6 +1,13 @@
 import './Privacy.css'
+import useSEO from '../../hooks/useSEO'
 
 export default function Privacy() {
+  useSEO({
+    title: 'Privacy & Salon Policy | Essence Hair Treatment Luton',
+    description: 'Read our salon policies, cancellation terms, and privacy information at Essence Hair Treatment, Luton.',
+    canonical: 'https://www.essencehairtreatment.co.uk/privacy',
+    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+  })
   return (
     <main>
       <div className="privacy-hero">

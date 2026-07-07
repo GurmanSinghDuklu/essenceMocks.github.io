@@ -1,4 +1,5 @@
 import './Academy.css'
+import useSEO from '../../hooks/useSEO'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue'
@@ -22,6 +23,12 @@ function CourseCard({ num, tag, name, desc, duration, investment, certification,
 }
 
 export default function Academy() {
+  useSEO({
+    title: 'Hair Academy | Essence Hair Treatment Luton',
+    description: 'Learn professional hair techniques at Essence Hair Academy in Luton. ABT accredited courses in Nanoplastia, Keratin, and more.',
+    canonical: 'https://www.essencehairtreatment.co.uk/academy',
+    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+  })
   return (
     <main>
       {/* HERO */}

@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom'
 import './Home.css'
 import InstagramFeed from '../../components/InstagramFeed/InstagramFeed'
+import useSEO from '../../hooks/useSEO'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 
 const marqueeItems = ['Balayage','Nanoplastia','Keratin','Hair Botox','Head Spa','Extensions','Cut & Style','ABT Accredited Academy','Luton']
 
 const services = [
-  { num:'01', img:'/img-new-06.jpg', name:<>Balayage &amp; <em>Colour Services</em></>, desc:'Sun-kissed, freehand colour that grows out beautifully. No harsh lines. Low maintenance. Bespoke to you.' },
-  { num:'02', img:'/img-new-12.jpg', name:<>Hair <em>Treatments</em></>, desc:'Organic, formaldehyde-free Nanoplastia, Keratin and Hair Botox. Frizz-free results that last months.' },
-  { num:'03', img:'/img-new-08.jpg', name:<>Cut &amp; <em>Style</em></>, desc:'Precision cuts and blowouts tailored to your face shape, hair type, and lifestyle.' },
-  { num:'04', img:'/img-new-02.jpg', name:<>Hair <em>Extensions</em></>, desc:'Lightweight, seamless, and undetectable. Medical-grade tape that moves like your own hair.' },
+  { num:'01', img:'/WhatsApp Image 2026-07-06 at 21.30.04.jpeg', name:<>Balayage &amp; <em>Colour Services</em></>, desc:'Refresh, enhance, or completely transform your hair with our professional colour services. From root touch-ups and grey coverage to balayage, highlights, and full colour transformations, every service is tailored to suit your style and hair goals.' },
+  { num:'02', img:'/WhatsApp Image 2026-07-06 at 21.30.24.jpeg', name:<>Hair <em>Extensions</em></>, desc:'Transform your hair with our premium extension services, tailored to your individual needs and lifestyle. We offer professional colour matching to ensure a seamless, natural blend with your own hair, creating the perfect look and finish.' },
+  { num:'03', img:'/WhatsApp Image 2026-07-06 at 21.34.12.jpeg', name:<>Hair <em>Treatments</em></>, desc:'Restore the health and beauty of your hair with our specialist treatment services. From smoothing and strengthening with Nanoplastia and Keratin Treatments to relaxing Head Spa experiences that promote healthy hair and scalp health.' },
+  { num:'04', img:'/WhatsApp Image 2026-07-06 at 21.39.01.jpeg', name:<>Cut &amp; <em>Style</em></>, desc:'Need a little pick-me-up? Whether you\'re looking for a fresh haircut, a complete restyle, or simply some time to relax, we\'ve got you covered. From quick refreshes to full transformations, we\'re here to help you look and feel your best.' },
 ]
 
 const testimonials = [
@@ -20,6 +21,12 @@ const testimonials = [
 ]
 
 export default function Home() {
+  useSEO({
+    title: 'Essence Hair Treatment | Hair Studio in Luton',
+    description: 'Luton\'s premier hair studio specialising in balayage, hair treatments, Nanoplastia, Keratin, extensions, cuts & more. Book your appointment today.',
+    canonical: 'https://www.essencehairtreatment.co.uk/',
+    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+  })
   return (
     <main>
       {/* HERO */}
@@ -117,7 +124,7 @@ export default function Home() {
 
       {/* FULL BLEED */}
       <div className="full-bleed">
-        <img src="/1000076203.jpg" alt="Hair transformation" />
+        <img src="/WhatsApp Image 2026-07-06 at 21.43.25.jpeg" alt="Hair transformation" />
         <div className="full-bleed-overlay">
           <h2>Book your appointment<br /><em>today.</em></h2>
           <a href={BOOK_URL} className="btn-wh" target="_blank" rel="noreferrer">Book Now</a>

@@ -1,11 +1,18 @@
 import { useMemo } from 'react'
 import useInstagramPosts from '../../hooks/useInstagramPosts'
 import './Gallery.css'
+import useSEO from '../../hooks/useSEO'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const IG_URL = 'https://www.instagram.com/essence.hairtreatment/'
 
 export default function Gallery() {
+  useSEO({
+    title: 'Gallery | Essence Hair Treatment Luton',
+    description: 'Browse our gallery of hair transformations — balayage, extensions, treatments and more from Essence Hair Treatment in Luton.',
+    canonical: 'https://www.essencehairtreatment.co.uk/gallery',
+    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+  })
   const posts = useInstagramPosts()
   const galleryImages = useMemo(() => posts.map(p => `/instagram/${p.file}`), [posts])
   const igImages = useMemo(() => [...posts].reverse().slice(0, 4).map(p => `/instagram/${p.file}`), [posts])

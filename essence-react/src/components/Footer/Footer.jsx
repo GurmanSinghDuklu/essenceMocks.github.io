@@ -13,7 +13,6 @@ export default function Footer() {
           <ul className="footer-links">
             <li><Link to="/services">Balayage &amp; Colour</Link></li>
             <li><Link to="/services">Hair Treatments</Link></li>
-            <li><Link to="/services">Head Spa</Link></li>
             <li><Link to="/services">Cut &amp; Style</Link></li>
             <li><Link to="/services">Extensions</Link></li>
           </ul>
@@ -40,7 +39,6 @@ export default function Footer() {
           <div className="footer-col-title">Contact</div>
           <ul className="footer-links">
             <li><a href="tel:+447375956131">07375 956 131</a></li>
-            <li><a href="https://wa.me/447375956131" target="_blank" rel="noreferrer">WhatsApp</a></li>
             <li><span>6 Woodmere, Luton</span></li>
             <li><span>Bedfordshire</span></li>
           </ul>

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './FAQs.css'
+import useSEO from '../../hooks/useSEO'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue'
@@ -148,6 +149,12 @@ function AccordionItem({ q, a }) {
 }
 
 export default function FAQs() {
+  useSEO({
+    title: 'FAQs | Essence Hair Treatment Luton',
+    description: 'Got questions? Find answers about booking, deposits, cancellations, aftercare and our hair services at Essence Hair Treatment in Luton.',
+    canonical: 'https://www.essencehairtreatment.co.uk/faqs',
+    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+  })
   return (
     <main>
       <div className="page-hero">

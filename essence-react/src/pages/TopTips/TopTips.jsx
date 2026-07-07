@@ -1,4 +1,5 @@
 import './TopTips.css';
+import useSEO from '../../hooks/useSEO'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book';
 const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue';
@@ -35,7 +36,6 @@ const TIPS = [
       </>
     ),
     list: [
-      'For a specific date, please allow at least 4 weeks’ notice',
       'Appointments are only confirmed once a deposit has been paid',
     ],
   },
@@ -104,6 +104,12 @@ const TIPS = [
 ];
 
 export default function TopTips() {
+  useSEO({
+    title: 'Hair Care Top Tips | Essence Hair Treatment Luton',
+    description: 'Expert hair care advice from Essence Hair Treatment in Luton. Tips on maintaining your colour, extensions, and treatments at home.',
+    canonical: 'https://www.essencehairtreatment.co.uk/top-tips',
+    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+  })
   return (
     <main style={{ paddingTop: '0' }}>
       {/* HERO */}
