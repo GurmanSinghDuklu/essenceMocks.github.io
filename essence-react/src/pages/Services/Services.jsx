@@ -20,8 +20,8 @@ function ServiceCard({ num, img, alt, name, desc, href }) {
 
 export default function Services() {
   useSEO({
-    title: 'Hair Services in Luton | Essence Hair Treatment',
-    description: 'Explore our full range of hair services in Luton — balayage, highlights, Nanoplastia, Keratin, Hair Botox, extensions, cuts & styling. Book online today.',
+    title: 'Hair Services Luton | Balayage, Extensions, Keratin | Essence',
+    description: 'Full range of hair services in Luton — balayage, highlights, hair extensions, Nanoplastia, Keratin, Hair Botox, cuts & styling. Book online today.',
     canonical: 'https://www.essencehairtreatment.co.uk/services',
     ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
   })

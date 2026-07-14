@@ -22,8 +22,8 @@ const testimonials = [
 
 export default function Home() {
   useSEO({
-    title: 'Essence Hair Treatment | Hair Studio in Luton',
-    description: 'Luton\'s premier hair studio specialising in balayage, hair treatments, Nanoplastia, Keratin, extensions, cuts & more. Book your appointment today.',
+    title: 'Hair Salon Luton | Balayage, Extensions & Treatments | Essence',
+    description: 'Award-worthy hair salon in Luton, Bedfordshire. Balayage, highlights, hair extensions, Nanoplastia & Keratin treatments. Book your appointment online today.',
     canonical: 'https://www.essencehairtreatment.co.uk/',
     ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
   })
