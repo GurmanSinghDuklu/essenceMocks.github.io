@@ -20,7 +20,7 @@
 .svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; align-items: stretch; }
 .svc-grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 3px; align-items: stretch; }
 .svc-card { background: #fff; overflow: hidden; display: flex; flex-direction: column; }
-.svc-card-img { overflow: hidden; height: 280px; flex-shrink: 0; }
+.svc-card-img { overflow: hidden; height: clamp(180px,20vw,280px); flex-shrink: 0; }
 .svc-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s; }
 .svc-card:hover .svc-card-img img { transform: scale(1.04); }
 .svc-card-body { padding: 32px 28px; display: flex; flex-direction: column; flex: 1; }
@@ -41,7 +41,7 @@
   .stabs { padding: 0 12px; }
   .svc-section { padding: 64px 20px; }
   .svc-grid, .svc-grid-4 { grid-template-columns: 1fr; }
-  .svc-card-img { height: 220px; }
+  .svc-card-img { height: clamp(160px,45vw,280px); }
   .sec-head { flex-direction: column; gap: 14px; align-items: flex-start; }
   .sh-right { text-align: left; max-width: 100%; }
   .svc-cta { padding: 64px 20px; }

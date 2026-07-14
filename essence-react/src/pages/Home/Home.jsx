@@ -11,7 +11,7 @@ const services = [
   { num:'01', img:'/WhatsApp Image 2026-07-06 at 21.30.04.jpeg', name:<>Balayage &amp; <em>Colour Services</em></>, desc:'Refresh, enhance, or completely transform your hair with our professional colour services. From root touch-ups and grey coverage to balayage, highlights, and full colour transformations, every service is tailored to suit your style and hair goals.' },
   { num:'02', img:'/WhatsApp Image 2026-07-06 at 21.30.24.jpeg', name:<>Hair <em>Extensions</em></>, desc:'Transform your hair with our premium extension services, tailored to your individual needs and lifestyle. We offer professional colour matching to ensure a seamless, natural blend with your own hair, creating the perfect look and finish.' },
   { num:'03', img:'/WhatsApp Image 2026-07-06 at 21.34.12.jpeg', name:<>Hair <em>Treatments</em></>, desc:'Restore the health and beauty of your hair with our specialist treatment services. From smoothing and strengthening with Nanoplastia and Keratin Treatments to relaxing Head Spa experiences that promote healthy hair and scalp health.' },
-  { num:'04', img:'/WhatsApp Image 2026-07-06 at 21.39.01.jpeg', name:<>Cut &amp; <em>Style</em></>, desc:'Need a little pick-me-up? Whether you\'re looking for a fresh haircut, a complete restyle, or simply some time to relax, we\'ve got you covered. From quick refreshes to full transformations, we\'re here to help you look and feel your best.' },
+  { num:'04', img:'/cut.jpg', name:<>Cut &amp; <em>Style</em></>, desc:'Need a little pick-me-up? Whether you\'re looking for a fresh haircut, a complete restyle, or simply some time to relax, we\'ve got you covered. From quick refreshes to full transformations, we\'re here to help you look and feel your best.' },
 ]
 
 const testimonials = [
@@ -37,7 +37,7 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-content">
           <div className="hero-tag">Luton's Premier Hair Studio</div>
-          <h1 className="hero-title">More Than Hair—A Place to Relax,<br />Refresh &amp; Feel Your Best.</h1>
+          <h1 className="hero-title">More Than Hair—A Place to Relax, Refresh &amp; Feel Your Best.</h1>
           <div className="hero-cta">
             <a href={BOOK_URL} className="btn-wh" target="_blank" rel="noreferrer">Book a Treatment</a>
             <Link to="/services" className="btn-outline-wh">Explore Services</Link>
@@ -52,7 +52,7 @@ export default function Home() {
       {/* INTRO SPLIT */}
       <section className="intro">
         <div className="intro-img">
-          <img src="/1000076210.jpg" alt="Essence studio interior" />
+          <img src="/studio.jpg" alt="Essence studio interior" />
         </div>
         <div className="intro-text">
           <div className="section-tag">Welcome to Essence</div>
@@ -166,7 +166,6 @@ export default function Home() {
             <div className="cs-detail"><div className="cs-detail-icon">🕐</div><div className="cs-detail-text"><strong>Booking</strong>Appointments can be made via the booking link, or by calling/WhatsApp: <a href="tel:+447375956131">07375 956 131</a>. A deposit is required to confirm.</div></div>
           </div>
           <a href={BOOK_URL} className="btn-blk" target="_blank" rel="noreferrer">Book Online</a>
-          <p style={{fontSize:'11px',letterSpacing:'.18em',textTransform:'uppercase',color:'#9A9087',marginTop:'12px'}}>Price list available upon Booking link </p>
         </div>
         <div className="cs-map">
           <iframe
