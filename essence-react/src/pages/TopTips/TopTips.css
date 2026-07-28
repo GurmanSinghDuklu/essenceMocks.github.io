@@ -39,7 +39,7 @@
 .tt-note strong { color: #0a0a0a; }
 
 /* Aftercare cards */
-.tt-ac-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #D4C9BB; margin-top: 24px; }
+.tt-ac-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: #D4C9BB; margin-top: 24px; }
 .tt-ac-card { background: #fff; padding: 36px 28px; }
 .tt-ac-icon { font-size: 22px; margin-bottom: 14px; }
 .tt-ac-title { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; margin-bottom: 12px; color: #0a0a0a; }

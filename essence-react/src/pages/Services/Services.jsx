@@ -39,7 +39,6 @@ export default function Services() {
       <div className="stabs">
         <a href="#colour" className="stab">Colour</a>
         <a href="#treatments" className="stab">Treatments</a>
-        <a href="#spa" className="stab">Head Spa</a>
         <a href="#cut" className="stab">Cut &amp; Style</a>
         <a href="#extensions" className="stab">Extensions</a>
       </div>
@@ -66,19 +65,10 @@ export default function Services() {
         </div>
         <div className="svc-grid">
           <ServiceCard num="01 — Organic · Formaldehyde-Free" img="/img-new-03.jpg" alt="Nanoplastia" name={<><em>Nanoplastia</em></>} desc="Transform frizzy, unruly hair with our Nanoplastia treatment, a long-lasting smoothing service that leaves hair softer, shinier, and more manageable. This innovative treatment helps reduce frizz, improve condition, and cut down styling time while maintaining natural movement and volume. Enjoy smooth, healthy-looking hair for months with lasting results." />
-          <ServiceCard num="02 — Organic · Formaldehyde-Free" img="/placeholder.svg" alt="Keratin" name={<>Keratin <em>Treatment</em></>} desc="Our Keratin treatment smooths, strengthens, and nourishes the hair, helping to reduce frizz and improve manageability. Perfect for taming unruly hair, it leaves your locks feeling softer, shinier, and easier to style. Enjoy smoother, healthier-looking hair with long-lasting results and reduced styling time." />
-          <ServiceCard num="03 — Deep Restoration" img="/placeholder.svg" alt="Hair Botox" name={<>Hair <em>Botox</em></>} desc="Our Hair Botox treatment deeply repairs and rejuvenates damaged hair, restoring softness, shine, and strength from root to tip. It helps smooth frizz, reduce breakage, and improve overall hair condition. Enjoy healthier, more manageable hair with results that last up to 4 months." />
+          <ServiceCard num="02 — Organic · Formaldehyde-Free" img="/keratin.jpeg" alt="Keratin" name={<>Keratin <em>Treatment</em></>} desc="Our Keratin treatment smooths, strengthens, and nourishes the hair, helping to reduce frizz and improve manageability. Perfect for taming unruly hair, it leaves your locks feeling softer, shinier, and easier to style. Enjoy smoother, healthier-looking hair with long-lasting results and reduced styling time." />
+          <ServiceCard num="03 — Deep Restoration" img="/hair-botox.jpeg" alt="Hair Botox" name={<>Hair <em>Botox</em></>} desc="Our Hair Botox treatment deeply repairs and rejuvenates damaged hair, restoring softness, shine, and strength from root to tip. It helps smooth frizz, reduce breakage, and improve overall hair condition. Enjoy healthier, more manageable hair with results that last up to 4 months." />
         </div>
         </section>
-        <section className="svc-section bg-beige" id="spa">
-        <div className="sec-head">
-          <div className="sh-left"><h2>Head Spa &amp; <em>Scalp Care</em></h2></div>
-          <div className="sh-right">Therapeutic rituals tailored to your specific scalp concern. Using argan oil, amino acid, and aloe-infused formulas to restore balance from root to tip.</div>
-        </div>
-        <div className="svc-grid" style={{gridTemplateColumns:'1fr'}}>
-          <ServiceCard num="01" img="/1000076199.jpg" alt="Head spa" name={<>Head <em>Spa</em></>} desc="A therapeutic scalp and hair ritual tailored to your specific needs — from hair growth stimulation and scalp detox to deep conditioning and hydration. Using argan oil, amino acid, and aloe-infused formulas to restore balance from root to tip." />
-        </div>
-      </section>
       {/* CUT & STYLE */}
       <section className="svc-section bg-ow" id="cut">
         <div className="sec-head">
@@ -86,8 +76,8 @@ export default function Services() {
           <div className="sh-right">Need a little pick-me-up? Whether you're looking for a fresh haircut, a complete restyle, or simply some time to relax, we've got you covered. Pop in for a nourishing hair mask and luxury wash, enjoy a professional blow-dry, or let us add beautiful curls for that perfect finishing touch. From quick refreshes to full transformations, we're here to help you look and feel your best.</div>
         </div>
         <div className="svc-grid" style={{gridTemplateColumns:'1fr 1fr'}}>
-          <ServiceCard num="01" img="/placeholder.svg" alt="Cut & Blowdry" name={<>Cut &amp; <em>Blow Dry</em></>} desc="Refresh your style with a personalised cut and a relaxing wash using professional salon products for a healthy, beautiful finish. If your hair needs extra care, we include nourishing hair masks to restore softness, shine, and condition. Completed with a professional blow dry, leaving your hair smooth, polished, and perfectly styled." />
-          <ServiceCard num="02" img="/placeholder.svg" alt="Styling Services" name={<><em>Styling</em> Services</>} desc="Get the perfect finish with our professional styling services, including curls, waves, or a sleek straight look. Whether it's a special occasion or a simple refresh, we create long-lasting styles tailored to you. Finished with professional products for a smooth, polished result that holds beautifully." />
+          <ServiceCard num="01" img="/cut-blowdry.jpeg" alt="Cut & Blowdry" name={<>Cut &amp; <em>Blow Dry</em></>} desc="Refresh your style with a personalised cut and a relaxing wash using professional salon products for a healthy, beautiful finish. If your hair needs extra care, we include nourishing hair masks to restore softness, shine, and condition. Completed with a professional blow dry, leaving your hair smooth, polished, and perfectly styled." />
+          <ServiceCard num="02" img="/styling.jpeg" alt="Styling Services" name={<><em>Styling</em> Services</>} desc="Get the perfect finish with our professional styling services, including curls, waves, or a sleek straight look. Whether it's a special occasion or a simple refresh, we create long-lasting styles tailored to you. Finished with professional products for a smooth, polished result that holds beautifully." />
         </div>
       </section>
 
@@ -102,7 +92,7 @@ export default function Services() {
           <ServiceCard num="02 — Tape-In" img="/img-new-20.jpg" alt="Tape-In Extensions" name={<>Tape-In <em>Extensions</em></>} desc="Tape-in extensions are a quick and comfortable way to add instant length and volume with a natural, seamless finish. Applied using ultra-flat wefts, they sit discreetly against the scalp and blend effortlessly with your own hair. Lightweight and reusable, they're perfect for long-lasting, low-maintenance glamour." />
           <ServiceCard num="03 — LA Weave" img="/la-weave.jpg" alt="LA Weave Extensions" name={<>LA Weave <em>Extensions</em></>} desc="LA Weave extensions are a secure and natural-looking method that adds instant length, volume, and thickness without heat or glue. Fitted using small beads and sewn-in wefts, they sit comfortably and blend seamlessly with your natural hair. A long-lasting, reusable option perfect for full, glamorous results with minimal maintenance." />
           <ServiceCard num="04 — Hybrid" img="/hybrid-extensions.jpg" alt="Hybrid Extensions" name={<>Hybrid <em>Extensions</em></>} desc="The hybrid method combines two extension techniques to create a fully customised, seamless result tailored to your hair type and desired look. By blending methods such as nano rings, tapes, or wefts, we achieve maximum comfort, flexibility, and a flawless finish. Perfect for clients wanting the most natural blend with added volume, length, and long-lasting wear." />
-          <ServiceCard num="05 — First Time?" img="/placeholder.svg" alt="Extension consultation" name={<>Extension <em>Consultation</em></>} desc="New to extensions? Start with a consultation to match your shade, discuss length goals, and get a full rundown of aftercare and maintenance." href={CONSULT_URL} />
+          <ServiceCard num="05 — First Time?" img="/brunette-waves.jpeg" alt="Extension consultation" name={<>Extension <em>Consultation</em></>} desc="New to extensions? Start with a consultation to match your shade, discuss length goals, and get a full rundown of aftercare and maintenance." href={CONSULT_URL} />
         </div>
       </section>
 
