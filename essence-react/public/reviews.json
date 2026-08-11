@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "rating": 5.0,
+    "count": 60,
+    "source": "Google"
+  },
+  "reviews": [
+    {
+      "text": "I had my hair balayage done and I’m absolutely in love with the results! The team were brilliant — so attentive, professional, and made sure I was comfortable throughout the whole appointment. They really listened to what I wanted and paid attention to every detail. The service was amazing, and I left feeling so happy and confident with my hair. Thank you so much for the beautiful work — I highly recommend!",
+      "author": "Yasmin Begum",
+      "service": "Balayage",
+      "rating": 5
+    },
+    {
+      "text": "Amazing salon, plenty of parking and easy to get to. I had a wash, cut and blow dry and I love my new hair — it feels so much healthier. I'm definitely coming back to Essence next time.",
+      "author": "Henna",
+      "service": "Cut, Wash & Blow Dry",
+      "rating": 5
+    },
+    {
+      "text": "I highly recommend the Nanoplastia treatment if you struggle with unmanageable hair. I have thick, frizzy, curly hair and this has drastically reduced my styling time — cutting it in half.",
+      "author": "Tamanna",
+      "service": "Nanoplastia Treatment",
+      "rating": 5
+    }
+  ]
+}

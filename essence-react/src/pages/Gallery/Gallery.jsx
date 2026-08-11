@@ -14,8 +14,21 @@ export default function Gallery() {
     ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
   })
   const posts = useInstagramPosts()
-  const galleryImages = useMemo(() => posts.map(p => `/instagram/${p.file}`), [posts])
-  const igImages = useMemo(() => [...posts].reverse().slice(0, 4).map(p => `/instagram/${p.file}`), [posts])
+  // The studio photo is swapped for image.png on this page only; the Home feed keeps the original.
+  const galleryImages = useMemo(
+    () => posts.map(p => (p.file === '1000076210.jpg' ? '/image.png' : `/instagram/${p.file}`)),
+    [posts],
+  )
+  // Distinct photos so this strip doesn't repeat images already shown in the masonry above.
+  const igImages = useMemo(
+    () => [
+      '/essence-gown-blowdry.jpeg',
+      '/balayage-waves-signage.jpeg',
+      '/dark-straight-gloss.jpeg',
+      '/image.png',
+    ],
+    [],
+  )
 
   return (
     <main>

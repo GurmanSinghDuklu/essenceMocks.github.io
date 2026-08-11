@@ -93,7 +93,6 @@ const TIPS = [
         title: 'Extensions Aftercare',
         items: [
           'Use sulphate-free shampoos and conditioners',
-          'Keratin only: no wash for 72 hours after treatment',
           'Avoid tight hairstyles for the first few days',
           'No swimming or excessive sweating for 72 hours',
           'Avoid moisture and humidity in first 72 hours',

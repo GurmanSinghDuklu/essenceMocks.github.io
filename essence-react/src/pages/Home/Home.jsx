@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import './Home.css'
 import InstagramFeed from '../../components/InstagramFeed/InstagramFeed'
 import useSEO from '../../hooks/useSEO'
+import useReviews from '../../hooks/useReviews'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 
@@ -14,11 +15,11 @@ const services = [
   { num:'04', img:'/cut.jpg', name:<>Cut &amp; <em>Style</em></>, desc:'Need a little pick-me-up? Whether you\'re looking for a fresh haircut, a complete restyle, or simply some time to relax, we\'ve got you covered. From quick refreshes to full transformations, we\'re here to help you look and feel your best.' },
 ]
 
-const testimonials = [
-  { text: 'Went in for a keratin treatment before my holiday as my hair is very curly and frizzy. They did such an amazing job — no frizz and my hair is so much easier to maintain. Will be a regular from now on.', author: 'Verified Client', service: 'Keratin Treatment' },
-  { text: "Amazing salon, plenty of parking and easy to get to. I had a wash, cut and blow dry and I love my new hair — it feels so much healthier. I'm definitely coming back to Essence next time.", author: 'Henna', service: 'Cut, Wash & Blow Dry' },
-  { text: 'I highly recommend the Nanoplastia treatment if you struggle with unmanageable hair. I have thick, frizzy, curly hair and this has drastically reduced my styling time — cutting it in half.', author: 'Tamanna', service: 'Nanoplastia Treatment' },
-]
+const Stars = () => (
+  <div className="tcard-stars" aria-label="5 out of 5 stars">
+    {Array.from({ length: 5 }, (_, i) => <span key={i}>★</span>)}
+  </div>
+)
 
 export default function Home() {
   useSEO({
@@ -27,6 +28,7 @@ export default function Home() {
     canonical: 'https://www.essencehairtreatment.co.uk/',
     ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
   })
+  const { summary, reviews } = useReviews()
   return (
     <main>
       {/* HERO */}
@@ -136,12 +138,19 @@ export default function Home() {
         <div className="testi-head">
           <div className="section-tag">Client Stories</div>
           <h2>What our clients <em>say</em></h2>
+          <div className="testi-summary">
+            <Stars />
+            <span className="testi-summary-text">
+              {summary.rating.toFixed(1)} out of 5 · {summary.count}+ {summary.source} reviews
+            </span>
+          </div>
           <div className="testi-rule" />
         </div>
         <div className="testi-grid">
-          {testimonials.map(t => (
+          {reviews.map(t => (
             <div className="tcard" key={t.author}>
               <div className="tcard-quote">"</div>
+              <Stars />
               <p className="tcard-text">{t.text}</p>
               <div className="tcard-rule" />
               <div className="tcard-author">{t.author}</div>
