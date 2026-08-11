@@ -24,7 +24,7 @@ function CourseCard({ num, tag, name, desc, duration, investment, certification,
 
 export default function Academy() {
   useSEO({
-    title: 'Hair Courses Luton | ABT Accredited Academy | Essence',
+    title: 'Essence Hair Treatment | Hair Courses Luton | ABT Accredited Academy',
     description: 'Learn professional hair techniques at Essence Hair Academy in Luton. ABT accredited courses in Nanoplastia, Keratin, balayage & extensions.',
     canonical: 'https://www.essencehairtreatment.co.uk/academy',
     ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',

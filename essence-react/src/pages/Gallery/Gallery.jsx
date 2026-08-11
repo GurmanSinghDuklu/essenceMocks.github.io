@@ -8,7 +8,7 @@ const IG_URL = 'https://www.instagram.com/essence.hairtreatment/'
 
 export default function Gallery() {
   useSEO({
-    title: 'Hair Transformations Gallery Luton | Essence Hair Treatment',
+    title: 'Essence Hair Treatment | Hair Transformations Gallery Luton',
     description: 'Browse real client hair transformations in Luton — balayage, hair extensions, colour and treatments at Essence Hair Treatment, Bedfordshire.',
     canonical: 'https://www.essencehairtreatment.co.uk/gallery',
     ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',

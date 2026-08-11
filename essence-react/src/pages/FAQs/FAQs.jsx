@@ -150,7 +150,7 @@ function AccordionItem({ q, a }) {
 
 export default function FAQs() {
   useSEO({
-    title: 'FAQs | Essence Hair Treatment Luton',
+    title: 'Essence Hair Treatment | FAQs | Hair Salon Luton',
     description: 'Answers about booking, deposits, cancellations, aftercare and our hair services at Essence Hair Treatment in Luton, Bedfordshire.',
     canonical: 'https://www.essencehairtreatment.co.uk/faqs',
     ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',

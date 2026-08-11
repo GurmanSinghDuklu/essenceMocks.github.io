@@ -23,7 +23,7 @@ const Stars = () => (
 
 export default function Home() {
   useSEO({
-    title: 'Hair Salon Luton | Balayage, Extensions & Treatments | Essence',
+    title: 'Essence Hair Treatment | Hair Salon Luton | Balayage & Extensions',
     description: 'Award-worthy hair salon in Luton, Bedfordshire. Balayage, highlights, hair extensions, Nanoplastia & Keratin treatments. Book your appointment online today.',
     canonical: 'https://www.essencehairtreatment.co.uk/',
     ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
