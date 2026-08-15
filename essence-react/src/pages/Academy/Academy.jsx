@@ -26,8 +26,8 @@ export default function Academy() {
   useSEO({
     title: 'Essence Hair Treatment | Hair Courses Luton | ABT Accredited Academy',
     description: 'Learn professional hair techniques at Essence Hair Academy in Luton. ABT accredited courses in Nanoplastia, Keratin, balayage & extensions.',
-    canonical: 'https://www.essencehairtreatment.co.uk/academy',
-    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+    canonical: 'https://www.essencehairtreatment.com/academy',
+    ogImage: 'https://www.essencehairtreatment.com/essencelogo.jpg',
   })
   return (
     <main>
@@ -98,7 +98,7 @@ export default function Academy() {
               <h3 className="ac-c-name">Balayage <em>Masterclass</em></h3>
               <p className="ac-c-desc">Our most celebrated course. A full day mastering the freehand balayage technique — not just the "how" but the "why" behind every decision. You'll work on a real model under expert guidance and leave truly ready.</p>
               <p className="ac-c-desc">First I demonstrate and break down every step, then it's your turn — with support throughout.</p>
-              <a href="https://www.essencehairtreatment.com/booking-calendar/balayage-masterclass" className="ac-book-link" target="_blank" rel="noreferrer">Enrol — £400 →</a>
+              <a href={BOOK_URL} className="ac-book-link" target="_blank" rel="noreferrer">Enrol — £400 →</a>
             </div>
             <div className="feat-r">
               <div>
@@ -130,63 +130,54 @@ export default function Academy() {
             name="Keratin <em>Treatment</em>"
             desc="Professional application of organic keratin — consultation, strand testing, application, heat activation, and full aftercare guidance. Everything needed to offer this as a standalone service."
             duration="6 Hours" investment="£200" certification="ABT Accredited" extra="Level" extraVal="All Levels"
-            bookHref="https://www.essencehairtreatment.com/booking-calendar/keratin-treatment"
           />
           <CourseCard
             num="03" tag="Treatments · 1 Day"
             name="Nanoplastia <em>Treatment</em>"
             desc="Master the most in-demand organic smoothing treatment. Understand the science, perfect the application, and learn to advise clients on suitability — a highly profitable skill set."
             duration="9 Hours" investment="£300" certification="ABT Accredited" extra="Level" extraVal="All Levels"
-            bookHref="https://www.essencehairtreatment.com/booking-calendar/nanoplastia-hair-treatment"
           />
           <CourseCard
             num="04" tag="Treatments · 1 Day"
             name="Hair <em>Botox</em>"
             desc="A full training day in hair botox — growing rapidly in demand. Full protocol: client assessment, product layering, heat sealing, and aftercare advice for lasting results and client retention."
             duration="9 Hours" investment="£300" certification="ABT Accredited" extra="Level" extraVal="All Levels"
-            bookHref="https://www.essencehairtreatment.com/booking-calendar/hair-botox-treatment"
           />
           <CourseCard
             num="05" tag="Bundle · 2 Days · Best Value"
             name="Full Treatment <em>Package</em>"
             desc="Keratin, Nanoplastia, and Hair Botox — all three organic smoothing treatments in one intensive two-day programme. Ideal for a complete treatment menu. Excellent value versus booking individually."
             duration="2 Days · 16 hrs" investment="£800" certification="ABT Accredited" extra="Includes" extraVal="All 3 Treatments"
-            bookHref="https://www.essencehairtreatment.com/booking-calendar/full-hair-treatment-package-2-day"
           />
           <CourseCard
             num="06" tag="Extensions · 1 Day"
             name="Extensions <em>2 Method</em>"
             desc="Certified in Tape and Nano Ring extensions. Fitting, colour matching, blending, removal, and maintenance advice. Immediately expands your service menu and earning potential."
             duration="9 Hours" investment="£350" certification="ABT Accredited" extra="Methods" extraVal="Tape + Nano Ring"
-            bookHref="https://www.essencehairtreatment.com/booking-calendar/hair-extensions-2-method-tape-nanos"
           />
           <CourseCard
             num="07" tag="Extensions · 1 Day"
             name="Extensions <em>4 Method</em>"
             desc="The most comprehensive extensions course — Tape, Nano Ring, Micro Ring, and LA Weave. Everything needed to build a complete extensions service."
             duration="9 Hours" investment="£600" certification="ABT Accredited" extra="Methods" extraVal="Tape/Nano/Micro/LA Weave"
-            bookHref="https://www.essencehairtreatment.com/booking-calendar/hair-extensions-4-method"
           />
           <CourseCard
             num="08" tag="Colour Foundation · 2 Days"
             name="Basics of <em>Colour</em>"
             desc="Essential foundation for any colourist. Colour theory, developer selection, application, highlighting, and professional toning. Ideal for beginners or those formalising existing skills."
             duration="2 Days · 18 hrs" investment="£800" certification="ABT Accredited" extra="Level" extraVal="Beginner–Intermediate"
-            bookHref="https://www.essencehairtreatment.com/booking-calendar/basics-of-colour-2-days"
           />
           <CourseCard
             num="09" tag="Colour Advanced · 2 Days"
             name="Advanced <em>Colour</em>"
             desc="Colour correction, vivids, grey blending, complex balayage, and editorial techniques. For experienced stylists ready to offer a genuinely premium colour service."
             duration="2 Days · 18 hrs" investment="£800" certification="ABT Accredited" extra="Level" extraVal="Intermediate–Advanced"
-            bookHref="https://www.essencehairtreatment.com/booking-calendar/advanced-colour"
           />
           <CourseCard
             num="10" tag="Cutting · 2 Days"
             name="Cutting <em>Basics</em>"
             desc="Precision cutting, scissor over comb, layering, graduation, and tailoring a cut to face shape and density. The technical foundation every stylist needs."
             duration="2 Days · 18 hrs" investment="£500" certification="ABT Accredited" extra="Level" extraVal="Beginner–Intermediate"
-            bookHref="https://www.essencehairtreatment.com/booking-calendar/cutting-basics"
           />
         </div>
       </section>

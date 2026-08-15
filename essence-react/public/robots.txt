@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.essencehairtreatment.co.uk/sitemap.xml
+Sitemap: https://www.essencehairtreatment.com/sitemap.xml

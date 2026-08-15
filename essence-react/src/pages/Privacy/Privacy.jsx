@@ -5,8 +5,8 @@ export default function Privacy() {
   useSEO({
     title: 'Essence Hair Treatment | Privacy & Salon Policy',
     description: 'Read our salon policies, cancellation terms, and privacy information at Essence Hair Treatment in Luton, Bedfordshire.',
-    canonical: 'https://www.essencehairtreatment.co.uk/privacy',
-    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+    canonical: 'https://www.essencehairtreatment.com/privacy',
+    ogImage: 'https://www.essencehairtreatment.com/essencelogo.jpg',
   })
   return (
     <main>

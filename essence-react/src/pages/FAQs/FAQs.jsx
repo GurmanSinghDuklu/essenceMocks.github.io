@@ -152,8 +152,8 @@ export default function FAQs() {
   useSEO({
     title: 'Essence Hair Treatment | FAQs | Hair Salon Luton',
     description: 'Answers about booking, deposits, cancellations, aftercare and our hair services at Essence Hair Treatment in Luton, Bedfordshire.',
-    canonical: 'https://www.essencehairtreatment.co.uk/faqs',
-    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+    canonical: 'https://www.essencehairtreatment.com/faqs',
+    ogImage: 'https://www.essencehairtreatment.com/essencelogo.jpg',
   })
   return (
     <main>

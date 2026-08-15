@@ -25,8 +25,8 @@ export default function Home() {
   useSEO({
     title: 'Essence Hair Treatment | Hair Salon Luton | Balayage & Extensions',
     description: 'Award-worthy hair salon in Luton, Bedfordshire. Balayage, highlights, hair extensions, Nanoplastia & Keratin treatments. Book your appointment online today.',
-    canonical: 'https://www.essencehairtreatment.co.uk/',
-    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+    canonical: 'https://www.essencehairtreatment.com/',
+    ogImage: 'https://www.essencehairtreatment.com/essencelogo.jpg',
   })
   const { summary, reviews } = useReviews()
   return (

@@ -106,8 +106,8 @@ export default function TopTips() {
   useSEO({
     title: 'Essence Hair Treatment | Hair Care Tips | Luton',
     description: 'Expert hair care advice from Essence Hair Treatment in Luton. How to maintain your balayage, colour, hair extensions and treatments at home.',
-    canonical: 'https://www.essencehairtreatment.co.uk/top-tips',
-    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+    canonical: 'https://www.essencehairtreatment.com/top-tips',
+    ogImage: 'https://www.essencehairtreatment.com/essencelogo.jpg',
   })
   return (
     <main style={{ paddingTop: '0' }}>

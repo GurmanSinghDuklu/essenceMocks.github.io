@@ -10,8 +10,8 @@ export default function Gallery() {
   useSEO({
     title: 'Essence Hair Treatment | Hair Transformations Gallery Luton',
     description: 'Browse real client hair transformations in Luton — balayage, hair extensions, colour and treatments at Essence Hair Treatment, Bedfordshire.',
-    canonical: 'https://www.essencehairtreatment.co.uk/gallery',
-    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+    canonical: 'https://www.essencehairtreatment.com/gallery',
+    ogImage: 'https://www.essencehairtreatment.com/essencelogo.jpg',
   })
   const posts = useInstagramPosts()
   // The studio photo is swapped for image.png on this page only; the Home feed keeps the original.

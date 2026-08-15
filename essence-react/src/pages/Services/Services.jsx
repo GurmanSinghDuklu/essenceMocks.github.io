@@ -22,8 +22,8 @@ export default function Services() {
   useSEO({
     title: 'Essence Hair Treatment | Hair Services Luton | Balayage & Keratin',
     description: 'Full range of hair services in Luton — balayage, highlights, hair extensions, Nanoplastia, Keratin, Hair Botox, cuts & styling. Book online today.',
-    canonical: 'https://www.essencehairtreatment.co.uk/services',
-    ogImage: 'https://www.essencehairtreatment.co.uk/essencelogo.jpg',
+    canonical: 'https://www.essencehairtreatment.com/services',
+    ogImage: 'https://www.essencehairtreatment.com/essencelogo.jpg',
   })
   return (
     <main>
