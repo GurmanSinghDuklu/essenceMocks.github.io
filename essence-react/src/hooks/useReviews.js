@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 // Reviews live in /public/reviews.json so they can be updated without a rebuild.
 // Only 5-star reviews are shown; anything lower is filtered out here.
 const FALLBACK = {
-  summary: { rating: 5, count: 60, source: 'Google' },
+  summary: { rating: 5, count: 300, source: 'Google' },
   reviews: [],
 }
 
