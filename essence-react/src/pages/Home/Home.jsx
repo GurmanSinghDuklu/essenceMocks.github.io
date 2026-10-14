@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import './Home.css'
 import InstagramFeed from '../../components/InstagramFeed/InstagramFeed'
 import useSEO from '../../hooks/useSEO'
+import { PAGES } from '../../seo'
 import useReviews from '../../hooks/useReviews'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
@@ -22,12 +23,7 @@ const Stars = () => (
 )
 
 export default function Home() {
-  useSEO({
-    title: 'Essence Hair Treatment | Hair Salon Luton | Balayage & Extensions',
-    description: 'Award-worthy hair salon in Luton, Bedfordshire. Balayage, highlights, hair extensions, Nanoplastia & Keratin treatments. Book your appointment online today.',
-    canonical: 'https://www.essencehairtreatment.com/',
-    ogImage: 'https://www.essencehairtreatment.com/essencelogo.jpg',
-  })
+  useSEO(PAGES['/'])
   const { summary, reviews } = useReviews()
   return (
     <main>
@@ -168,9 +164,9 @@ export default function Home() {
         <div className="cs-text">
           <div className="section-tag">Get in Touch</div>
           <h2 className="section-title" style={{marginBottom:'36px'}}>Find <em>Us</em></h2>
-          <p className="body-text" style={{marginBottom:'32px'}}>All appointments are by booking only. Book online, call, or WhatsApp us.</p>
+          <p className="body-text" style={{marginBottom:'32px'}}>All appointments are by booking only. Book online, call, or WhatsApp us. We're in north Luton, a short drive from Dunstable, Houghton Regis, Barton-le-Clay, Toddington and Harpenden.</p>
           <div style={{display:'flex',flexDirection:'column',gap:'20px',marginBottom:'36px'}}>
-            <div className="cs-detail"><div className="cs-detail-icon">📍</div><div className="cs-detail-text"><strong>Address</strong>6 Woodmere, Luton, Bedfordshire · Free street parking available</div></div>
+            <div className="cs-detail"><div className="cs-detail-icon">📍</div><div className="cs-detail-text"><strong>Address</strong>6 Woodmere, Luton, Bedfordshire LU3 4DN · Free street parking available</div></div>
             <div className="cs-detail"><div className="cs-detail-icon">📞</div><div className="cs-detail-text"><strong>Phone / WhatsApp</strong><a href="tel:+447375956131">07375 956 131</a></div></div>
             <div className="cs-detail"><div className="cs-detail-icon">🕐</div><div className="cs-detail-text"><strong>Booking</strong>Appointments can be made via the booking link, or by calling/WhatsApp: <a href="tel:+447375956131">07375 956 131</a>. A deposit is required to confirm.</div></div>
           </div>
@@ -178,7 +174,7 @@ export default function Home() {
         </div>
         <div className="cs-map">
           <iframe
-            src="https://maps.google.com/maps?q=6+Woodmere,+Luton,+Bedfordshire&output=embed"
+            src="https://maps.google.com/maps?q=6+Woodmere,+Luton+LU3+4DN&output=embed"
             allowFullScreen
             loading="lazy"
             title="Essence location"

@@ -34,7 +34,10 @@ export default function useSEO({ title, description, canonical, ogImage }) {
     setMeta('twitter:title', title)
     setMeta('twitter:description', description)
 
-    if (canonical) setLink('canonical', canonical)
+    if (canonical) {
+      setLink('canonical', canonical)
+      setMeta('og:url', canonical, true)
+    }
     if (ogImage) {
       setMeta('og:image', ogImage, true)
       setMeta('twitter:image', ogImage)

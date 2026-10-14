@@ -2,17 +2,13 @@ import { useMemo } from 'react'
 import useInstagramPosts from '../../hooks/useInstagramPosts'
 import './Gallery.css'
 import useSEO from '../../hooks/useSEO'
+import { PAGES } from '../../seo'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const IG_URL = 'https://www.instagram.com/essence.hairtreatment/'
 
 export default function Gallery() {
-  useSEO({
-    title: 'Essence Hair Treatment | Hair Transformations Gallery Luton',
-    description: 'Browse real client hair transformations in Luton — balayage, hair extensions, colour and treatments at Essence Hair Treatment, Bedfordshire.',
-    canonical: 'https://www.essencehairtreatment.com/gallery',
-    ogImage: 'https://www.essencehairtreatment.com/essencelogo.jpg',
-  })
+  useSEO(PAGES['/gallery'])
   const posts = useInstagramPosts()
   // The studio photo is swapped for image.png on this page only; the Home feed keeps the original.
   const galleryImages = useMemo(

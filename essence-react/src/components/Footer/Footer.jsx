@@ -40,7 +40,7 @@ export default function Footer() {
           <ul className="footer-links">
             <li><a href="tel:+447375956131">07375 956 131</a></li>
             <li><span>6 Woodmere, Luton</span></li>
-            <li><span>Bedfordshire</span></li>
+            <li><span>Bedfordshire LU3 4DN</span></li>
           </ul>
         </div>
       </div>

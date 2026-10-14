@@ -1,5 +1,6 @@
 import './Services.css'
 import useSEO from '../../hooks/useSEO'
+import { PAGES } from '../../seo'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue'
@@ -19,12 +20,7 @@ function ServiceCard({ num, img, alt, name, desc, href }) {
 }
 
 export default function Services() {
-  useSEO({
-    title: 'Essence Hair Treatment | Hair Services Luton | Balayage & Keratin',
-    description: 'Full range of hair services in Luton — balayage, highlights, hair extensions, Nanoplastia, Keratin, Hair Botox, cuts & styling. Book online today.',
-    canonical: 'https://www.essencehairtreatment.com/services',
-    ogImage: 'https://www.essencehairtreatment.com/essencelogo.jpg',
-  })
+  useSEO(PAGES['/services'])
   return (
     <main>
       <div className="page-hero">
