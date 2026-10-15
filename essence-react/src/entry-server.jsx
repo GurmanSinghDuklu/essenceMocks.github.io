@@ -5,7 +5,8 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from './App.jsx'
 import { FAQ_GROUPS } from './pages/FAQs/faqData.jsx'
-import { PAGES, salonSchema, breadcrumbSchema, faqSchema } from './seo.js'
+import { PAGES, salonSchema, breadcrumbSchema, faqSchema, serviceSchema } from './seo.js'
+import { LANDINGS } from './pages/Landing/landings.jsx'
 
 export { PAGES }
 
@@ -21,7 +22,8 @@ export function render(url) {
 
 // FAQ answers are JSX; flatten them to plain text for the FAQPage schema.
 function toText(node) {
-  return renderToStaticMarkup(<>{node}</>)
+  // Answers can contain <Link>, which needs a router to render.
+  return renderToStaticMarkup(<StaticRouter location="/">{node}</StaticRouter>)
     .replace(/<br\s*\/?>|<\/li>/g, ' ')
     .replace(/<[^>]+>/g, '')
     .replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"')
@@ -35,6 +37,10 @@ export function schemasFor(path) {
   if (path === '/faqs') {
     const items = FAQ_GROUPS.flatMap(g => g.items).map(({ q, a }) => ({ q, text: toText(a) }))
     schemas.push(faqSchema(items))
+  }
+  if (LANDINGS[path]) {
+    schemas.push(serviceSchema(path, LANDINGS[path]))
+    schemas.push(faqSchema(LANDINGS[path].faqs.map(({ q, a }) => ({ q, text: toText(a) }))))
   }
   return schemas.filter(Boolean)
 }

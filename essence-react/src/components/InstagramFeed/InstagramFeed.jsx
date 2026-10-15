@@ -29,7 +29,7 @@ export default function InstagramFeed() {
             <div className="ig-feed-card-img">
               <img
                 src={`/instagram/${post.file}`}
-                alt={post.caption}
+                alt={post.alt || post.caption}
                 style={post.focal ? { objectPosition: post.focal } : undefined}
               />
             </div>

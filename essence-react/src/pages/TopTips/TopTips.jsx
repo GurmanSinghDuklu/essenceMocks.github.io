@@ -110,7 +110,7 @@ export default function TopTips() {
       {/* HERO */}
       <div className="tt-hero">
         <div className="tt-ph-img">
-          <img src="/1000076208.jpg" alt="Top Tips" />
+          <img src="/1000076208.jpg" alt="Stylist checking glossy, shoulder-length brunette hair with caramel ends" />
         </div>
         <div className="tt-ph-ov" />
         <div className="tt-ph-content">

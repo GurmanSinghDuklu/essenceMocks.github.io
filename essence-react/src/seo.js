@@ -3,6 +3,7 @@
 
 export const SITE_URL = 'https://www.essencehairtreatment.com'
 export const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
+export const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue'
 
 export const BUSINESS = {
   name: 'Essence Hair Treatment',
@@ -23,11 +24,27 @@ export const BUSINESS = {
   ],
 }
 
+// Regular opening hours (used for the schema). Saturdays are by advance booking only,
+// so they're shown on the page but left out of the schema.
+export const HOURS = [
+  { days: ['Monday', 'Tuesday', 'Wednesday', 'Friday'], opens: '09:30', closes: '17:30' },
+  { days: ['Thursday'], opens: '10:00', closes: '19:00' },
+]
+
+// The same hours as visible text, for the page and the opening-hours FAQ.
+export const HOURS_TEXT = [
+  ['Mon – Wed', '9:30am – 5:30pm'],
+  ['Thursday', '10am – 7pm'],
+  ['Friday', '9:30am – 5:30pm'],
+  ['Saturday', 'Limited appointments, book 6 weeks ahead'],
+  ['Sunday', 'Closed'],
+]
+
 const OG_IMAGE = `${SITE_URL}/essencelogo.jpg`
 
 export const PAGES = {
   '/': {
-    title: 'Essence Hair Treatment | Hair Salon Luton | Balayage & Extensions',
+    title: 'Hair Salon in Luton, Bedfordshire | Balayage & Extensions | Essence',
     description: 'Hair salon in Luton, Bedfordshire rated 5.0 from 300+ Google reviews. Balayage, highlights, hair extensions, Nanoplastia & Keratin treatments. Book online today.',
   },
   '/services': {
@@ -51,9 +68,19 @@ export const PAGES = {
     crumb: 'FAQs',
   },
   '/academy': {
-    title: 'Essence Hair Treatment | Hair Courses Luton | ABT Accredited Academy',
-    description: 'Learn professional hair techniques at Essence Hair Academy in Luton. ABT accredited courses in Nanoplastia, Keratin, balayage & extensions.',
+    title: 'Hair Training Academy in Bedfordshire | Essence Academy, Luton',
+    description: 'ABT-accredited hair training academy in Luton, Bedfordshire. One-to-one courses in balayage, colour, cutting, Keratin, Nanoplastia, Hair Botox and hair extensions.',
     crumb: 'Academy',
+  },
+  '/hair-extensions-bedfordshire': {
+    title: 'Hair Extensions in Bedfordshire | Essence Hair, Luton',
+    description: 'Nano ring, tape-in, LA Weave and hybrid hair extensions in Luton, Bedfordshire. Expert colour matching, rated 5.0 from 300+ Google reviews. Book a consultation.',
+    crumb: 'Hair Extensions in Bedfordshire',
+  },
+  '/balayage-bedfordshire': {
+    title: 'Balayage in Bedfordshire | Essence Hair, Luton',
+    description: 'Bespoke balayage in Luton, Bedfordshire, with a bonding treatment and custom toning included. Rated 5.0 from 300+ Google reviews. Book online.',
+    crumb: 'Balayage in Bedfordshire',
   },
   '/privacy': {
     title: 'Essence Hair Treatment | Privacy & Salon Policy',
@@ -105,21 +132,16 @@ export function salonSchema() {
     },
     geo: { '@type': 'GeoCoordinates', latitude: b.latitude, longitude: b.longitude },
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${b.name}, ${b.streetAddress}, ${b.addressLocality} ${b.postalCode}`)}`,
-    areaServed: b.areaServed.map(name => ({ '@type': 'City', name })),
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Friday'],
-        opens: '09:30',
-        closes: '17:30',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Thursday',
-        opens: '10:00',
-        closes: '19:00',
-      },
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Bedfordshire' },
+      ...b.areaServed.map(name => ({ '@type': 'City', name })),
     ],
+    openingHoursSpecification: HOURS.map(({ days, opens, closes }) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: days,
+      opens,
+      closes,
+    })),
     priceRange: '££',
     currenciesAccepted: 'GBP',
     paymentAccepted: 'Cash',
@@ -169,5 +191,23 @@ export function faqSchema(items) {
       name: q,
       acceptedAnswer: { '@type': 'Answer', text },
     })),
+  }
+}
+
+// Service schema for the location landing pages.
+export function serviceSchema(path, { service }) {
+  const page = PAGES[path]
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `${service} in Bedfordshire`,
+    serviceType: service,
+    description: page.description,
+    url: page.canonical,
+    provider: { '@id': `${SITE_URL}/#salon` },
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Bedfordshire' },
+      ...BUSINESS.areaServed.map(name => ({ '@type': 'City', name })),
+    ],
   }
 }

@@ -1,4 +1,7 @@
 // FAQ content, shared by the FAQs page and the FAQPage schema in entry-server.jsx.
+import { Link } from 'react-router-dom'
+import { HOURS_TEXT } from '../../seo'
+
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue'
 
@@ -97,7 +100,7 @@ export const FAQ_GROUPS = [
     items: [
       {
         q: 'What types of extensions do you offer?',
-        a: 'We offer tape hair extensions — a semi-permanent, lightweight method that lies flat against the scalp and blends seamlessly with natural hair. Applied using medical-grade adhesive and lasting 6–8 weeks before a maintenance appointment.',
+        a: <>We offer nano ring, tape-in, LA Weave and hybrid extensions, all colour-matched to your natural hair. Tape-ins are a semi-permanent, lightweight method that lies flat against the scalp, applied using medical-grade adhesive and lasting 6–8 weeks before a maintenance appointment. <Link to="/hair-extensions-bedfordshire">More about our hair extensions</Link>.</>,
       },
       {
         q: 'Will extensions damage my natural hair?',
@@ -114,6 +117,10 @@ export const FAQ_GROUPS = [
     label: 'General',
     title: <><em>General</em> Questions</>,
     items: [
+      {
+        q: 'What are your opening hours?',
+        a: <>{HOURS_TEXT.map(([days, time]) => <span key={days}>{days}: {time}.<br /></span>)}All appointments are by booking only.</>,
+      },
       {
         q: 'Where are you located?',
         a: 'We are based at 6 Woodmere, Luton, Bedfordshire LU3 4DN — a short drive from Dunstable, Houghton Regis, Barton-le-Clay, Toddington and Harpenden. Free street parking is available directly outside. We operate by appointment only — walk-ins are not available.',

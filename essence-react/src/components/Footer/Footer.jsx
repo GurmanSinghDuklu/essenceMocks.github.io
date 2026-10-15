@@ -11,10 +11,10 @@ export default function Footer() {
         <div>
           <div className="footer-col-title">Services</div>
           <ul className="footer-links">
-            <li><Link to="/services">Balayage &amp; Colour</Link></li>
+            <li><Link to="/balayage-bedfordshire">Balayage &amp; Colour</Link></li>
             <li><Link to="/services">Hair Treatments</Link></li>
             <li><Link to="/services">Cut &amp; Style</Link></li>
-            <li><Link to="/services">Extensions</Link></li>
+            <li><Link to="/hair-extensions-bedfordshire">Hair Extensions</Link></li>
           </ul>
         </div>
         <div>

@@ -1,75 +1,93 @@
 [
   {
     "file": "img-new-01.jpg",
-    "caption": "Fresh results from the studio ✨"
+    "caption": "Fresh results from the studio ✨",
+    "alt": "Long brunette hair with caramel balayage and soft curls, Essence Hair Treatment, Luton"
   },
   {
     "file": "img-new-02.jpg",
-    "caption": "Hair extensions — lightweight and seamless 🌿"
+    "caption": "Hair extensions — lightweight and seamless 🌿",
+    "alt": "Long, voluminous black wavy hair extensions on a client in the Essence salon"
   },
   {
     "file": "img-new-03.jpg",
-    "caption": "Transformation at Essence Hair Treatment"
+    "caption": "Transformation at Essence Hair Treatment",
+    "alt": "Long straight hair with a brunette-to-caramel balayage blend, back view"
   },
   {
     "file": "img-new-04.jpg",
-    "caption": "Bespoke colour, tailored to you"
+    "caption": "Bespoke colour, tailored to you",
+    "alt": "Long, sleek jet-black straight hair, back view, Essence salon in Luton"
   },
   {
     "file": "img-new-06.jpg",
-    "caption": "Sun-kissed balayage — no harsh lines"
+    "caption": "Sun-kissed balayage — no harsh lines",
+    "alt": "Sun-kissed blonde balayage on long, loose curls"
   },
   {
     "file": "img-new-07.jpg",
-    "caption": "The Essence studio, Luton"
+    "caption": "The Essence studio, Luton",
+    "alt": "Long copper-brown curls in front of the Essence Hair & Academy sign, Luton"
   },
   {
     "file": "img-new-08.jpg",
-    "caption": "Frizz-free results that last months"
+    "caption": "Frizz-free results that last months",
+    "alt": "Bronde balayage with soft, bouncy curls"
   },
   {
     "file": "img-new-09.jpg",
-    "caption": "Head spa — deep hydration ritual"
+    "caption": "Head spa — deep hydration ritual",
+    "alt": "Long, sleek, glossy black hair after a treatment at Essence"
   },
   {
     "file": "img-new-10.jpg",
-    "caption": "Hair Botox — smooth, glossy, healthy"
+    "caption": "Hair Botox — smooth, glossy, healthy",
+    "alt": "Long, glossy copper hair after a Hair Botox treatment"
   },
   {
     "file": "img-new-11.jpg",
-    "caption": "Nanoplastia treatment results"
+    "caption": "Nanoplastia treatment results",
+    "alt": "Long ash-brown hair with soft, frizz-free waves after Nanoplastia"
   },
   {
     "file": "img-new-12.jpg",
-    "caption": "Keratin treatment — cutting styling time in half"
+    "caption": "Keratin treatment — cutting styling time in half",
+    "alt": "Long, sleek chocolate-brown hair with subtle highlights after a Keratin treatment"
   },
   {
     "file": "img-new-14.jpg",
-    "caption": "Scalp care at Essence"
+    "caption": "Scalp care at Essence",
+    "alt": "Long, straight, glossy chestnut-brown hair, back view, Essence salon in Luton"
   },
   {
     "file": "img-new-15.jpg",
     "caption": "Another beautiful transformation ✨",
+    "alt": "Glossy shoulder-length bob with caramel highlights",
     "focal": "center 22%"
   },
   {
     "file": "img-new-16.jpg",
-    "caption": "Organic, formaldehyde-free treatments"
+    "caption": "Organic, formaldehyde-free treatments",
+    "alt": "Long brunette hair with caramel balayage and bouncy curls under the Essence sign"
   },
   {
     "file": "img-new-18.jpg",
-    "caption": "Real results, real clients"
+    "caption": "Real results, real clients",
+    "alt": "Client with long, layered dark-brown hair and caramel face-framing highlights"
   },
   {
     "file": "img-new-19.jpg",
-    "caption": "Your hair, your story, our passion"
+    "caption": "Your hair, your story, our passion",
+    "alt": "Client with long golden-blonde balayage curls at Essence in Luton"
   },
   {
     "file": "img-new-20.jpg",
-    "caption": "Book your appointment today"
+    "caption": "Book your appointment today",
+    "alt": "Long, straight brunette hair with tape-in hair extensions"
   },
   {
     "file": "1000076210.jpg",
-    "caption": "Inside the Essence studio"
+    "caption": "Inside the Essence studio",
+    "alt": "Inside the Essence Hair & Academy salon in Luton"
   }
 ]

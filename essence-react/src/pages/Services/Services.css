@@ -17,6 +17,8 @@
 .sh-left h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px,3vw,42px); font-weight: 300; line-height: 1.1; }
 .sh-left h2 em { font-style: italic; }
 .sh-right { font-size: 13px; line-height: 1.82; color: #9A9087; max-width: 320px; text-align: right; }
+.sh-link { display: block; margin-top: 12px; color: #0a0a0a; font-size: 9px; letter-spacing: .3em; text-transform: uppercase; text-decoration: none; }
+.sh-link:hover { color: #9A9087; }
 .svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; align-items: stretch; }
 .svc-grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 3px; align-items: stretch; }
 .svc-card { background: #fff; overflow: hidden; display: flex; flex-direction: column; }

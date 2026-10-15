@@ -1,30 +1,15 @@
-import { useState } from 'react'
 import './FAQs.css'
 import useSEO from '../../hooks/useSEO'
 import { PAGES, BOOK_URL } from '../../seo'
 import { FAQ_GROUPS } from './faqData'
-
-function AccordionItem({ q, a }) {
-  const [open, setOpen] = useState(false)
-  return (
-    <div className={`faq-item${open ? ' open' : ''}`}>
-      <button className="faq-q" onClick={() => setOpen(o => !o)} aria-expanded={open}>
-        <span>{q}</span>
-        <div className="faq-icon">{open ? '−' : '+'}</div>
-      </button>
-      <div className="faq-a-wrap">
-        <div className="faq-a">{a}</div>
-      </div>
-    </div>
-  )
-}
+import AccordionItem from '../../components/Accordion/Accordion'
 
 export default function FAQs() {
   useSEO(PAGES['/faqs'])
   return (
     <main>
       <div className="page-hero">
-        <div className="ph-img"><img src="/1000076197.jpg" alt="Frequently Asked Questions" /></div>
+        <div className="ph-img"><img src="/1000076197.jpg" alt="Close-up of a tape-in hair extension blended into caramel balayage waves" /></div>
         <div className="ph-ov" />
         <div className="ph-content">
           <div className="ph-tag">Questions &amp; Answers</div>

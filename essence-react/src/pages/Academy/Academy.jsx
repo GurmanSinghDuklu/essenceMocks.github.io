@@ -29,11 +29,11 @@ export default function Academy() {
     <main>
       {/* HERO */}
       <div className="page-hero">
-        <div className="ph-img"><img src="/img-new-17.jpg" alt="Essence Academy" /></div>
+        <div className="ph-img"><img src="/img-new-17.jpg" alt="Essence Academy trainer presenting a training certificate to a student in the Luton salon" /></div>
         <div className="ph-ov" />
         <div className="ph-content">
-          <div className="ph-tag">ABT Accredited</div>
-          <h1 className="ph-title">The <em>Academy</em></h1>
+          <div className="ph-tag">ABT Accredited · Luton, Bedfordshire</div>
+          <h1 className="ph-title">Hair Training <em>Academy</em></h1>
         </div>
       </div>
 
@@ -82,7 +82,7 @@ export default function Academy() {
             <div className="ac-sec-tag">Our Courses</div>
             <h2>Fully Accredited <em>Training</em></h2>
           </div>
-          <div className="ac-ci-r">Every course is delivered hands-on, 1-to-1 — real models, real products, real feedback with undivided attention throughout. All include a free shadowing day, extensive training manual, and ongoing online support. Not sure which course is right for you? <a href={CONSULT_URL} target="_blank" rel="noreferrer" style={{color:'inherit'}}><strong>Book a free consultation</strong></a> and we'll help you find the perfect fit.</div>
+          <div className="ac-ci-r">Essence Academy is an ABT-accredited hair training academy in Luton, Bedfordshire, run from our working salon. Every course is delivered hands-on, 1-to-1 — real models, real products, real feedback with undivided attention throughout. All include a free shadowing day, extensive training manual, and ongoing online support. Not sure which course is right for you? <a href={CONSULT_URL} target="_blank" rel="noreferrer" style={{color:'inherit'}}><strong>Book a free consultation</strong></a> and we'll help you find the perfect fit.</div>
         </div>
 
         <div className="ac-courses-grid">
