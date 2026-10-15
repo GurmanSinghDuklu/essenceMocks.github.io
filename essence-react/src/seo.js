@@ -44,7 +44,7 @@ const OG_IMAGE = `${SITE_URL}/essencelogo.jpg`
 
 export const PAGES = {
   '/': {
-    title: 'Hair Salon in Luton, Bedfordshire | Balayage & Extensions | Essence',
+    title: 'Essence Hair Treatment | Hair Salon in Luton, Bedfordshire',
     description: 'Hair salon in Luton, Bedfordshire rated 5.0 from 300+ Google reviews. Balayage, highlights, hair extensions, Nanoplastia & Keratin treatments. Book online today.',
   },
   '/services': {
@@ -209,5 +209,18 @@ export function serviceSchema(path, { service }) {
       { '@type': 'AdministrativeArea', name: 'Bedfordshire' },
       ...BUSINESS.areaServed.map(name => ({ '@type': 'City', name })),
     ],
+  }
+}
+
+// Tells Google the site's name (shown above the result) and the brand's other names.
+export function websiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: BUSINESS.name,
+    alternateName: BUSINESS.alternateName,
+    url: `${SITE_URL}/`,
+    publisher: { '@id': `${SITE_URL}/#salon` },
   }
 }

@@ -44,4 +44,13 @@ for (const [route, page] of Object.entries(PAGES)) {
   console.log(`prerendered ${route} -> dist/${file}`)
 }
 
+// 404 page: Cloudflare serves 404.html with a real 404 status for unknown URLs
+// (instead of the home page with 200, which Google treats as a "soft 404").
+const notFound = template
+  .replace('content="index, follow, max-image-preview:large"', 'content="noindex"')
+  .replace('<!--app-head-->', '<title>Page not found | Essence Hair Treatment</title>')
+  .replace('<div id="root"></div>', `<div id="root">${render('/__not-found__')}</div>`)
+fs.writeFileSync(path.join(dist, '404.html'), notFound)
+console.log('prerendered 404 -> dist/404.html')
+
 fs.rmSync(path.join(root, 'dist-ssr'), { recursive: true, force: true })

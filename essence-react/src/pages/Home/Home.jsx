@@ -55,7 +55,7 @@ export default function Home() {
         <div className="intro-text">
           <div className="section-tag">Welcome to Essence</div>
           <h2 className="section-title">A cosy studio<br />built around <em>you.</em></h2>
-          <p className="body-text">A cosy hair studio in Luton offering professional hair services including colour services, cuts, styling, hair extensions and nourishing hair treatments. Specialising in personalised care, we create bespoke styles tailored to your needs in a relaxed and welcoming environment.</p>
+          <p className="body-text">A cosy hair salon in Luton, Bedfordshire, with friendly hairdressers offering professional hair services including colour services, cuts, styling, hair extensions and nourishing hair treatments. Specialising in personalised care, we create bespoke styles tailored to your needs in a relaxed and welcoming environment.</p>
           <div style={{display:'flex',gap:'14px',flexWrap:'wrap'}}>
             <a href={BOOK_URL} className="btn-blk" target="_blank" rel="noreferrer">Book Treatment</a>
             <Link to="/services" className="btn-outline-blk">Our Services</Link>

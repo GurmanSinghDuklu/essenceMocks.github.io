@@ -10,6 +10,7 @@ import FAQs from './pages/FAQs/FAQs.jsx'
 import Academy from './pages/Academy/Academy.jsx'
 import Privacy from './pages/Privacy/Privacy.jsx'
 import Landing from './pages/Landing/Landing.jsx'
+import NotFound from './pages/NotFound/NotFound.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -32,6 +33,7 @@ export default function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/hair-extensions-bedfordshire" element={<Landing path="/hair-extensions-bedfordshire" />} />
         <Route path="/balayage-bedfordshire" element={<Landing path="/balayage-bedfordshire" />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>

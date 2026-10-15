@@ -5,7 +5,7 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from './App.jsx'
 import { FAQ_GROUPS } from './pages/FAQs/faqData.jsx'
-import { PAGES, salonSchema, breadcrumbSchema, faqSchema, serviceSchema } from './seo.js'
+import { PAGES, salonSchema, breadcrumbSchema, faqSchema, serviceSchema, websiteSchema } from './seo.js'
 import { LANDINGS } from './pages/Landing/landings.jsx'
 
 export { PAGES }
@@ -34,6 +34,7 @@ function toText(node) {
 
 export function schemasFor(path) {
   const schemas = [salonSchema(), breadcrumbSchema(path)]
+  if (path === '/') schemas.push(websiteSchema())
   if (path === '/faqs') {
     const items = FAQ_GROUPS.flatMap(g => g.items).map(({ q, a }) => ({ q, text: toText(a) }))
     schemas.push(faqSchema(items))
