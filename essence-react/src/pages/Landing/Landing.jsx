@@ -16,7 +16,7 @@ export default function Landing({ path }) {
   return (
     <main>
       <div className="page-hero">
-        <div className="ph-img"><img src={page.hero.img} alt={page.hero.alt} /></div>
+        <div className="ph-img"><img fetchPriority="high" src={page.hero.img} alt={page.hero.alt} /></div>
         <div className="ph-ov" />
         <div className="ph-content">
           <div className="ph-tag">{page.tag}</div>
@@ -46,7 +46,7 @@ export default function Landing({ path }) {
           <div className="svc-grid-4">
             {page.cards.map(c => (
               <div className="svc-card" key={c.img}>
-                <div className="svc-card-img"><img src={c.img} alt={c.alt} /></div>
+                <div className="svc-card-img"><img loading="lazy" decoding="async" src={c.img} alt={c.alt} /></div>
                 <div className="svc-card-body">
                   <h3 className="svc-name">{c.name}</h3>
                   <p className="svc-desc">{c.desc}</p>
@@ -58,7 +58,7 @@ export default function Landing({ path }) {
         {page.looks && (
           <div className="lp-looks">
             {page.looks.map(l => (
-              <div className="lp-look" key={l.img}><img src={l.img} alt={l.alt} /></div>
+              <div className="lp-look" key={l.img}><img loading="lazy" decoding="async" src={l.img} alt={l.alt} /></div>
             ))}
           </div>
         )}

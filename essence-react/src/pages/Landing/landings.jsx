@@ -6,17 +6,17 @@ import { BOOK_URL, CONSULT_URL } from '../../seo'
 export const LANDINGS = {
   '/hair-extensions-bedfordshire': {
     service: 'Hair extensions',
-    hero: { img: '/hybrid-extensions.jpg', alt: 'Long icy-blonde balayage with hybrid hair extensions at Essence in Luton' },
+    hero: { img: '/hybrid-extensions.webp', alt: 'Long icy-blonde balayage with hybrid hair extensions at Essence in Luton' },
     tag: 'Essence · Luton, Bedfordshire',
-    title: <>Hair Extensions in <em>Bedfordshire</em></>,
+    title: <>Hair Extensions in Luton &amp; <em>Bedfordshire</em></>,
     lead: 'Essence Hair Treatment is a hair extension salon in Luton, Bedfordshire, rated 5.0 from over 300 Google reviews. We fit nano ring, tape-in, LA Weave and hybrid extensions, colour-matched to your own hair for a seamless, natural blend.',
     cta: { label: 'Book a Consultation', href: CONSULT_URL },
     cardsHead: { title: <>Our extension <em>methods</em></>, text: 'Not sure which method suits you? We’ll recommend one at your consultation, based on your hair type, lifestyle and the length and volume you want.' },
     cards: [
-      { img: '/img-new-04.jpg', alt: 'Long, sleek jet-black hair with nano ring extensions', name: <>Nano Ring <em>Extensions</em></>, desc: 'A discreet, lightweight method fitted strand by strand with tiny rings, with no heat or glue. Gentle on the hair and suitable for most hair types.' },
-      { img: '/img-new-20.jpg', alt: 'Long, straight brunette hair with tape-in extensions', name: <>Tape-In <em>Extensions</em></>, desc: 'Ultra-flat wefts that sit discreetly against the scalp for instant length and volume. Quick to fit, comfortable to wear and reusable.' },
-      { img: '/la-weave.jpg', alt: 'Long, sleek brunette hair with LA Weave extensions', name: <>LA Weave <em>Extensions</em></>, desc: 'Sewn-in wefts secured with small beads, with no heat or glue. A secure, reusable option for full, glamorous length and thickness.' },
-      { img: '/hybrid-extensions.jpg', alt: 'Long icy-blonde balayage with hybrid hair extensions', name: <>Hybrid <em>Extensions</em></>, desc: 'Two methods combined, such as nano rings with tapes or wefts, for a fully customised result and the most natural blend.' },
+      { img: '/img-new-04.webp', alt: 'Long, sleek jet-black hair with nano ring extensions', name: <>Nano Ring <em>Extensions</em></>, desc: 'A discreet, lightweight method fitted strand by strand with tiny rings, with no heat or glue. Gentle on the hair and suitable for most hair types.' },
+      { img: '/img-new-20.webp', alt: 'Long, straight brunette hair with tape-in extensions', name: <>Tape-In <em>Extensions</em></>, desc: 'Ultra-flat wefts that sit discreetly against the scalp for instant length and volume. Quick to fit, comfortable to wear and reusable.' },
+      { img: '/la-weave.webp', alt: 'Long, sleek brunette hair with LA Weave extensions', name: <>LA Weave <em>Extensions</em></>, desc: 'Sewn-in wefts secured with small beads, with no heat or glue. A secure, reusable option for full, glamorous length and thickness.' },
+      { img: '/hybrid-extensions.webp', alt: 'Long icy-blonde balayage with hybrid hair extensions', name: <>Hybrid <em>Extensions</em></>, desc: 'Two methods combined, such as nano rings with tapes or wefts, for a fully customised result and the most natural blend.' },
     ],
     steps: [
       ['Consultation', <>New to extensions? Start with a <a href={CONSULT_URL} target="_blank" rel="noreferrer">consultation</a> to match your shade, talk through your length goals and get a full rundown of aftercare and maintenance.</>],
@@ -42,19 +42,19 @@ export const LANDINGS = {
 
   '/balayage-bedfordshire': {
     service: 'Balayage',
-    hero: { img: '/img-new-06.jpg', alt: 'Sun-kissed blonde balayage on long, loose curls at Essence in Luton' },
+    hero: { img: '/img-new-06.webp', alt: 'Sun-kissed blonde balayage on long, loose curls at Essence in Luton' },
     tag: 'Essence · Luton, Bedfordshire',
-    title: <>Balayage in <em>Bedfordshire</em></>,
+    title: <>Balayage in Luton &amp; <em>Bedfordshire</em></>,
     lead: 'Essence Hair Treatment is a balayage salon in Luton, Bedfordshire, rated 5.0 from over 300 Google reviews. Every balayage includes a bonding treatment to protect your hair and bespoke toning to perfect your shade, from sun-kissed blonde to soft bronde and caramel brunette.',
     cta: { label: 'Book Your Balayage', href: BOOK_URL },
     cardsHead: { title: <>Balayage <em>looks</em></>, text: 'Real results from our Luton studio, each one a bespoke shade created for the client in the chair.' },
     looks: [
-      { img: '/img-new-06.jpg', alt: 'Sun-kissed blonde balayage on long, loose curls' },
-      { img: '/img-new-08.jpg', alt: 'Bronde balayage with soft, bouncy curls' },
-      { img: '/img-new-01.jpg', alt: 'Long brunette hair with caramel balayage and soft curls' },
-      { img: '/balayage-waves-signage.jpeg', alt: 'Brunette-to-caramel balayage waves under the Essence sign' },
-      { img: '/styling.jpeg', alt: 'Long blonde balayage styled in loose curls' },
-      { img: '/image.png', alt: 'Ash-bronde balayage on straight, mid-length hair' },
+      { img: '/img-new-06.webp', alt: 'Sun-kissed blonde balayage on long, loose curls' },
+      { img: '/img-new-08.webp', alt: 'Bronde balayage with soft, bouncy curls' },
+      { img: '/img-new-01.webp', alt: 'Long brunette hair with caramel balayage and soft curls' },
+      { img: '/balayage-waves-signage.webp', alt: 'Brunette-to-caramel balayage waves under the Essence sign' },
+      { img: '/styling.webp', alt: 'Long blonde balayage styled in loose curls' },
+      { img: '/image.webp', alt: 'Ash-bronde balayage on straight, mid-length hair' },
     ],
     steps: [
       ['Patch test & consultation', <>New colour clients need a patch test and consultation first. It takes 5–10 minutes and must be <a href={CONSULT_URL} target="_blank" rel="noreferrer">booked in advance</a>, as it can’t be done on the day.</>],

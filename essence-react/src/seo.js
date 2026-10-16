@@ -68,19 +68,19 @@ export const PAGES = {
     crumb: 'FAQs',
   },
   '/academy': {
-    title: 'Hair Training Academy in Bedfordshire | Essence Academy, Luton',
+    title: 'Hair Training Academy in Luton & Bedfordshire | Essence Academy',
     description: 'ABT-accredited hair training academy in Luton, Bedfordshire. One-to-one courses in balayage, colour, cutting, Keratin, Nanoplastia, Hair Botox and hair extensions.',
     crumb: 'Academy',
   },
   '/hair-extensions-bedfordshire': {
-    title: 'Hair Extensions in Bedfordshire | Essence Hair, Luton',
+    title: 'Hair Extensions in Luton & Bedfordshire | Essence Hair',
     description: 'Nano ring, tape-in, LA Weave and hybrid hair extensions in Luton, Bedfordshire. Expert colour matching, rated 5.0 from 300+ Google reviews. Book a consultation.',
-    crumb: 'Hair Extensions in Bedfordshire',
+    crumb: 'Hair Extensions in Luton & Bedfordshire',
   },
   '/balayage-bedfordshire': {
-    title: 'Balayage in Bedfordshire | Essence Hair, Luton',
+    title: 'Balayage in Luton & Bedfordshire | Essence Hair',
     description: 'Bespoke balayage in Luton, Bedfordshire, with a bonding treatment and custom toning included. Rated 5.0 from 300+ Google reviews. Book online.',
-    crumb: 'Balayage in Bedfordshire',
+    crumb: 'Balayage in Luton & Bedfordshire',
   },
   '/privacy': {
     title: 'Essence Hair Treatment | Privacy & Salon Policy',
@@ -200,7 +200,7 @@ export function serviceSchema(path, { service }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: `${service} in Bedfordshire`,
+    name: `${service} in Luton & Bedfordshire`,
     serviceType: service,
     description: page.description,
     url: page.canonical,

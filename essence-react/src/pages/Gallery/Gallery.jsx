@@ -12,18 +12,18 @@ export default function Gallery() {
   const posts = useInstagramPosts()
   // The studio photo is swapped for image.png on this page only; the Home feed keeps the original.
   const galleryImages = useMemo(
-    () => posts.map(p => (p.file === '1000076210.jpg'
-      ? { src: '/image.png', alt: 'Ash-bronde balayage on straight, mid-length hair' }
+    () => posts.map(p => (p.file === '1000076210.webp'
+      ? { src: '/image.webp', alt: 'Ash-bronde balayage on straight, mid-length hair' }
       : { src: `/instagram/${p.file}`, alt: p.alt || p.caption })),
     [posts],
   )
   // Distinct photos so this strip doesn't repeat images already shown in the masonry above.
   const igImages = useMemo(
     () => [
-      { src: '/essence-gown-blowdry.jpeg', alt: 'Honey-brown blow-dry with soft, bouncy ends on a client in an Essence gown' },
-      { src: '/balayage-waves-signage.jpeg', alt: 'Brunette-to-caramel balayage waves under the Essence Hair & Academy sign' },
-      { src: '/dark-straight-gloss.jpeg', alt: 'Long, straight, glossy dark-brown hair' },
-      { src: '/image.png', alt: 'Ash-bronde balayage on straight, mid-length hair' },
+      { src: '/essence-gown-blowdry.webp', alt: 'Honey-brown blow-dry with soft, bouncy ends on a client in an Essence gown' },
+      { src: '/balayage-waves-signage.webp', alt: 'Brunette-to-caramel balayage waves under the Essence Hair & Academy sign' },
+      { src: '/dark-straight-gloss.webp', alt: 'Long, straight, glossy dark-brown hair' },
+      { src: '/image.webp', alt: 'Ash-bronde balayage on straight, mid-length hair' },
     ],
     [],
   )
@@ -31,7 +31,7 @@ export default function Gallery() {
   return (
     <main>
       <div className="page-hero">
-        <div className="ph-img"><img src="/instagram/img-new-19.jpg" alt="Client with long golden-blonde balayage curls at Essence in Luton" /></div>
+        <div className="ph-img"><img fetchPriority="high" src="/instagram/img-new-19.webp" alt="Client with long golden-blonde balayage curls at Essence in Luton" /></div>
         <div className="ph-ov" />
         <div className="ph-content">
           <div className="ph-tag">Real Results</div>
@@ -44,7 +44,7 @@ export default function Gallery() {
         <div className="masonry">
           {galleryImages.map(({ src, alt }) => (
             <div className="gi" key={src}>
-              <img src={src} alt={alt} />
+              <img loading="lazy" decoding="async" src={src} alt={alt} />
               <div className="gi-ov" />
             </div>
           ))}
@@ -57,7 +57,7 @@ export default function Gallery() {
         <div className="ig-handle">@essence.hairtreatment</div>
         <div className="ig-grid">
           {igImages.map(({ src, alt }) => (
-            <div className="igi" key={src}><img src={src} alt={alt} /></div>
+            <div className="igi" key={src}><img loading="lazy" decoding="async" src={src} alt={alt} /></div>
           ))}
         </div>
         <a href={IG_URL} className="btn-blk" target="_blank" rel="noreferrer">Follow @essence.hairtreatment</a>

@@ -9,7 +9,7 @@ export default function FAQs() {
   return (
     <main>
       <div className="page-hero">
-        <div className="ph-img"><img src="/1000076197.jpg" alt="Close-up of a tape-in hair extension blended into caramel balayage waves" /></div>
+        <div className="ph-img"><img fetchPriority="high" src="/1000076197.webp" alt="Close-up of a tape-in hair extension blended into caramel balayage waves" /></div>
         <div className="ph-ov" />
         <div className="ph-content">
           <div className="ph-tag">Questions &amp; Answers</div>

@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-logo">
-        <img src="/essencelogo-cropped.jpg" alt="Essence Hair Treatment" />
+        <img loading="lazy" decoding="async" src="/essence-logo.png" alt="Essence Hair Treatment" />
       </div>
       <div className="footer-grid">
         <div>

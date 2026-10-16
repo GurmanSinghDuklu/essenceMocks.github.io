@@ -28,6 +28,8 @@ export default function InstagramFeed() {
           >
             <div className="ig-feed-card-img">
               <img
+                loading="lazy"
+                decoding="async"
                 src={`/instagram/${post.file}`}
                 alt={post.alt || post.caption}
                 style={post.focal ? { objectPosition: post.focal } : undefined}

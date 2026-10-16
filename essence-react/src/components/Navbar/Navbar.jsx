@@ -21,7 +21,7 @@ export default function Navbar() {
             <li><NavLink to="/top-tips" className={activeClass}>Top Tips</NavLink></li>
           </ul>
           <NavLink to="/" className="nav-logo" onClick={close}>
-            <img src="/essencelogo-cropped.jpg" alt="Essence Hair Treatment" />
+            <img src="/essence-logo.png" alt="Essence Hair Treatment" />
           </NavLink>
           <ul className="nav-right">
             <li><NavLink to="/gallery" className={activeClass}>Gallery</NavLink></li>

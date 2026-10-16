@@ -10,10 +10,10 @@ const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const marqueeItems = ['Balayage','Nanoplastia','Keratin','Hair Botox','Head Spa','Extensions','Cut & Style','ABT Accredited Academy','Luton']
 
 const services = [
-  { num:'01', img:'/WhatsApp Image 2026-07-06 at 21.30.04.jpeg', alt:'Bronde balayage on long, wavy hair', to:'/balayage-bedfordshire', name:<>Balayage &amp; <em>Colour Services</em></>, desc:'Refresh, enhance, or completely transform your hair with our professional colour services. From root touch-ups and grey coverage to balayage, highlights, and full colour transformations, every service is tailored to suit your style and hair goals.' },
-  { num:'02', img:'/WhatsApp Image 2026-07-06 at 21.30.24.jpeg', alt:'Long, voluminous chocolate-brown hair extensions with soft waves', to:'/hair-extensions-bedfordshire', name:<>Hair <em>Extensions</em></>, desc:'Transform your hair with our premium extension services, tailored to your individual needs and lifestyle. We offer professional colour matching to ensure a seamless, natural blend with your own hair, creating the perfect look and finish.' },
-  { num:'03', img:'/WhatsApp Image 2026-07-06 at 21.34.12.jpeg', alt:'Long, sleek, glossy dark-brown hair after a smoothing treatment', name:<>Hair <em>Treatments</em></>, desc:'Restore the health and beauty of your hair with our specialist treatment services. From smoothing and strengthening with Nanoplastia and Keratin Treatments to relaxing Head Spa experiences that promote healthy hair and scalp health.' },
-  { num:'04', img:'/cut.jpg', alt:'Shoulder-length blonde cut with a clean, blunt finish', name:<>Cut &amp; <em>Style</em></>, desc:'Need a little pick-me-up? Whether you\'re looking for a fresh haircut, a complete restyle, or simply some time to relax, we\'ve got you covered. From quick refreshes to full transformations, we\'re here to help you look and feel your best.' },
+  { num:'01', img:'/WhatsApp Image 2026-07-06 at 21.30.04.webp', alt:'Bronde balayage on long, wavy hair', to:'/balayage-bedfordshire', name:<>Balayage &amp; <em>Colour Services</em></>, desc:'Refresh, enhance, or completely transform your hair with our professional colour services. From root touch-ups and grey coverage to balayage, highlights, and full colour transformations, every service is tailored to suit your style and hair goals.' },
+  { num:'02', img:'/WhatsApp Image 2026-07-06 at 21.30.24.webp', alt:'Long, voluminous chocolate-brown hair extensions with soft waves', to:'/hair-extensions-bedfordshire', name:<>Hair <em>Extensions</em></>, desc:'Transform your hair with our premium extension services, tailored to your individual needs and lifestyle. We offer professional colour matching to ensure a seamless, natural blend with your own hair, creating the perfect look and finish.' },
+  { num:'03', img:'/WhatsApp Image 2026-07-06 at 21.34.12.webp', alt:'Long, sleek, glossy dark-brown hair after a smoothing treatment', name:<>Hair <em>Treatments</em></>, desc:'Restore the health and beauty of your hair with our specialist treatment services. From smoothing and strengthening with Nanoplastia and Keratin Treatments to relaxing Head Spa experiences that promote healthy hair and scalp health.' },
+  { num:'04', img:'/cut.webp', alt:'Shoulder-length blonde cut with a clean, blunt finish', name:<>Cut &amp; <em>Style</em></>, desc:'Need a little pick-me-up? Whether you\'re looking for a fresh haircut, a complete restyle, or simply some time to relax, we\'ve got you covered. From quick refreshes to full transformations, we\'re here to help you look and feel your best.' },
 ]
 
 const Stars = () => (
@@ -30,7 +30,7 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-img">
-          <img src="/instagram/WhatsApp Image 2026-06-25 at 22.36.46.jpeg" alt="Long brunette hair with caramel balayage and soft waves at Essence Hair Treatment in Luton" />
+          <img fetchPriority="high" src="/instagram/WhatsApp Image 2026-06-25 at 22.36.46.webp" alt="Long brunette hair with caramel balayage and soft waves at Essence Hair Treatment in Luton" />
         </div>
         <div className="hero-overlay" />
         <div className="hero-content">
@@ -50,7 +50,7 @@ export default function Home() {
       {/* INTRO SPLIT */}
       <section className="intro">
         <div className="intro-img">
-          <img src="/studio.jpg" alt="Inside the Essence Hair & Academy salon in Luton, with arched mirrors and styling chairs" />
+          <img loading="lazy" decoding="async" src="/studio.webp" alt="Inside the Essence Hair & Academy salon in Luton, with arched mirrors and styling chairs" />
         </div>
         <div className="intro-text">
           <div className="section-tag">Welcome to Essence</div>
@@ -95,7 +95,7 @@ export default function Home() {
         <div className="services-grid">
           {services.map(s => (
             <div className="svc" key={s.num}>
-              <div className="svc-img"><img src={s.img} alt={s.alt} /></div>
+              <div className="svc-img"><img loading="lazy" decoding="async" src={s.img} alt={s.alt} /></div>
               <div className="svc-info">
                 <div className="svc-num">{s.num}</div>
                 <div className="svc-name">{s.name}</div>
@@ -122,7 +122,7 @@ export default function Home() {
 
       {/* FULL BLEED */}
       <div className="full-bleed">
-        <img src="/WhatsApp Image 2026-07-06 at 21.43.25.jpeg" alt="Blonde balayage on long, curled hair" />
+        <img loading="lazy" decoding="async" src="/WhatsApp Image 2026-07-06 at 21.43.25.webp" alt="Blonde balayage on long, curled hair" />
         <div className="full-bleed-overlay">
           <h2>Book your appointment<br /><em>today.</em></h2>
           <a href={BOOK_URL} className="btn-wh" target="_blank" rel="noreferrer">Book Now</a>

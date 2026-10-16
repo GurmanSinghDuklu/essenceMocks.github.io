@@ -29,10 +29,10 @@ export default function Academy() {
     <main>
       {/* HERO */}
       <div className="page-hero">
-        <div className="ph-img"><img src="/img-new-17.jpg" alt="Essence Academy trainer presenting a training certificate to a student in the Luton salon" /></div>
+        <div className="ph-img"><img fetchPriority="high" src="/img-new-17.webp" alt="Essence Academy trainer presenting a training certificate to a student in the Luton salon" /></div>
         <div className="ph-ov" />
         <div className="ph-content">
-          <div className="ph-tag">ABT Accredited · Luton, Bedfordshire</div>
+          <div className="ph-tag">ABT Accredited · Luton &amp; Bedfordshire</div>
           <h1 className="ph-title">Hair Training <em>Academy</em></h1>
         </div>
       </div>
