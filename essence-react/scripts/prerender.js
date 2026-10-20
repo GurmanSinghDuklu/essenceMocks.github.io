@@ -53,4 +53,7 @@ const notFound = template
 fs.writeFileSync(path.join(dist, '404.html'), notFound)
 console.log('prerendered 404 -> dist/404.html')
 
+// AI tools also look for /llms-full.txt; serve the same fact sheet there.
+fs.copyFileSync(path.join(dist, 'llms.txt'), path.join(dist, 'llms-full.txt'))
+
 fs.rmSync(path.join(root, 'dist-ssr'), { recursive: true, force: true })
