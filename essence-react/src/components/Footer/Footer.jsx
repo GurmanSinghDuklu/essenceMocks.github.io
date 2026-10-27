@@ -56,8 +56,6 @@ export default function Footer() {
         <span className="footer-credit-label">Site made by</span>
         <span className="footer-credit-mark" aria-hidden="true">
           <span className="footer-credit-layer" />
-          <span className="footer-credit-layer footer-credit-layer--a" />
-          <span className="footer-credit-layer footer-credit-layer--b" />
         </span>
       </a>
     </footer>

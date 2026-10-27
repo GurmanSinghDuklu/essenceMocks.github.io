@@ -20,43 +20,15 @@ footer {
 .footer-credit-label { font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase; transition: color .2s; }
 .footer-credit-mark { position: relative; display: block; width: 78px; aspect-ratio: 2054 / 439; }
 .footer-credit-layer { position: absolute; inset: 0; background: currentColor; -webkit-mask: url(/human-logo.svg) center / contain no-repeat; mask: url(/human-logo.svg) center / contain no-repeat; }
-.footer-credit-layer--a, .footer-credit-layer--b { opacity: 0; }
-.footer-credit-layer--a { background: #B2FF58; }
-.footer-credit-layer--b { background: #C9A96E; }
 .footer-credit:hover, .footer-credit:focus-visible { color: rgba(255,255,255,.85); }
-.footer-credit:hover .footer-credit-layer:first-child, .footer-credit:focus-visible .footer-credit-layer:first-child { animation: credit-jitter .9s steps(1) infinite; }
-.footer-credit:hover .footer-credit-layer--a, .footer-credit:focus-visible .footer-credit-layer--a { animation: credit-glitch-a .9s steps(1) infinite; }
-.footer-credit:hover .footer-credit-layer--b, .footer-credit:focus-visible .footer-credit-layer--b { animation: credit-glitch-b .9s steps(1) infinite; }
-@keyframes credit-jitter {
-  0%, 100% { transform: none; }
-  12% { transform: translate(-1px, 0); }
-  30% { transform: translate(1px, -1px); }
-  48% { transform: none; }
-  66% { transform: translate(-2px, 1px); }
-  84% { transform: translate(1px, 0); }
-}
-@keyframes credit-glitch-a {
-  0%   { opacity: .9; transform: translate(-3px, 0); clip-path: inset(10% 0 62% 0); }
-  15%  { opacity: .9; transform: translate(3px, 0);  clip-path: inset(58% 0 18% 0); }
-  30%  { opacity: 0; }
-  45%  { opacity: .9; transform: translate(-2px, 0); clip-path: inset(32% 0 40% 0); }
-  60%  { opacity: .9; transform: translate(4px, 0);  clip-path: inset(0 0 80% 0); }
-  75%  { opacity: 0; }
-  90%  { opacity: .9; transform: translate(-4px, 0); clip-path: inset(70% 0 5% 0); }
-  100% { opacity: 0; }
-}
-@keyframes credit-glitch-b {
-  0%   { opacity: 0; }
-  10%  { opacity: .9; transform: translate(3px, 0);  clip-path: inset(45% 0 30% 0); }
-  25%  { opacity: .9; transform: translate(-3px, 0); clip-path: inset(5% 0 75% 0); }
-  40%  { opacity: 0; }
-  55%  { opacity: .9; transform: translate(2px, 0);  clip-path: inset(66% 0 10% 0); }
-  70%  { opacity: .9; transform: translate(-4px, 0); clip-path: inset(20% 0 55% 0); }
-  85%  { opacity: 0; }
-  100% { opacity: 0; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .footer-credit-layer { animation: none !important; }
+@property --credit-hue { syntax: '<number>'; inherits: true; initial-value: 0; }
+@keyframes credit-hue { to { --credit-hue: 360; } }
+@media (prefers-reduced-motion: no-preference) {
+  /* Without @property the hue flips 0 → 360 discretely: same colour, no flicker.
+     background-color, not the background shorthand: Chrome doesn't recompute the
+     shorthand when var() has a fallback and the inherited value animates. */
+  .footer-credit-mark { animation: credit-hue 12s linear infinite; }
+  .footer-credit-layer { background-color: oklch(0.75 0.17 var(--credit-hue, 0)); }
 }
 @media (max-width: 900px) {
   footer { padding: 52px 20px 28px; }
