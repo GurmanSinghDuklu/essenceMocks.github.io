@@ -52,6 +52,14 @@ export default function Footer() {
           <a href="https://www.facebook.com/essencekeratinluton" target="_blank" rel="noreferrer">Facebook</a>
         </div>
       </div>
+      <a className="footer-credit" href="https://humansoftwareagency.com" target="_blank" rel="noopener" aria-label="Site made by HU/MAN">
+        <span className="footer-credit-label">Site made by</span>
+        <span className="footer-credit-mark" aria-hidden="true">
+          <span className="footer-credit-layer" />
+          <span className="footer-credit-layer footer-credit-layer--a" />
+          <span className="footer-credit-layer footer-credit-layer--b" />
+        </span>
+      </a>
     </footer>
   )
 }
