@@ -21,14 +21,26 @@ footer {
 .footer-credit-mark { position: relative; display: block; width: 78px; aspect-ratio: 2054 / 439; }
 .footer-credit-layer { position: absolute; inset: 0; background: currentColor; -webkit-mask: url(/human-logo.svg) center / contain no-repeat; mask: url(/human-logo.svg) center / contain no-repeat; }
 .footer-credit:hover, .footer-credit:focus-visible { color: rgba(255,255,255,.85); }
-@property --credit-hue { syntax: '<number>'; inherits: true; initial-value: 0; }
-@keyframes credit-hue { to { --credit-hue: 360; } }
+/* Literal colour stops on the layer itself, not an animated custom property
+   inherited from the mark: some browsers never repaint the child, leaving it on hue 0. */
+@keyframes credit-hue {
+  0%, 100% { background-color: oklch(0.75 0.17 0); }
+  8.333%   { background-color: oklch(0.75 0.17 30); }
+  16.667%  { background-color: oklch(0.75 0.17 60); }
+  25%      { background-color: oklch(0.75 0.17 90); }
+  33.333%  { background-color: oklch(0.75 0.17 120); }
+  41.667%  { background-color: oklch(0.75 0.17 150); }
+  50%      { background-color: oklch(0.75 0.17 180); }
+  58.333%  { background-color: oklch(0.75 0.17 210); }
+  66.667%  { background-color: oklch(0.75 0.17 240); }
+  75%      { background-color: oklch(0.75 0.17 270); }
+  83.333%  { background-color: oklch(0.75 0.17 300); }
+  91.667%  { background-color: oklch(0.75 0.17 330); }
+}
+@keyframes credit-settle { from { background-color: oklch(0.75 0.17 0); } }
 @media (prefers-reduced-motion: no-preference) {
-  /* Without @property the hue flips 0 → 360 discretely: same colour, no flicker.
-     background-color, not the background shorthand: Chrome doesn't recompute the
-     shorthand when var() has a fallback and the inherited value animates. */
-  .footer-credit-mark { animation: credit-hue 12s linear infinite; }
-  .footer-credit-layer { background-color: oklch(0.75 0.17 var(--credit-hue, 0)); }
+  /* 25 × 12s = 5 minutes of cycling, then ease back to the plain credit colour. */
+  .footer-credit-layer { animation: credit-hue 12s linear 25, credit-settle 1.6s ease 300s; }
 }
 @media (max-width: 900px) {
   footer { padding: 52px 20px 28px; }
