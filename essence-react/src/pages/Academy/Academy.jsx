@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Academy.css'
 import useSEO from '../../hooks/useSEO'
 import { PAGES } from '../../seo'
@@ -193,7 +194,7 @@ export default function Academy() {
           <a href={BOOK_URL} className="ac-btn-blk" target="_blank" rel="noreferrer">Enrol Now</a>
           <a href={CONSULT_URL} className="ac-btn-outline" target="_blank" rel="noreferrer">Book Free Consultation</a>
         </div>
-        <p style={{fontSize:'11px',letterSpacing:'.18em',textTransform:'uppercase',color:'#9A9087',marginTop:'20px'}}>Price list available on request</p>
+        <p style={{fontSize:'11px',letterSpacing:'.18em',textTransform:'uppercase',color:'#9A9087',marginTop:'20px'}}><Link to="/prices" style={{color:'inherit'}}>View our salon price list →</Link></p>
       </section>
     </main>
   )

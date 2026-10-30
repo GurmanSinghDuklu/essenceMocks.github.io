@@ -1,0 +1,13 @@
+.pl-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: #E8E0D6; }
+.pl-group { background: #fff; padding: 40px 36px; }
+.pl-group h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 300; margin-bottom: 6px; }
+.pl-note { font-size: 12px; color: #9A9087; margin-bottom: 8px; }
+.pl-group ul { list-style: none; margin-top: 16px; }
+.pl-group li { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 11px 0; border-bottom: 1px solid #F2EDE6; font-size: 13.5px; line-height: 1.5; color: #2d2d2d; }
+.pl-group li:last-child { border-bottom: 0; }
+.pl-price { flex-shrink: 0; color: #0a0a0a; font-weight: 400; }
+
+@media (max-width: 960px) {
+  .pl-grid { grid-template-columns: 1fr; }
+  .pl-group { padding: 28px 22px; }
+}

@@ -9,7 +9,9 @@ import TopTips from './pages/TopTips/TopTips.jsx'
 import FAQs from './pages/FAQs/FAQs.jsx'
 import Academy from './pages/Academy/Academy.jsx'
 import Privacy from './pages/Privacy/Privacy.jsx'
+import Prices from './pages/Prices/Prices.jsx'
 import Landing from './pages/Landing/Landing.jsx'
+import { LANDINGS } from './pages/Landing/landings.jsx'
 import NotFound from './pages/NotFound/NotFound.jsx'
 
 function ScrollToTop() {
@@ -31,8 +33,10 @@ export default function App() {
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route path="/hair-extensions-bedfordshire" element={<Landing path="/hair-extensions-bedfordshire" />} />
-        <Route path="/balayage-bedfordshire" element={<Landing path="/balayage-bedfordshire" />} />
+        <Route path="/prices" element={<Prices />} />
+        {Object.keys(LANDINGS).map(path => (
+          <Route key={path} path={path} element={<Landing path={path} />} />
+        ))}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

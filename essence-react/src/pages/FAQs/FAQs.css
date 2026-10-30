@@ -12,7 +12,8 @@
 .faq-layout { padding: 88px 56px; display: grid; grid-template-columns: 220px 1fr; gap: 80px; align-items: start; max-width: 1200px; margin: 0 auto; }
 
 /* ── Side Nav ── */
-.faq-nav { position: sticky; top: 120px; background: #F2EDE6; padding: 28px 24px; }
+.faq-nav { position: sticky; top: 120px; max-height: calc(100vh - 140px); overflow-y: auto; background: #F2EDE6; padding: 28px 24px; }
+.fn-title--gap { margin-top: 28px; }
 .fn-title { font-size: 8px; letter-spacing: .45em; text-transform: uppercase; color: #9A9087; margin-bottom: 18px; }
 .fn-links { list-style: none; display: flex; flex-direction: column; gap: 2px; }
 .fn-links a { font-size: 12px; color: #2d2d2d; text-decoration: none; padding: 9px 0; display: block; border-bottom: 1px solid #D4C9BB; transition: color .2s, padding-left .2s; }
@@ -24,6 +25,22 @@
 .faq-group { margin-bottom: 56px; }
 .fg-title { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.3vw, 32px); font-weight: 300; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #E8E0D6; }
 .fg-title em { font-style: italic; }
+
+/* ── Service dropdowns ── */
+.sf-cat { border-bottom: 1px solid #E8E0D6; }
+.sf-cat h3 { font-weight: inherit; }
+.sf-head { display: flex; align-items: center; gap: 16px; width: 100%; padding: 22px 0; background: none; border: none; cursor: pointer; text-align: left; font-family: inherit; }
+.sf-label { font-family: 'Playfair Display', serif; font-size: clamp(19px, 1.8vw, 24px); font-weight: 300; color: #0a0a0a; flex: 1; }
+.sf-count { font-size: 9px; letter-spacing: .28em; text-transform: uppercase; color: #9A9087; }
+.sf-cat.open .faq-icon { color: #0a0a0a; }
+.sf-wrap { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease; }
+.sf-cat.open .sf-wrap { grid-template-rows: 1fr; }
+.sf-inner { overflow: hidden; min-height: 0; }
+.sf-qa { padding: 4px 0 2px 24px; border-left: 1px solid #E8E0D6; margin-bottom: 22px; }
+.sf-qa h4 { font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 500; color: #0a0a0a; line-height: 1.45; margin-bottom: 8px; }
+.sf-qa .faq-a { color: #2d2d2d; padding-bottom: 0; }
+.sf-more { display: inline-block; margin: 4px 0 30px; font-size: 9px; letter-spacing: .3em; text-transform: uppercase; color: #0a0a0a; text-decoration: none; border-bottom: 1px solid #0a0a0a; padding-bottom: 3px; }
+.sf-more:hover { color: #9A9087; border-color: #9A9087; }
 
 /* ── Accordion ── */
 .faq-item { border-bottom: 1px solid #E8E0D6; }
@@ -78,6 +95,8 @@
   .ph-content { padding: 0 20px 52px; }
   .faq-layout { grid-template-columns: 1fr; padding: 56px 20px; gap: 0; }
   .faq-nav { display: none; }
+  .sf-count { display: none; }
+  .sf-qa { padding-left: 16px; }
   .cta-strip { flex-direction: column; text-align: center; padding: 56px 20px; }
   .cta-actions { justify-content: center; }
 }

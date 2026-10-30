@@ -32,6 +32,9 @@
 .svc-desc { font-size: 13px; line-height: 1.82; color: #2d2d2d; margin-bottom: 20px; flex: 1; }
 .book-link { font-size: 9px; letter-spacing: .3em; text-transform: uppercase; color: #0a0a0a; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; border-bottom: 1px solid #0a0a0a; padding-bottom: 3px; transition: color .2s, border-color .2s; margin-top: auto; align-self: flex-start; }
 .book-link:hover { color: #9A9087; border-color: #9A9087; }
+.more-link { font-size: 9px; letter-spacing: .3em; text-transform: uppercase; color: #9A9087; text-decoration: none; margin: auto 0 16px; align-self: flex-start; }
+.more-link:hover { color: #0a0a0a; }
+.more-link + .book-link { margin-top: 0; }
 .svc-cta { background: #0a0a0a; padding: 88px 56px; text-align: center; }
 .svc-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px,3.5vw,50px); font-weight: 300; color: #fff; margin-bottom: 24px; line-height: 1.15; }
 .svc-cta h2 em { font-style: italic; }

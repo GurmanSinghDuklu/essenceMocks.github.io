@@ -1,0 +1,208 @@
+// The most-asked questions for each service, one dropdown per service on the FAQs page
+// (also in the FAQPage schema). Prices come from src/prices.js so answers stay in step.
+import { Link } from 'react-router-dom'
+import { CONSULT_URL } from '../../seo'
+import { PRICE_GROUPS, formatPrice, fromPrice, costAnswer } from '../../prices'
+
+const price = (id, name) => formatPrice(PRICE_GROUPS[id].items.find(([n]) => n === name)[1])
+
+const consult = <a href={CONSULT_URL} target="_blank" rel="noreferrer">free consultation</a>
+
+export const SERVICE_FAQS = [
+  {
+    id: 'balayage',
+    label: 'Balayage',
+    page: '/balayage-bedfordshire',
+    items: [
+      { q: 'What is balayage?', a: 'Balayage (from the French for “to sweep”) is a hand-painted colouring technique. Lightener is swept onto the hair freehand to create soft, natural-looking dimension and brightness that grows out without harsh regrowth lines.' },
+      { q: 'What’s the difference between balayage and highlights?', a: <>Balayage is painted freehand for a soft, blended result that grows out gently. <Link to="/highlights-bedfordshire">Highlights</Link> are placed in sections for a more defined, even level of brightness. At Essence both include a bonding treatment and bespoke toning, and we’ll recommend the right one for you at your consultation.</> },
+      { q: 'How long does balayage last?', a: `Because it’s painted to grow out softly, balayage is low maintenance and can often go several months between full appointments. Toner fades sooner, so a toner refresh (from ${price('toner', 'Toner only (without blow dry)')}) between appointments keeps your shade looking fresh.` },
+      { q: 'How much does balayage cost?', a: costAnswer('balayage') },
+      { q: 'What’s the difference between balayage and ombré?', a: 'Ombré is a clear, horizontal fade from darker roots to lighter ends. Balayage is painted in vertical pieces throughout the hair for a softer, more natural blend, with brightness placed where the sun would naturally catch it.' },
+      { q: 'Does balayage damage your hair?', a: `Any lightening changes the hair, but balayage usually lightens less hair than an all-over colour. Every balayage at Essence includes a bonding treatment to protect and strengthen your hair while it’s coloured, and we also offer no-bleach balayage (${price('balayage', 'No-bleach balayage')}).` },
+      { q: 'Can I have balayage on dark hair?', a: <>Yes. Balayage suits dark hair beautifully, from soft caramel and bronde to brighter blonde. How light we can go in one appointment depends on your starting colour and colour history, which we’ll go through at your {consult}.</> },
+    ],
+  },
+  {
+    id: 'highlights',
+    label: 'Highlights',
+    page: '/highlights-bedfordshire',
+    items: [
+      { q: 'What is the difference between highlights and lowlights?', a: 'Highlights use lightener to make sections of your hair brighter than your base colour. Lowlights add darker strands to create depth and dimension. They can be combined, and we’ll recommend the right balance for your hair at your consultation.' },
+      { q: 'How long do highlights last?', a: <>Foil highlights usually need a root touch-up every 6 to 8 weeks, depending on how fast your hair grows and how much contrast there is with your natural colour. Hand-painted <Link to="/balayage-bedfordshire">balayage</Link> grows out more softly and can often last up to 12 weeks. A toner between appointments keeps your shade fresh.</> },
+      { q: 'What is the difference between balayage and traditional highlights?', a: <>Traditional highlights are placed in foils from the root down for an even, defined brightness. <Link to="/balayage-bedfordshire">Balayage</Link> is swept on freehand for a softer, natural look with a gentle grow-out line. Not sure which suits you? We’ll help you decide at your {consult}.</> },
+      { q: 'Do highlights damage your hair?', a: 'Any lightener strips some moisture and natural pigment from the hair, so we protect it: every highlights appointment at Essence includes a bonding treatment to help keep your hair strong, followed by bespoke toning. Good aftercare at home keeps it healthy between visits.' },
+      { q: 'How much do highlights cost?', a: costAnswer('highlights') },
+      { q: 'How long does a highlights appointment take?', a: 'Allow around 2 to 4 hours. It depends on your hair’s length and thickness, how much of your head is highlighted (T-section, half head or full head) and the look you want. We’ll give you a guide time when you book.' },
+      { q: 'How do I stop my blonde highlights turning brassy?', a: 'Use sulphate-free, colour-safe shampoo and conditioner, and a purple or blue toning shampoo once or twice a week to neutralise yellow and orange tones. Protect your hair from heat and sun, and book a toner refresh between appointments to keep your blonde cool and bright.' },
+    ],
+  },
+  {
+    id: 'hair-colour',
+    label: 'Hair colour',
+    page: '/hair-colour-bedfordshire',
+    items: [
+      { q: 'How do I know what hair colour suits my skin tone?', a: <>Start with your undertone. Cool undertones usually suit ash, platinum and cool brown shades, while warm undertones suit honey, golden and auburn tones. Neutral undertones can wear both. Your eye colour and natural shade matter too, so we’ll suggest the most flattering tones at your {consult}.</> },
+      { q: 'How long does hair dye last?', a: 'Permanent colour stays in the hair until it grows out or is cut off, so you’ll only need to refresh your roots. Demi-permanent colour fades gradually over around 20 to 28 washes, and semi-permanent over around 4 to 12. Sulphate-free, colour-safe products help every type last longer.' },
+      { q: 'What is the difference between semi-permanent, demi-permanent and permanent hair dye?', a: 'Semi-permanent colour coats the outside of the hair without developer and washes out over a few weeks. Demi-permanent uses a low-strength developer to deposit colour just inside the hair’s outer layer, so it lasts longer but can’t lighten. Permanent colour opens the hair’s outer layer fully, so it can lift your natural pigment and deposit new colour that won’t wash out.' },
+      { q: 'How do I cover stubborn grey hair?', a: 'Grey hair is often coarser and more resistant to colour, so it usually needs a permanent colour, a tailored formula and sometimes a pre-treatment to help the colour take. We can softly blend greys for a natural look or cover them completely, and every colour service at Essence includes a bonding treatment.' },
+      { q: 'Does dyeing your hair ruin or thin it?', a: 'Colour, and especially lightening, changes the hair’s protein structure and moisture balance, which can cause dryness or breakage if it isn’t cared for. It doesn’t stop your hair growing from the root. That’s why every colour service at Essence includes a bonding treatment to help keep your hair strong.' },
+      { q: 'How do I fix orange or brassy hair after dyeing?', a: `Brassiness happens when the warm pigments underneath your colour show through. A toner neutralises them in the salon (toner only is ${price('toner', 'Toner only (without blow dry)')}), and at home a purple shampoo tackles yellow tones and a blue shampoo tackles orange. If the colour is very uneven, it may need colour correction, which we price at your consultation.` },
+      { q: 'How soon can I re-dye my hair if I don’t like the colour?', a: <>Wait at least 1 to 2 weeks, use deep conditioning treatments in the meantime, and avoid putting box dye over the top, which can make the result harder to fix. The safest option is professional colour correction: book a {consult} and we’ll plan the best way to get you to the shade you want.</> },
+    ],
+  },
+  {
+    id: 'hair-extensions',
+    label: 'Hair extensions',
+    page: '/hair-extensions-bedfordshire',
+    items: [
+      { q: 'Which type of hair extensions are best for my hair?', a: <>It depends on your hair’s thickness, your lifestyle and the length and volume you want. <Link to="/tape-in-extensions-bedfordshire">Tape-ins</Link> are lightweight and lie flat, <Link to="/nano-ring-extensions-bedfordshire">nano rings</Link> are individual strands with tiny rings, <Link to="/la-weave-extensions-bedfordshire">LA Weave</Link> wefts suit medium to thick hair, and <Link to="/hybrid-extensions-bedfordshire">hybrids</Link> combine wefts with nanos or tapes. Clip-ins are a temporary option you put in yourself for occasional wear. We fit all four salon methods, so we’ll recommend the right one at your {consult}.</> },
+      { q: 'Do hair extensions damage your natural hair?', a: 'Extensions shouldn’t damage your hair when they’re fitted correctly and matched to what your hair can comfortably hold. Damage comes from pulling, removing them at home or wearing them past their maintenance date. We assess your hair before fitting, and keeping up with maintenance is key.' },
+      { q: 'How long do hair extensions last?', a: 'Salon extensions need to be moved up as your natural hair grows. Tape-ins, for example, need a maintenance appointment every 6–8 weeks. We’ll give you your time frame at your fitting, and maintenance must be booked within it. Clip-ins you wear occasionally can last 6–12 months.' },
+      { q: 'How much do hair extensions cost?', a: `Tape-in fitting starts from £${fromPrice('tape')}, nano ring fitting from £${fromPrice('nano')}, weft fitting from £${fromPrice('weft')} and hybrid fitting from £${fromPrice('hybrid')}. Your price depends on the method, length and volume, and consultations are free. We’ll confirm your price once we’ve matched your shade and agreed your look.` },
+      { q: 'What is the difference between synthetic and 100% human hair extensions?', a: 'Human hair extensions can be washed, heat-styled and treated much like your own hair, and last longer with good care. Synthetic hair comes pre-styled and costs less, but it can melt under heat and tangles more easily. We’ll talk you through the hair we use at your consultation.' },
+      { q: 'Can you wash and heat-style your hair with extensions in?', a: 'Yes. For the first 72 hours avoid moisture, humidity, swimming and heavy sweating. After that, use sulphate-free shampoo and conditioner, keep conditioner away from the attachments, and always apply heat protection before styling.' },
+      { q: 'How do I sleep with hair extensions without tangling them?', a: 'Brush your hair gently before bed, then tie it in a loose low plait or ponytail. Sleeping on a silk or satin pillowcase reduces friction, which helps prevent matting and strain at the roots. Never go to bed with wet hair.' },
+    ],
+  },
+  {
+    id: 'tape-in-extensions',
+    label: 'Tape-in extensions',
+    page: '/tape-in-extensions-bedfordshire',
+    items: [
+      { q: 'How long do tape-in hair extensions last?', a: 'Tape-ins need a maintenance appointment every 6–8 weeks, as your natural hair grows and the adhesive loosens. The hair itself can be reused and refitted at each maintenance appointment, so with good care it can last around 6–12 months before it needs replacing.' },
+      { q: 'Do tape-in extensions ruin your natural hair?', a: 'No, not when they’re fitted and removed properly. We use medical-grade adhesive that is gentle on the hair shaft, assess your hair before fitting, and remove tapes with a professional bond remover so they slide off without pulling. Never pull them out at home.' },
+      { q: 'How much do tape-in extensions cost?', a: costAnswer('tape') },
+      { q: 'Can you wash your hair normally with tape-in extensions?', a: 'Yes, after the first 72 hours. Until then, avoid washing, humidity, swimming and heavy sweating so the adhesive can set. After that, use sulphate-free shampoo and conditioner, and keep oils, silicones and conditioner away from the tapes.' },
+      { q: 'Can you wear your hair up in a ponytail with tape-in extensions?', a: 'Yes. We place the tapes so there’s enough of your own hair around your hairline to cover them. Low, loose ponytails and buns keep the tapes hidden, and avoid tight hairstyles for the first few days after fitting.' },
+      { q: 'How do tape-in extensions stay in your hair?', a: 'Each extension is a thin, ultra-flat weft with a strip of medical-grade adhesive. A small, thin section of your own hair is sandwiched between two wefts, so they lie flat against the scalp and blend under your natural hair.' },
+      { q: 'How do you remove or reuse tape-in extensions?', a: `We apply a bond remover that breaks down the adhesive so the wefts slide off without pulling. The old tape is peeled off, the wefts are cleaned and retaped, and they’re refitted closer to the root. Maintenance starts from ${price('tape', 'Tape maintenance (¼ head)')}, and removal on its own is ${price('tape', 'Tape removal')}.` },
+    ],
+  },
+  {
+    id: 'nano-ring-extensions',
+    label: 'Nano ring extensions',
+    page: '/nano-ring-extensions-bedfordshire',
+    items: [
+      { q: 'What is the difference between nano rings and micro rings?', a: 'Both attach each extension strand to your own hair with a small ring, but nano rings are much smaller, around the size of a ballpoint pen tip. That makes them far more discreet, especially in fine or thin hair. You may also see nano rings called nano beads or nano bonds.' },
+      { q: 'How long do nano ring extensions last?', a: 'As your hair grows, the rings move down from the root, so they need a maintenance appointment to move them back up, usually every 6–8 weeks. We’ll give you your exact time frame at your fitting. With good care, the hair itself can last around 6–12 months.' },
+      { q: 'Are nano ring extensions safe for fine hair?', a: 'Yes, they’re one of the most suitable methods for fine hair. There’s no heat, glue or adhesive, and each strand is attached to a small section of your own hair, so the weight is spread evenly. We’ll assess your hair at your consultation before recommending them.' },
+      { q: 'How are nano ring hair extensions attached?', a: 'Each extension strand has a fine tip that is threaded through a tiny ring together with a small section of your own hair. The ring is then gently closed with a specialist tool to hold it in place, with no heat or glue.' },
+      { q: 'How much do nano ring hair extensions cost?', a: costAnswer('nano') },
+      { q: 'Can you tie your hair up with nano ring extensions?', a: 'Yes. The rings are so small that they sit flat against the scalp and hide easily under your top layers, so ponytails and updos are possible. Avoid tight hairstyles for the first few days after fitting.' },
+      { q: 'How do you wash and brush hair with nano rings?', a: 'Brush with a loop brush or soft bristle brush, starting at the ends and holding your hair at the root. Wait 72 hours after fitting before washing, then wash gently with sulphate-free shampoo, keeping your head upright, and keep conditioner away from the rings.' },
+    ],
+  },
+  {
+    id: 'la-weave-extensions',
+    label: 'LA Weave extensions',
+    page: '/la-weave-extensions-bedfordshire',
+    items: [
+      { q: 'What is an LA Weave and how does it work?', a: 'An LA Weave is a sew-in extension method. A row of small beads (micro rings) is secured in your natural hair, and the hair wefts are stitched onto that row. There are no cornrow braids, heat or glue, and it adds instant length, volume and thickness.' },
+      { q: 'How long does an LA Weave last?', a: `The rows usually stay secure for around 6–8 weeks. As your hair grows they move down, so they need a removal and refit appointment (from ${price('weft', 'One row removal & refit')} per row), and within 4 weeks a weave push-up is ${price('weft', 'Weave push-up (under 4 weeks)')}. Good-quality wefts can be reused, so with care the hair can last around 9–12 months.` },
+      { q: 'Does an LA Weave damage your natural hair?', a: 'It’s one of the gentlest sew-in methods. The weight is spread evenly along the row of beads, with no tight cornrows, heat or glue. Damage usually only comes from poor fitting or leaving refits too long, so we assess your hair before fitting and you’ll get a maintenance time frame to book within.' },
+      { q: 'How much does an LA Weave cost?', a: costAnswer('weft') },
+      { q: 'What is the difference between an LA Weave and a traditional sew-in weave?', a: 'A traditional sew-in is stitched onto tight cornrow braids, which add bulk and tension at the scalp. An LA Weave is stitched onto a flat row of small beads instead, so it sits flatter against the head, feels lighter and dries faster after washing.' },
+      { q: 'Can you wash and tie your hair up with an LA Weave?', a: 'Yes. Wait 72 hours after fitting, then wash once or twice a week with sulphate-free shampoo and conditioner, and always dry the roots fully. Keep ponytails loose so they don’t pull on the beads or show the rows, and avoid tight hairstyles for the first few days.' },
+      { q: 'Is an LA Weave suitable for fine or short hair?', a: <>It usually works best on medium to thick hair that’s around shoulder length or longer, so there’s enough of your own hair to cover the rows. For fine or thin hair, <Link to="/nano-ring-extensions-bedfordshire">nano rings</Link> or <Link to="/tape-in-extensions-bedfordshire">tape-ins</Link> are often a better fit. We’ll recommend the right method at your {consult}.</> },
+    ],
+  },
+  {
+    id: 'hybrid-extensions',
+    label: 'Hybrid extensions',
+    page: '/hybrid-extensions-bedfordshire',
+    items: [
+      { q: 'What are hybrid hair extensions?', a: <>Hybrid extensions combine two methods: rows of weft with <Link to="/nano-ring-extensions-bedfordshire">nano rings</Link> or <Link to="/tape-in-extensions-bedfordshire">tape-ins</Link>. The wefts add volume and length quickly, and the nanos or tapes are placed around the crown and hairline to blend them in, so the result is tailored to your head shape and hair density.</> },
+      { q: 'What is a hybrid weft, and how is it different from hand-tied or machine wefts?', a: 'A hybrid weft is a type of weft that combines the thin, flat top of a hand-tied weft with the strength of a machine weft, so it can be cut to size without unravelling. It’s different from hybrid extensions at Essence, which means combining wefts with nano rings or tapes. We’ll explain the wefts we use at your consultation.' },
+      { q: 'How long do hybrid hair extensions last?', a: 'As your natural hair grows, hybrid extensions need maintenance to move them back up, usually every 5–8 weeks. We’ll give you your time frame at your fitting, and maintenance must be booked within it. With good care, the hair itself can last around 6–12 months.' },
+      { q: 'Do hybrid hair extensions damage fine hair?', a: 'Not when they’re fitted and maintained properly. A hybrid set spreads the weight evenly: lightweight nano rings or tapes go around the more delicate hair at your hairline, and wefts go where your hair is thicker. We assess your hair before fitting, and you should never remove them yourself.' },
+      { q: 'How much do hybrid hair extensions cost?', a: costAnswer('hybrid') },
+      { q: 'Can you wash and heat-style hybrid hair extensions as normal?', a: 'Yes, after the first 72 hours. Use sulphate-free shampoo and conditioner, keep heavy conditioners off the rings, tapes and rows, and dry your roots fully straight after washing. Always apply heat protection before styling.' },
+      { q: 'How many hybrid rows do I need for full coverage?', a: <>It depends on your hair’s thickness and the look you want. One or two rows of weft usually give natural-looking volume, and two or three rows build dramatic length and density. Each is paired with one or two packs of nano rings or tapes, and we’ll recommend yours at your {consult}.</> },
+    ],
+  },
+  {
+    id: 'nanoplastia',
+    label: 'Nanoplastia',
+    page: '/nanoplastia-bedfordshire',
+    items: [
+      { q: 'What is Nanoplastia hair treatment?', a: 'Nanoplastia is an organic, formaldehyde-free smoothing and restoring treatment. It works at a molecular level to restructure and hydrate the hair from the inside, reducing frizz and styling time while keeping natural movement and volume.' },
+      { q: 'Is Nanoplastia safer than a Keratin treatment or Brazilian blowout?', a: <>Nanoplastia is formaldehyde-free, so there are no harsh fumes. Some Keratin and Brazilian blowout products elsewhere use formaldehyde or similar chemicals to set the hair straight, but every treatment we offer, including our <Link to="/keratin-treatment-bedfordshire">Keratin</Link>, is formaldehyde-free. The difference is the result: Nanoplastia is gentler and keeps more natural movement.</> },
+      { q: 'How long does Nanoplastia last?', a: 'Results typically last 3–5 months, depending on your hair type and how often you wash. It wears off gradually, so there’s no harsh line as your hair grows. Sulphate-free shampoo and conditioner significantly extend your results.' },
+      { q: 'Does Nanoplastia straighten hair permanently or change your curl pattern?', a: 'No, it isn’t permanent. Nanoplastia refines curl and wave rather than fully removing it, so hair is smoother, frizz-free and more manageable while keeping natural movement and volume. How much it relaxes your curl depends on your natural texture, and it gradually wears off.' },
+      { q: 'Is Nanoplastia suitable for bleached or damaged hair?', a: 'It can be, but it needs care. Nanoplastia is sealed in with heat, so bleached, over-processed or very fragile hair has to be assessed first. We always check your hair’s condition before treatment and will tell you honestly if it isn’t suitable. If you’re colouring too, have your colour done before your treatment, not after.' },
+      { q: 'How much does Nanoplastia cost?', a: costAnswer('nanoplastia') },
+      { q: 'How do you wash and care for hair after Nanoplastia?', a: 'For the first 72 hours, avoid moisture, humidity, swimming, heavy sweating and tight hairstyles. After that, use sulphate-free and salt-free shampoo and conditioner to make your results last as long as possible.' },
+    ],
+  },
+  {
+    id: 'keratin',
+    label: 'Keratin treatment',
+    page: '/keratin-treatment-bedfordshire',
+    items: [
+      { q: 'Does a Keratin treatment permanently straighten hair or ruin natural curls?', a: 'No. Keratin smooths frizz and softens your hair’s texture without permanently changing it. The results gradually wash out over around 3–5 months, and your natural curl pattern returns as they do.' },
+      { q: 'How long does a Keratin treatment last?', a: 'Results typically last 3–5 months, depending on your hair’s condition, your hair type and how often you wash. Sulphate-free, colour-safe shampoo and conditioner help them last longer.' },
+      { q: 'Do Keratin treatments contain formaldehyde?', a: <>Some traditional formulas do, which is why some treatments give off harsh fumes. Ours doesn’t: every treatment we offer, Keratin, <Link to="/nanoplastia-bedfordshire">Nanoplastia</Link> and <Link to="/hair-botox-bedfordshire">Hair Botox</Link>, is formaldehyde-free.</> },
+      { q: 'How long do I have to wait to wash my hair after a Keratin treatment?', a: 'Wait 72 hours. For the first 72 hours also avoid getting your hair wet, humidity, swimming, heavy sweating and tight hairstyles, ponytails or clips. After that, use sulphate-free shampoo and conditioner.' },
+      { q: 'How much does a Keratin treatment cost?', a: costAnswer('keratin') },
+      { q: 'What is the difference between a Keratin treatment and a Brazilian blowout?', a: <>Both reduce frizz. A Brazilian blowout uses a lighter solution that can keep more of your natural wave, while Keratin gives a smoother, sleeker finish. If you want to keep more movement, ask us about <Link to="/nanoplastia-bedfordshire">Nanoplastia</Link>, which refines curl rather than fully removing it. We’ll recommend the right treatment at your {consult}.</> },
+      { q: 'How do I maintain my Keratin treatment at home?', a: 'Use sulphate-free and salt-free shampoo and conditioner, as both can strip the treatment early. Protect your hair before swimming in chlorinated or salt water, and always apply heat protection before styling.' },
+    ],
+  },
+  {
+    id: 'hair-botox',
+    label: 'Hair Botox',
+    page: '/hair-botox-bedfordshire',
+    items: [
+      { q: 'What is Hair Botox and does it involve needles?', a: 'No needles, and no botulinum toxin. Hair Botox is a deep repair treatment, usually made with conditioning ingredients such as amino acids, vitamins and oils, that fills and plumps damaged strands. It restores softness, shine and strength from root to tip, and ours is formaldehyde-free.' },
+      { q: 'What is the difference between Hair Botox and a Keratin treatment?', a: <><Link to="/keratin-treatment-bedfordshire">Keratin</Link> is a smoothing treatment for a sleek, frizz-free finish. Hair Botox focuses on repair, restoring moisture, shine and strength to damaged hair without flattening your natural movement. We’ll assess your hair and recommend the right one at your {consult}.</> },
+      { q: 'How long does Hair Botox last?', a: 'Results last up to 4 months, depending on your hair type, how often you wash and your aftercare. Sulphate-free shampoo and conditioner help them last.' },
+      { q: 'Does Hair Botox straighten your hair or change your curl pattern?', a: 'No. Hair Botox smooths frizz and softens your hair, but it doesn’t straighten it or remove your curls. Your natural wave or curl stays, just healthier, shinier and easier to manage.' },
+      { q: 'Is Hair Botox safe for coloured, bleached or damaged hair?', a: 'Yes. It’s made for damaged, dry and over-processed hair, helping to smooth frizz, reduce breakage and restore softness and shine. It’s safe for colour-treated hair, and we recommend colouring before your treatment, not after. We always assess your hair’s condition first.' },
+      { q: 'How much does a Hair Botox treatment cost?', a: costAnswer('botox') },
+      { q: 'How do you wash and maintain hair after Hair Botox?', a: 'For the first 72 hours, avoid moisture, humidity, swimming, heavy sweating and tight hairstyles. After that, use sulphate-free and salt-free shampoo and conditioner, and use a deep conditioning mask regularly to make your results last.' },
+    ],
+  },
+  {
+    id: 'head-spa',
+    label: 'Head spa',
+    page: '/head-spa-bedfordshire',
+    items: [
+      { q: 'What is a scalp spa or head spa treatment?', a: 'A head spa is a relaxing salon treatment that focuses on your scalp rather than your lengths. It cleanses and refreshes the skin under your hair with massage, to promote a healthy scalp and healthy hair. At Essence we offer three: for hair loss and thinning, for a dry or itchy scalp, and for hydration. Each takes around 1 hour 20 minutes.' },
+      { q: 'How does a head spa help with scalp health and dandruff?', a: 'A head spa cleanses and exfoliates the scalp to lift product build-up, excess oil and dry flakes, and helps restore hydration. Our dry or itchy scalp head spa is designed for exactly this. If flaking or irritation is persistent, painful or spreading, check with a pharmacist or GP too.' },
+      { q: 'How much does a head spa treatment cost?', a: costAnswer('headspa') },
+      { q: 'What is the difference between a head spa and a hair mask?', a: <>A hair mask works on your mid-lengths and ends for softness and shine. A head spa treats the living skin of your scalp, where your hair grows from, to ease dryness, oiliness or tension. For both, add a scalp scrub, hair mask and head massage ({price('headspa', 'Scalp scrub, hair mask & head massage (add-on)')}) to your visit.</> },
+      { q: 'Does a head spa massage help hair grow faster?', a: 'Scalp massage boosts blood flow to the scalp, and a healthy scalp supports healthy hair growth, but no treatment can promise faster growth. Our hair loss and thinning head spa is designed to care for the scalp. If you’re worried about sudden or significant hair loss, speak to your GP as well.' },
+      { q: 'How often should you get a head spa treatment?', a: 'Once every 4–6 weeks is a popular routine for keeping your scalp balanced, or book one whenever your scalp feels dry, oily or in need of a reset. We’ll suggest a routine that suits your scalp.' },
+      { q: 'Can you do a head spa treatment at home?', a: 'You can recreate some of it: use a scalp scrub or pre-wash oil, massage your scalp with your fingertips or a soft silicone scalp brush in the shower, and finish with a warm towel wrap. For a deeper cleanse and over an hour of relaxation, book a salon head spa.' },
+    ],
+  },
+  {
+    id: 'cut-and-style',
+    label: 'Cut & blow dry',
+    page: '/services',
+    items: [
+      { q: 'What is included in a cut and blow dry?', a: 'Your cut and finish starts with a chat about the look you want, then a relaxing wash with professional salon products, with a nourishing hair mask if your hair needs extra care. Then comes your personalised cut or restyle, finished with a professional blow dry.' },
+      { q: 'How long does a cut and blow dry take?', a: 'Allow around 45 minutes to an hour for short or medium hair, and up to an hour and a half for long, thick or textured hair. We’ll give you a guide time when you book.' },
+      { q: 'How much does a cut and blow dry cost?', a: costAnswer('cut') },
+      { q: 'Should I wash my hair before a cut and blow dry?', a: 'No, a wash is included in your cut and finish. Coming in with hair washed a day or two before is ideal, so we can see how your hair naturally sits. If you’ve booked a dry cut, come with clean, dry hair styled the way you usually wear it.' },
+      { q: 'What is the difference between a blow dry and a blowout?', a: `A basic blow dry dries your hair into shape. A blowout is a styled finish, smooth, voluminous or bouncy, using round brushes and techniques that help it last for days. We offer a straight blow dry (${price('cut', 'Blow dry (straight)')}) and a wash and wand for curls or waves (${price('cut', 'Wash & wand')}).` },
+      { q: 'How often should you get a haircut?', a: 'Every 6–8 weeks keeps shorter or layered styles in shape and helps prevent split ends. If you’re growing your hair long, every 8–12 weeks is usually enough to keep the ends healthy.' },
+      { q: 'Is a wet cut or a dry cut better?', a: `It depends on your hair and the look you want. A wet cut gives sharp, precise lines for even, structured styles. A dry cut lets your stylist see how your hair naturally falls, which suits texture, curls and refining a shape. We offer both: a wash and cut (${price('cut', 'Wash & cut')}) or a dry cut trim (${price('cut', 'Dry cut (trim only)')}).` },
+    ],
+  },
+  {
+    id: 'training-courses',
+    label: 'Hair training courses',
+    page: '/academy',
+    items: [
+      { q: 'Is there a hair academy near me in Luton or Bedfordshire?', a: <>Yes. <Link to="/academy">Essence Academy</Link> is an ABT-accredited hair training academy run from our working salon in Luton, Bedfordshire. Every course is taught one-to-one and hands-on, with real models and real products, covering balayage, colour, cutting, Keratin, Nanoplastia, Hair Botox and hair extensions.</> },
+      { q: 'What hairdressing courses does Essence Academy offer, and how much are they?', a: <>We offer ten courses: <Link to="/academy#courses">Balayage Masterclass</Link> (£400), Keratin Treatment (£200), Nanoplastia Treatment (£300), Hair Botox (£300), the Full Treatment Package of all three (£800), Extensions 2 Method, tape and nano ring (£350), Extensions 4 Method, tape, nano ring, micro ring and LA Weave (£600), Basics of Colour (£800), Advanced Colour (£800) and Cutting Basics (£500).</> },
+      { q: 'How long are the courses?', a: 'Most courses are one full day: Keratin Treatment is 6 hours, and the Balayage Masterclass, Nanoplastia, Hair Botox and both extensions courses are 9 hours. The Full Treatment Package is two days (16 hours), and Basics of Colour, Advanced Colour and Cutting Basics are two days (18 hours) each.' },
+      { q: 'Are the courses accredited, and do I get a certificate?', a: 'Yes. Every Essence Academy course is ABT accredited, and you receive a certificate when you complete it. ABT accreditation can also give you access to insurance discounts with ABT, so you can start offering what you’ve learned to clients.' },
+      { q: 'Do I need hairdressing experience to train with Essence Academy?', a: 'Not for most courses. The Balayage Masterclass and the Keratin, Nanoplastia and Hair Botox courses welcome all levels. Basics of Colour and Cutting Basics suit beginners to intermediate stylists, and Advanced Colour is for experienced stylists ready to offer a premium colour service. Not sure? Book a free consultation and we’ll help you choose.' },
+      { q: 'What is included in an Essence Academy course?', a: 'One-to-one, hands-on training on a real model with real products, a training manual, your ABT-accredited certificate, a free shadowing day to watch real client appointments, and ongoing online support as you build your client base. We don’t disappear after training.' },
+      { q: 'How do I enrol, and can I pay in instalments?', a: <>Enrol online from the <Link to="/academy#courses">Academy page</Link>, or book a {consult} if you’d like help choosing a course. Payment plans are available, and spaces are limited because every course is one-to-one.</> },
+    ],
+  },
+]

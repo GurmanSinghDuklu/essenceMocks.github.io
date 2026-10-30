@@ -4,10 +4,18 @@
 .lp-facts { display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: #9A9087; margin-bottom: 36px; }
 .lp-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
+.lp-card-from { font-size: 9px; letter-spacing: .3em; text-transform: uppercase; color: #9A9087; margin: -6px 0 18px; }
+
 .lp-looks { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; }
 .lp-look { overflow: hidden; aspect-ratio: 4 / 5; }
 .lp-look img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s; }
 .lp-look:hover img { transform: scale(1.04); }
+
+.lp-why { list-style: none; display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: #E8E0D6; }
+.lp-why li { background: #fff; padding: 40px 32px; }
+.lp-why h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 300; margin-bottom: 12px; }
+.lp-why p { font-size: 13px; line-height: 1.82; color: #2d2d2d; }
+.lp-why a { color: inherit; text-underline-offset: 3px; }
 
 .lp-steps { list-style: none; display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; margin-bottom: 72px; }
 .lp-step-num { font-size: 9px; letter-spacing: .3em; color: #9A9087; margin-bottom: 14px; }
@@ -40,6 +48,8 @@
 @media (max-width: 960px) {
   .lp-intro { padding: 56px 20px 48px; }
   .lp-looks { grid-template-columns: 1fr 1fr; }
+  .lp-why { grid-template-columns: 1fr; }
+  .lp-why li { padding: 32px 22px; }
   .lp-steps { grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px; }
   .lp-aftercare { padding: 28px 22px; }
   .lp-quotes { padding: 64px 20px; }

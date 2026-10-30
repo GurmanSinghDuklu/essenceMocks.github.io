@@ -20,6 +20,7 @@ export default function Footer() {
         <div>
           <div className="footer-col-title">Info</div>
           <ul className="footer-links">
+            <li><Link to="/prices">Price List</Link></li>
             <li><Link to="/top-tips">Top Tips</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
             <li><Link to="/faqs">FAQs</Link></li>

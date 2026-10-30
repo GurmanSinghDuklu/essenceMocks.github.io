@@ -46,6 +46,8 @@
 .tt-ac-items { list-style: none; display: flex; flex-direction: column; gap: 8px; }
 .tt-ac-items li { font-size: 12.5px; line-height: 1.7; color: #2d2d2d; display: flex; gap: 9px; }
 .tt-ac-items li::before { content: '—'; color: #9A9087; flex-shrink: 0; }
+.tt-ac-link { display: inline-block; margin-top: 20px; font-size: 9px; letter-spacing: .26em; text-transform: uppercase; color: #0a0a0a; text-decoration: none; border-bottom: 1px solid #0a0a0a; padding-bottom: 3px; }
+.tt-ac-link:hover { color: #9A9087; border-color: #9A9087; }
 
 /* CTA */
 .tt-cta { background: #0a0a0a; padding: 80px 56px; display: flex; justify-content: space-between; align-items: center; gap: 32px; }

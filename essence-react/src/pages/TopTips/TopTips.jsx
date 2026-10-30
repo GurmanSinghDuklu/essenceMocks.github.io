@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './TopTips.css';
 import useSEO from '../../hooks/useSEO'
 import { PAGES } from '../../seo'
@@ -58,6 +59,7 @@ const TIPS = [
       {
         icon: '🎨',
         title: 'Hair Colour Aftercare',
+        link: { to: '/balayage-bedfordshire', label: 'Balayage in Luton & Bedfordshire' },
         items: [
           'Wait at least 48 hours before washing after colour',
           'Use professional hair products',
@@ -92,6 +94,7 @@ const TIPS = [
       {
         icon: '✨',
         title: 'Extensions Aftercare',
+        link: { to: '/hair-extensions-bedfordshire', label: 'Hair extensions in Luton & Bedfordshire' },
         items: [
           'Use sulphate-free shampoos and conditioners',
           'Avoid tight hairstyles for the first few days',
@@ -148,6 +151,7 @@ export default function TopTips() {
                             <li key={m}>{item}</li>
                           ))}
                         </ul>
+                        {card.link && <Link to={card.link.to} className="tt-ac-link">{card.link.label} →</Link>}
                       </div>
                     ))}
                   </div>

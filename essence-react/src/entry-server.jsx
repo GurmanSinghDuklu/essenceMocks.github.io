@@ -5,7 +5,8 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from './App.jsx'
 import { FAQ_GROUPS } from './pages/FAQs/faqData.jsx'
-import { PAGES, salonSchema, breadcrumbSchema, faqSchema, serviceSchema, websiteSchema } from './seo.js'
+import { SERVICE_FAQS } from './pages/FAQs/serviceFaqs.jsx'
+import { PAGES, salonSchema, breadcrumbSchema, faqSchema, serviceSchema, websiteSchema, priceListSchema } from './seo.js'
 import { LANDINGS } from './pages/Landing/landings.jsx'
 
 export { PAGES }
@@ -36,9 +37,10 @@ export function schemasFor(path) {
   const schemas = [salonSchema(), breadcrumbSchema(path)]
   if (path === '/') schemas.push(websiteSchema())
   if (path === '/faqs') {
-    const items = FAQ_GROUPS.flatMap(g => g.items).map(({ q, a }) => ({ q, text: toText(a) }))
+    const items = [...SERVICE_FAQS, ...FAQ_GROUPS].flatMap(g => g.items).map(({ q, a }) => ({ q, text: toText(a) }))
     schemas.push(faqSchema(items))
   }
+  if (path === '/prices') schemas.push(priceListSchema())
   if (LANDINGS[path]) {
     schemas.push(serviceSchema(path, LANDINGS[path]))
     schemas.push(faqSchema(LANDINGS[path].faqs.map(({ q, a }) => ({ q, text: toText(a) }))))

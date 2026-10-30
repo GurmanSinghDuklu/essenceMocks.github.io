@@ -10,8 +10,8 @@ const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const marqueeItems = ['Balayage','Nanoplastia','Keratin','Hair Botox','Head Spa','Extensions','Cut & Style','ABT Accredited Academy','Luton']
 
 const services = [
-  { num:'01', img:'/WhatsApp Image 2026-07-06 at 21.30.04.webp', alt:'Bronde balayage on long, wavy hair', to:'/balayage-bedfordshire', name:<>Balayage &amp; <em>Colour Services</em></>, desc:'Refresh, enhance, or completely transform your hair with our professional colour services. From root touch-ups and grey coverage to balayage, highlights, and full colour transformations, every service is tailored to suit your style and hair goals.' },
-  { num:'02', img:'/WhatsApp Image 2026-07-06 at 21.30.24.webp', alt:'Long, voluminous chocolate-brown hair extensions with soft waves', to:'/hair-extensions-bedfordshire', name:<>Hair <em>Extensions</em></>, desc:'Transform your hair with our premium extension services, tailored to your individual needs and lifestyle. We offer professional colour matching to ensure a seamless, natural blend with your own hair, creating the perfect look and finish.' },
+  { num:'01', img:'/WhatsApp Image 2026-07-06 at 21.30.04.webp', alt:'Bronde balayage on long, wavy hair', to:'/balayage-bedfordshire', cta:'Balayage in Bedfordshire', name:<>Balayage &amp; <em>Colour Services</em></>, desc:'Refresh, enhance, or completely transform your hair with our professional colour services. From root touch-ups and grey coverage to balayage, highlights, and full colour transformations, every service is tailored to suit your style and hair goals.' },
+  { num:'02', img:'/WhatsApp Image 2026-07-06 at 21.30.24.webp', alt:'Long, voluminous chocolate-brown hair extensions with soft waves', to:'/hair-extensions-bedfordshire', cta:'Hair Extensions in Bedfordshire', name:<>Hair <em>Extensions</em></>, desc:'Transform your hair with our premium extension services, tailored to your individual needs and lifestyle. We offer professional colour matching to ensure a seamless, natural blend with your own hair, creating the perfect look and finish.' },
   { num:'03', img:'/WhatsApp Image 2026-07-06 at 21.34.12.webp', alt:'Long, sleek, glossy dark-brown hair after a smoothing treatment', name:<>Hair <em>Treatments</em></>, desc:'Restore the health and beauty of your hair with our specialist treatment services. From smoothing and strengthening with Nanoplastia and Keratin Treatments to relaxing Head Spa experiences that promote healthy hair and scalp health.' },
   { num:'04', img:'/cut.webp', alt:'Shoulder-length blonde cut with a clean, blunt finish', name:<>Cut &amp; <em>Style</em></>, desc:'Need a little pick-me-up? Whether you\'re looking for a fresh haircut, a complete restyle, or simply some time to relax, we\'ve got you covered. From quick refreshes to full transformations, we\'re here to help you look and feel your best.' },
 ]
@@ -34,8 +34,8 @@ export default function Home() {
         </div>
         <div className="hero-overlay" />
         <div className="hero-content">
-          <div className="hero-tag">Luton's Premier Hair Studio</div>
-          <h1 className="hero-title">More Than Hair—A Place to Relax, Refresh &amp; Feel Your Best.</h1>
+          <h1 className="hero-tag">Hair Salon in Luton, Bedfordshire</h1>
+          <p className="hero-title">More Than Hair—A Place to Relax, Refresh &amp; Feel Your Best.</p>
           <div className="hero-cta">
             <a href={BOOK_URL} className="btn-wh" target="_blank" rel="noreferrer">Book a Treatment</a>
             <Link to="/services" className="btn-outline-wh">Explore Services</Link>
@@ -100,7 +100,7 @@ export default function Home() {
                 <div className="svc-num">{s.num}</div>
                 <div className="svc-name">{s.name}</div>
                 <p className="svc-desc">{s.desc}</p>
-                <Link to={s.to || '/services'} className="svc-link">Book Now</Link>
+                <Link to={s.to || '/services'} className="svc-link">{s.cta || 'Book Now'}</Link>
               </div>
             </div>
           ))}

@@ -4,7 +4,7 @@
 .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center center; filter: brightness(1.25) contrast(1.02); }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top,rgba(10,10,10,.72) 0%,rgba(10,10,10,.45) 50%,rgba(10,10,10,.3) 100%); }
 .hero-content { position: relative; z-index: 1; padding: 0 56px 80px; width: 100%; }
-.hero-tag { font-size: 9px; letter-spacing: .5em; text-transform: uppercase; color: rgba(255,255,255,.7); margin-bottom: 20px; }
+.hero-tag { font-size: 9px; font-weight: inherit; letter-spacing: .5em; text-transform: uppercase; color: rgba(255,255,255,.7); margin-bottom: 20px; }
 .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem,5vw,5.5rem); font-weight: 300; line-height: 1.08; color: #fff; margin-bottom: 32px; max-width: 15ch; }
 .hero-title em { font-style: italic; }
 .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }

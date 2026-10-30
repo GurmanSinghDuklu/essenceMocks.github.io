@@ -1,0 +1,5 @@
+.pr-notes { list-style: none; margin-bottom: 36px; }
+.pr-notes li { font-size: 13.5px; line-height: 1.7; color: #2d2d2d; padding-left: 20px; position: relative; margin-bottom: 6px; }
+.pr-notes li::before { content: '—'; position: absolute; left: 0; color: #9A9087; }
+.pr-notes a, .pr-updated a { color: inherit; text-underline-offset: 3px; }
+.pr-updated { font-size: 13px; line-height: 1.8; color: #9A9087; }

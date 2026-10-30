@@ -4,14 +4,17 @@ import './Landing.css'
 import useSEO from '../../hooks/useSEO'
 import useReviews from '../../hooks/useReviews'
 import AccordionItem from '../../components/Accordion/Accordion'
+import PriceList from '../../components/PriceList/PriceList'
 import { PAGES, BOOK_URL, BUSINESS, HOURS_TEXT } from '../../seo'
 import { LANDINGS } from './landings'
+import { fromPrice } from '../../prices'
 
 export default function Landing({ path }) {
   const page = LANDINGS[path]
   useSEO(PAGES[path])
   const { summary, reviews } = useReviews()
   const quotes = reviews.filter(r => page.reviewMatch.test(r.service || ''))
+  const noun = page.noun || page.service.toLowerCase()
 
   return (
     <main>
@@ -27,6 +30,7 @@ export default function Landing({ path }) {
       <section className="lp-intro">
         <p className="lp-lead">{page.lead}</p>
         <div className="lp-facts">
+          {page.prices && <span>From £{page.from ?? fromPrice(page.prices[0])}</span>}
           <span>★ {summary.rating.toFixed(1)} · {summary.count}+ {summary.source} reviews</span>
           <span>{BUSINESS.streetAddress}, {BUSINESS.addressLocality} {BUSINESS.postalCode}</span>
           <span>Free street parking</span>
@@ -43,13 +47,15 @@ export default function Landing({ path }) {
           <div className="sh-right">{page.cardsHead.text}</div>
         </div>
         {page.cards && (
-          <div className="svc-grid-4">
+          <div className={page.cards.length === 4 ? 'svc-grid-4' : 'svc-grid'} style={page.cards.length === 2 ? { gridTemplateColumns: '1fr 1fr' } : undefined}>
             {page.cards.map(c => (
               <div className="svc-card" key={c.img}>
                 <div className="svc-card-img"><img loading="lazy" decoding="async" src={c.img} alt={c.alt} /></div>
                 <div className="svc-card-body">
                   <h3 className="svc-name">{c.name}</h3>
                   <p className="svc-desc">{c.desc}</p>
+                  {c.prices && <p className="lp-card-from">From £{fromPrice(c.prices)}</p>}
+                  {c.to && <Link to={c.to} className="book-link">{c.label} in Bedfordshire →</Link>}
                 </div>
               </div>
             ))}
@@ -64,10 +70,25 @@ export default function Landing({ path }) {
         )}
       </section>
 
+      <section className="svc-section">
+        <div className="sec-head">
+          <div className="sh-left"><h2>{page.why.title}</h2></div>
+          <div className="sh-right">Rated {summary.rating.toFixed(1)} from {summary.count}+ {summary.source} reviews by clients across Luton and Bedfordshire.</div>
+        </div>
+        <ul className="lp-why">
+          {page.why.items.map(([title, text]) => (
+            <li key={title}>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section className="svc-section bg-ow">
         <div className="sec-head">
           <div className="sh-left"><h2>How it <em>works</em></h2></div>
-          <div className="sh-right">From your first visit to keeping your {page.service.toLowerCase()} looking its best.</div>
+          <div className="sh-right">From your first visit to looking after your {noun} at home.</div>
         </div>
         <ol className="lp-steps">
           {page.steps.map(([title, text], i) => (
@@ -78,12 +99,24 @@ export default function Landing({ path }) {
             </li>
           ))}
         </ol>
-        <div className="lp-aftercare">
-          <h3>Aftercare at home</h3>
-          <ul>{page.aftercare.map(a => <li key={a}>{a}</li>)}</ul>
-          <Link to="/top-tips">More aftercare tips →</Link>
-        </div>
+        {page.aftercare && (
+          <div className="lp-aftercare">
+            <h3>Aftercare at home</h3>
+            <ul>{page.aftercare.map(a => <li key={a}>{a}</li>)}</ul>
+            <Link to="/top-tips">More aftercare tips →</Link>
+          </div>
+        )}
       </section>
+
+      {page.prices && (
+        <section className="svc-section bg-beige">
+          <div className="sec-head">
+            <div className="sh-left"><h2>{page.service} <em>prices</em></h2></div>
+            <div className="sh-right">Prices depend on your hair’s length and thickness, and we’ll confirm yours at your consultation. <Link to="/prices" className="sh-link">Full price list →</Link></div>
+          </div>
+          <PriceList groups={page.prices} />
+        </section>
+      )}
 
       {quotes.length > 0 && (
         <section className="lp-quotes">
@@ -119,7 +152,7 @@ export default function Landing({ path }) {
       </section>
 
       <div className="svc-cta">
-        <h2>Ready for your <em>{page.service.toLowerCase()}?</em></h2>
+        <h2>Ready for your <em>{noun}?</em></h2>
         <p>Book online or call/WhatsApp 07375 956 131. A deposit is required to confirm your appointment.</p>
         <a href={BOOK_URL} className="btn-wh" target="_blank" rel="noreferrer">Book Now</a>
       </div>
