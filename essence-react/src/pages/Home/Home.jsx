@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
 import InstagramFeed from '../../components/InstagramFeed/InstagramFeed'
 import useSEO from '../../hooks/useSEO'
-import { PAGES, HOURS_TEXT } from '../../seo'
+import { PAGES, HOURS_TEXT, BUSINESS } from '../../seo'
 import useReviews from '../../hooks/useReviews'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
@@ -21,6 +22,31 @@ const Stars = () => (
     {Array.from({ length: 5 }, (_, i) => <span key={i}>★</span>)}
   </div>
 )
+
+// Google Maps sets its own cookies, so the map only loads once the visitor asks for it.
+// Nothing is remembered: the site itself stays cookie-free.
+function MapEmbed() {
+  const [show, setShow] = useState(false)
+  if (show) {
+    return (
+      <iframe
+        src="https://maps.google.com/maps?q=6+Woodmere,+Luton+LU3+4DN&output=embed"
+        allowFullScreen
+        title="Essence location"
+      />
+    )
+  }
+  return (
+    <div className="cs-map-consent">
+      <div className="section-tag">6 Woodmere, Luton LU3 4DN</div>
+      <p>The map is provided by Google, which may set cookies and receive your IP address once it loads. See our <Link to="/cookies">cookie policy</Link>.</p>
+      <div className="cs-map-actions">
+        <button type="button" className="btn-blk" onClick={() => setShow(true)}>Show Map</button>
+        <a href={BUSINESS.googleMaps} className="btn-outline-blk" target="_blank" rel="noreferrer">Open in Google Maps</a>
+      </div>
+    </div>
+  )
+}
 
 export default function Home() {
   useSEO(PAGES['/'])
@@ -174,12 +200,7 @@ export default function Home() {
           <a href={BOOK_URL} className="btn-blk" target="_blank" rel="noreferrer">Book Online</a>
         </div>
         <div className="cs-map">
-          <iframe
-            src="https://maps.google.com/maps?q=6+Woodmere,+Luton+LU3+4DN&output=embed"
-            allowFullScreen
-            loading="lazy"
-            title="Essence location"
-          />
+          <MapEmbed />
         </div>
       </section>
     </main>

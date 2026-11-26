@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Privacy.css'
 import useSEO from '../../hooks/useSEO'
 import { PAGES } from '../../seo'
@@ -20,14 +21,36 @@ export default function Privacy() {
           <div className="ps-tag">Data &amp; Privacy</div>
           <h2 className="ps-title">Privacy <em>Policy</em></h2>
           <div className="ps-body">
-            <p>By providing your personal details you consent to Essence Hair securely storing and processing your information in accordance with data protection laws.</p>
-            <p>Your information will be used to:</p>
+            <p>Essence Hair Treatment, 6 Woodmere, Luton, Bedfordshire LU3 4DN, is responsible for the personal information you give us (the "data controller" under UK GDPR and the Data Protection Act 2018). You can contact us about your data on <a href="tel:+447375956131">07375 956 131</a>, by phone or WhatsApp.</p>
+
+            <h3>Browsing our website</h3>
+            <p>Our website doesn't use cookies and doesn't collect or store any information about you. See our <Link to="/cookies">cookie policy</Link> for the details.</p>
+
+            <h3>What we collect when you book</h3>
             <ul>
-              <li>Manage and confirm your appointments</li>
-              <li>Send booking reminders</li>
-              <li>Share occasional updates or promotional offers (where consent is given)</li>
+              <li>Your name, phone number and email address</li>
+              <li>Your appointment history, the services you've had and notes about your hair (such as colour formulas)</li>
+              <li>Patch test results, and any allergies, medication or health conditions you tell us about that could affect a treatment</li>
+              <li>Deposits and payments you've made with us</li>
             </ul>
-            <p>You have the right to access, correct, or request deletion of your personal data at any time. You may also withdraw your consent for marketing communications at any time without affecting your booked services.</p>
+
+            <h3>How we use it, and why we're allowed to</h3>
+            <ul>
+              <li>To book, confirm and manage your appointments and send reminders, because we need to in order to provide the service you've booked.</li>
+              <li>To carry out treatments safely. Health and allergy information is only used for this, with your explicit consent, which you give when you share it with us.</li>
+              <li>To keep financial records, because the law requires us to.</li>
+              <li>To send occasional updates or offers, only if you've agreed to receive them. You can say no at any time without affecting your bookings.</li>
+            </ul>
+
+            <h3>Who we share it with</h3>
+            <p>We never sell your information or share it for anyone else's marketing. It is only handled by services that help us run the salon: our online booking system (Timely), WhatsApp if you message us there, and our accountant or HMRC where the law requires. Some of these providers store data outside the UK; where they do, it's protected by safeguards recognised under UK law.</p>
+
+            <h3>How long we keep it</h3>
+            <p>We keep your client record while you're visiting us, so we can keep your treatments safe and consistent. Financial records are kept for as long as the law requires (usually six years). After that, or sooner if you ask and we're not legally required to keep it, your information is deleted.</p>
+
+            <h3>Your rights</h3>
+            <p>You have the right to see the information we hold about you, have it corrected, ask for it to be deleted, restrict or object to how we use it, receive a copy to take elsewhere, and withdraw any consent you've given. Just get in touch and we'll respond within one month.</p>
+            <p>If you're unhappy with how we've handled your information, please talk to us first. You can also complain to the Information Commissioner's Office at <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noreferrer">ico.org.uk</a> or on 0303 123 1113.</p>
           </div>
         </div>
 

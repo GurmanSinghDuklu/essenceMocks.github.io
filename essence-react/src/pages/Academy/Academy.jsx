@@ -2,24 +2,31 @@ import { Link } from 'react-router-dom'
 import './Academy.css'
 import useSEO from '../../hooks/useSEO'
 import { PAGES } from '../../seo'
+import { COURSES } from './courses'
+
+const [[featuredPath, featured], ...rest] = Object.entries(COURSES)
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const CONSULT_URL = 'https://bookings.gettimely.com/essencehairtreatment/book?uri=https%3A%2F%2Fbook.gettimely.com%2FBooking%2FLocation%2F290341%3Fmobile%3DTrue%26params%3D%25253fclient-login%25253dtrue'
 
-function CourseCard({ num, tag, name, desc, duration, investment, certification, extra, extraVal, bookHref }) {
+function CourseCard({ path, c }) {
+  const [extra, extraVal] = c.details[0]
   return (
     <div className="ac-course">
-      <div className="ac-c-num">{num}</div>
-      <div className="ac-c-tag">{tag}</div>
-      <h3 className="ac-c-name" dangerouslySetInnerHTML={{ __html: name }} />
-      <p className="ac-c-desc">{desc}</p>
+      <div className="ac-c-num">{c.num}</div>
+      <div className="ac-c-tag">{c.tag}</div>
+      <h3 className="ac-c-name"><Link to={path} className="ac-c-link">{c.cardName}</Link></h3>
+      <p className="ac-c-desc">{c.cardDesc}</p>
       <div className="ac-c-meta">
-        <div><div className="ac-cm-label">Duration</div><div className="ac-cm-val">{duration}</div></div>
-        <div><div className="ac-cm-label">Investment</div><div className="ac-cm-val">{investment}</div></div>
-        <div><div className="ac-cm-label">Certification</div><div className="ac-cm-val">{certification}</div></div>
-        {extra && <div><div className="ac-cm-label">{extra}</div><div className="ac-cm-val">{extraVal}</div></div>}
+        <div><div className="ac-cm-label">Duration</div><div className="ac-cm-val">{c.duration.replace(' (1 Full Day)', '')}</div></div>
+        <div><div className="ac-cm-label">Investment</div><div className="ac-cm-val">£{c.price}</div></div>
+        <div><div className="ac-cm-label">Certification</div><div className="ac-cm-val">ABT Accredited</div></div>
+        <div><div className="ac-cm-label">{extra}</div><div className="ac-cm-val">{extraVal}</div></div>
       </div>
-      <a href={bookHref || BOOK_URL} className="ac-book-link" target="_blank" rel="noreferrer">Enrol Now →</a>
+      <div className="ac-c-links">
+        <Link to={path} className="ac-book-link">Course Details →</Link>
+        <a href={BOOK_URL} className="ac-book-link" target="_blank" rel="noreferrer">Enrol Now →</a>
+      </div>
     </div>
   )
 }
@@ -90,92 +97,39 @@ export default function Academy() {
           {/* Featured: Balayage Masterclass */}
           <div className="ac-course feat">
             <div className="feat-l">
-              <div className="ac-c-num">01</div>
-              <div className="ac-c-tag">Colour · 1 Day · Flagship</div>
-              <h3 className="ac-c-name">Balayage <em>Masterclass</em></h3>
-              <p className="ac-c-desc">Our most celebrated course. A full day mastering the freehand balayage technique — not just the "how" but the "why" behind every decision. You'll work on a real model under expert guidance and leave truly ready.</p>
-              <p className="ac-c-desc">First I demonstrate and break down every step, then it's your turn — with support throughout.</p>
-              <a href={BOOK_URL} className="ac-book-link" target="_blank" rel="noreferrer">Enrol — £400 →</a>
+              <div className="ac-c-num">{featured.num}</div>
+              <div className="ac-c-tag">{featured.tag}</div>
+              <h3 className="ac-c-name"><Link to={featuredPath} className="ac-c-link">{featured.cardName}</Link></h3>
+              <p className="ac-c-desc">{featured.cardDesc}</p>
+              <p className="ac-c-desc">First I demonstrate and break down every step, then it’s your turn — with support throughout.</p>
+              <div className="ac-c-links">
+                <Link to={featuredPath} className="ac-book-link">Course Details →</Link>
+                <a href={BOOK_URL} className="ac-book-link" target="_blank" rel="noreferrer">Enrol — £{featured.price} →</a>
+              </div>
             </div>
             <div className="feat-r">
               <div>
                 <div className="ac-learn-head">You Will Learn</div>
                 <ul className="ac-learn-list">
-                  <li>Freehand brush technique and pressure control</li>
-                  <li>Sectioning for different lengths and densities</li>
-                  <li>Lightener selection and timing for each hair type</li>
-                  <li>Toning theory — perfect blonde, brunette or copper</li>
-                  <li>Client consultation and expectation management</li>
-                  <li>Aftercare advice for every client</li>
+                  {featured.learn.map(item => <li key={item}>{item}</li>)}
                 </ul>
               </div>
               <div>
                 <div className="ac-detail-head">Course Details</div>
                 <div className="ac-detail-rows">
-                  <div><div className="ac-cm-label">Duration</div><div className="ac-cm-val">9 Hours (1 Full Day)</div></div>
-                  <div><div className="ac-cm-label">Investment</div><div className="ac-cm-val">£400</div></div>
+                  <div><div className="ac-cm-label">Duration</div><div className="ac-cm-val">{featured.duration}</div></div>
+                  <div><div className="ac-cm-label">Investment</div><div className="ac-cm-val">£{featured.price}</div></div>
                   <div><div className="ac-cm-label">Certification</div><div className="ac-cm-val">ABT Accredited</div></div>
                   <div><div className="ac-cm-label">Includes</div><div className="ac-cm-val">Manual + Shadowing + Support</div></div>
-                  <div><div className="ac-cm-label">Level</div><div className="ac-cm-val">All Levels Welcome</div></div>
+                  {featured.details.map(([label, value]) => (
+                    <div key={label}><div className="ac-cm-label">{label}</div><div className="ac-cm-val">{value}</div></div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
 
-          <CourseCard
-            num="02" tag="Treatments · 1 Day"
-            name="Keratin <em>Treatment</em>"
-            desc="Professional application of organic keratin — consultation, strand testing, application, heat activation, and full aftercare guidance. Everything needed to offer this as a standalone service."
-            duration="6 Hours" investment="£200" certification="ABT Accredited" extra="Level" extraVal="All Levels"
-          />
-          <CourseCard
-            num="03" tag="Treatments · 1 Day"
-            name="Nanoplastia <em>Treatment</em>"
-            desc="Master the most in-demand organic smoothing treatment. Understand the science, perfect the application, and learn to advise clients on suitability — a highly profitable skill set."
-            duration="9 Hours" investment="£300" certification="ABT Accredited" extra="Level" extraVal="All Levels"
-          />
-          <CourseCard
-            num="04" tag="Treatments · 1 Day"
-            name="Hair <em>Botox</em>"
-            desc="A full training day in hair botox — growing rapidly in demand. Full protocol: client assessment, product layering, heat sealing, and aftercare advice for lasting results and client retention."
-            duration="9 Hours" investment="£300" certification="ABT Accredited" extra="Level" extraVal="All Levels"
-          />
-          <CourseCard
-            num="05" tag="Bundle · 2 Days · Best Value"
-            name="Full Treatment <em>Package</em>"
-            desc="Keratin, Nanoplastia, and Hair Botox — all three organic smoothing treatments in one intensive two-day programme. Ideal for a complete treatment menu. Excellent value versus booking individually."
-            duration="2 Days · 16 hrs" investment="£800" certification="ABT Accredited" extra="Includes" extraVal="All 3 Treatments"
-          />
-          <CourseCard
-            num="06" tag="Extensions · 1 Day"
-            name="Extensions <em>2 Method</em>"
-            desc="Certified in Tape and Nano Ring extensions. Fitting, colour matching, blending, removal, and maintenance advice. Immediately expands your service menu and earning potential."
-            duration="9 Hours" investment="£350" certification="ABT Accredited" extra="Methods" extraVal="Tape + Nano Ring"
-          />
-          <CourseCard
-            num="07" tag="Extensions · 1 Day"
-            name="Extensions <em>4 Method</em>"
-            desc="The most comprehensive extensions course — Tape, Nano Ring, Micro Ring, and LA Weave. Everything needed to build a complete extensions service."
-            duration="9 Hours" investment="£600" certification="ABT Accredited" extra="Methods" extraVal="Tape/Nano/Micro/LA Weave"
-          />
-          <CourseCard
-            num="08" tag="Colour Foundation · 2 Days"
-            name="Basics of <em>Colour</em>"
-            desc="Essential foundation for any colourist. Colour theory, developer selection, application, highlighting, and professional toning. Ideal for beginners or those formalising existing skills."
-            duration="2 Days · 18 hrs" investment="£800" certification="ABT Accredited" extra="Level" extraVal="Beginner–Intermediate"
-          />
-          <CourseCard
-            num="09" tag="Colour Advanced · 2 Days"
-            name="Advanced <em>Colour</em>"
-            desc="Colour correction, vivids, grey blending, complex balayage, and editorial techniques. For experienced stylists ready to offer a genuinely premium colour service."
-            duration="2 Days · 18 hrs" investment="£800" certification="ABT Accredited" extra="Level" extraVal="Intermediate–Advanced"
-          />
-          <CourseCard
-            num="10" tag="Cutting · 2 Days"
-            name="Cutting <em>Basics</em>"
-            desc="Precision cutting, scissor over comb, layering, graduation, and tailoring a cut to face shape and density. The technical foundation every stylist needs."
-            duration="2 Days · 18 hrs" investment="£500" certification="ABT Accredited" extra="Level" extraVal="Beginner–Intermediate"
-          />
+          {rest.map(([path, c]) => <CourseCard key={path} path={path} c={c} />)}
         </div>
       </section>
 

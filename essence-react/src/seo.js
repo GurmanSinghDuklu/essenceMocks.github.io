@@ -2,6 +2,9 @@
 // Used by useSEO on the client and by scripts/prerender.js at build time.
 import reviews from '../public/reviews.json'
 import { PRICE_GROUPS, PRICE_SECTIONS } from './prices'
+import { COURSES } from './pages/Academy/courses.jsx'
+import posts from '../public/instagram/posts.json'
+import { GALLERY_SERVICES, galleryPhotos } from './pages/Gallery/galleryServices.js'
 
 export const SITE_URL = 'https://www.essencehairtreatment.com'
 export const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
@@ -159,6 +162,16 @@ export const PAGES = {
     description: 'Read our salon policies, cancellation terms, and privacy information at Essence Hair Treatment in Luton, Bedfordshire.',
     crumb: 'Privacy & Policies',
   },
+  '/cookies': {
+    title: 'Cookie Policy | Essence Hair Treatment',
+    description: 'Essence Hair Treatment’s website uses no cookies, analytics or tracking, and keeps no information about visitors.',
+    crumb: 'Cookie Policy',
+  },
+}
+
+// One page per Academy course, listed under /academy in the breadcrumb.
+for (const [path, c] of Object.entries(COURSES)) {
+  PAGES[path] = { ...c.seo, crumb: c.name, parent: '/academy', ogImage: SITE_URL + c.hero.img }
 }
 
 for (const [path, page] of Object.entries(PAGES)) {
@@ -250,12 +263,13 @@ export function salonSchema() {
 export function breadcrumbSchema(path) {
   const page = PAGES[path]
   if (!page?.crumb) return null
+  const trail = [...(page.parent ? [PAGES[page.parent]] : []), page]
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: page.crumb, item: page.canonical },
+      ...trail.map((p, i) => ({ '@type': 'ListItem', position: i + 2, name: p.crumb, item: p.canonical })),
     ],
   }
 }
@@ -329,5 +343,100 @@ export function priceListSchema() {
         itemListElement: offersFor(id),
       })),
     },
+  }
+}
+
+const ADDRESS = {
+  '@type': 'PostalAddress',
+  streetAddress: BUSINESS.streetAddress,
+  addressLocality: BUSINESS.addressLocality,
+  addressRegion: BUSINESS.addressRegion,
+  postalCode: BUSINESS.postalCode,
+  addressCountry: BUSINESS.addressCountry,
+}
+
+// Essence Academy, the salon's training arm, as the provider of every course.
+const ACADEMY = {
+  '@type': 'EducationalOrganization',
+  '@id': `${SITE_URL}/academy#academy`,
+  name: 'Essence Academy',
+  url: `${SITE_URL}/academy`,
+  description: 'ABT-accredited hair training academy in Luton, Bedfordshire, offering one-to-one courses.',
+  address: ADDRESS,
+  telephone: BUSINESS.telephone,
+  parentOrganization: { '@id': `${SITE_URL}/#salon` },
+}
+
+// Course schema for each /academy/... page.
+export function courseSchema(path) {
+  const c = COURSES[path]
+  const page = PAGES[path]
+  const hours = `PT${c.hours}H`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    '@id': `${page.canonical}#course`,
+    name: c.name,
+    description: page.description,
+    url: page.canonical,
+    image: page.ogImage,
+    inLanguage: 'en-GB',
+    provider: ACADEMY,
+    teaches: c.learn,
+    educationalLevel: (c.details.find(([label]) => label === 'Level') ?? [])[1],
+    educationalCredentialAwarded: 'ABT-accredited certificate',
+    timeRequired: hours,
+    offers: {
+      '@type': 'Offer',
+      category: 'Paid',
+      price: c.price,
+      priceCurrency: 'GBP',
+      availability: 'https://schema.org/InStock',
+      url: page.canonical,
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'Onsite',
+      courseWorkload: hours,
+      location: { '@type': 'Place', name: 'Essence Academy', address: ADDRESS },
+    },
+  }
+}
+
+// The /academy page: the academy itself plus the list of course pages.
+export function academySchemas() {
+  return [
+    { '@context': 'https://schema.org', ...ACADEMY },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Essence Academy courses',
+      itemListElement: Object.keys(COURSES).map((path, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: PAGES[path].canonical,
+        name: COURSES[path].name,
+      })),
+    },
+  ]
+}
+
+// The /gallery page: each photo with its caption, the service it shows and the salon as creator.
+export function gallerySchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ImageGallery',
+    name: 'Hair transformations at Essence Hair Treatment, Luton',
+    url: PAGES['/gallery'].canonical,
+    associatedMedia: galleryPhotos(posts).map(({ src, alt, service }) => ({
+      '@type': 'ImageObject',
+      contentUrl: SITE_URL + src,
+      caption: alt,
+      ...(GALLERY_SERVICES[service]?.to && { about: { '@type': 'Service', name: GALLERY_SERVICES[service].label, url: SITE_URL + GALLERY_SERVICES[service].to } }),
+      contentLocation: { '@id': `${SITE_URL}/#salon` },
+      creator: { '@id': `${SITE_URL}/#salon` },
+      creditText: BUSINESS.name,
+      copyrightNotice: `© ${BUSINESS.name}`,
+    })),
   }
 }

@@ -1,8 +1,10 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import useInstagramPosts from '../../hooks/useInstagramPosts'
 import './Gallery.css'
 import useSEO from '../../hooks/useSEO'
 import { PAGES } from '../../seo'
+import { GALLERY_SERVICES, GALLERY_FILTERS, galleryPhotos } from './galleryServices'
 
 const BOOK_URL = 'https://bookings.gettimely.com/essencehairtreatment/bb/book'
 const IG_URL = 'https://www.instagram.com/essence.hairtreatment/'
@@ -10,13 +12,13 @@ const IG_URL = 'https://www.instagram.com/essence.hairtreatment/'
 export default function Gallery() {
   useSEO(PAGES['/gallery'])
   const posts = useInstagramPosts()
-  // The studio photo is swapped for image.png on this page only; the Home feed keeps the original.
-  const galleryImages = useMemo(
-    () => posts.map(p => (p.file === '1000076210.webp'
-      ? { src: '/image.webp', alt: 'Ash-bronde balayage on straight, mid-length hair' }
-      : { src: `/instagram/${p.file}`, alt: p.alt || p.caption })),
-    [posts],
+  const [filter, setFilter] = useState('all')
+  const photos = useMemo(() => galleryPhotos(posts), [posts])
+  const filters = useMemo(
+    () => GALLERY_FILTERS.filter(([key]) => photos.filter(p => GALLERY_SERVICES[p.service]?.filter === key).length >= 2),
+    [photos],
   )
+  const shown = filter === 'all' ? photos : photos.filter(p => GALLERY_SERVICES[p.service]?.filter === filter)
   // Distinct photos so this strip doesn't repeat images already shown in the masonry above.
   const igImages = useMemo(
     () => [
@@ -31,7 +33,7 @@ export default function Gallery() {
   return (
     <main>
       <div className="page-hero">
-        <div className="ph-img"><img fetchPriority="high" src="/instagram/img-new-19.webp" alt="Client with long golden-blonde balayage curls at Essence in Luton" /></div>
+        <div className="ph-img"><img fetchPriority="high" src="/instagram/golden-blonde-balayage-curls-luton.webp" alt="Client with long golden-blonde balayage curls at Essence in Luton" /></div>
         <div className="ph-ov" />
         <div className="ph-content">
           <div className="ph-tag">Real Results</div>
@@ -41,13 +43,26 @@ export default function Gallery() {
 
       <div className="gallery-wrap">
         <div className="gal-note">Real client transformations · Essence Hair Treatment, Luton</div>
-        <div className="masonry">
-          {galleryImages.map(({ src, alt }) => (
-            <div className="gi" key={src}>
-              <img loading="lazy" decoding="async" src={src} alt={alt} />
-              <div className="gi-ov" />
-            </div>
-          ))}
+        {filters.length > 0 && (
+          <div className="gal-filters" role="group" aria-label="Filter photos by service">
+            {[['all', 'All'], ...filters].map(([key, label]) => (
+              <button key={key} type="button" className="gal-filter" aria-pressed={filter === key} onClick={() => setFilter(key)}>
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
+        <div className="masonry" key={filter}>
+          {shown.map(({ src, alt, service }) => {
+            const svc = GALLERY_SERVICES[service]
+            return (
+              <figure className="gi" key={src}>
+                <img loading="lazy" decoding="async" src={src} alt={alt} />
+                <div className="gi-ov" />
+                {svc?.to && <figcaption><Link to={svc.to} className="gi-tag">{svc.label} →</Link></figcaption>}
+              </figure>
+            )
+          })}
         </div>
       </div>
 

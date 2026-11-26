@@ -6,7 +6,8 @@ import { StaticRouter } from 'react-router-dom'
 import App from './App.jsx'
 import { FAQ_GROUPS } from './pages/FAQs/faqData.jsx'
 import { SERVICE_FAQS } from './pages/FAQs/serviceFaqs.jsx'
-import { PAGES, salonSchema, breadcrumbSchema, faqSchema, serviceSchema, websiteSchema, priceListSchema } from './seo.js'
+import { PAGES, salonSchema, breadcrumbSchema, faqSchema, serviceSchema, websiteSchema, priceListSchema, courseSchema, academySchemas, gallerySchema } from './seo.js'
+import { COURSES, courseFaqs } from './pages/Academy/courses.jsx'
 import { LANDINGS } from './pages/Landing/landings.jsx'
 
 export { PAGES }
@@ -41,6 +42,12 @@ export function schemasFor(path) {
     schemas.push(faqSchema(items))
   }
   if (path === '/prices') schemas.push(priceListSchema())
+  if (path === '/academy') schemas.push(...academySchemas())
+  if (path === '/gallery') schemas.push(gallerySchema())
+  if (COURSES[path]) {
+    schemas.push(courseSchema(path))
+    schemas.push(faqSchema(courseFaqs(COURSES[path]).map(({ q, a }) => ({ q, text: toText(a) }))))
+  }
   if (LANDINGS[path]) {
     schemas.push(serviceSchema(path, LANDINGS[path]))
     schemas.push(faqSchema(LANDINGS[path].faqs.map(({ q, a }) => ({ q, text: toText(a) }))))

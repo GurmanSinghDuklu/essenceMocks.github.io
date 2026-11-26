@@ -39,7 +39,9 @@ for (const [route, page] of Object.entries(PAGES)) {
 
   // /services is written as services.html so Cloudflare serves it at /services
   // (no trailing-slash redirect), matching the canonical URLs and sitemap.
+  // Nested routes (/academy/balayage-course) go in a folder: dist/academy/balayage-course.html.
   const file = route === '/' ? 'index.html' : `${route.slice(1)}.html`
+  fs.mkdirSync(path.dirname(path.join(dist, file)), { recursive: true })
   fs.writeFileSync(path.join(dist, file), html)
   console.log(`prerendered ${route} -> dist/${file}`)
 }

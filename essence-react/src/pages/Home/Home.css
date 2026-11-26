@@ -115,6 +115,11 @@
 .cs-hours { display: flex; gap: 12px; }
 .cs-hours span { min-width: 76px; color: #9A9087; }
 .cs-map iframe { width: 100%; height: 100%; min-height: 480px; border: 0; display: block; }
+.cs-map-consent { height: 100%; min-height: 480px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 4px; padding: 48px 28px; background: #E8E0D6; }
+.cs-map-consent p { max-width: 340px; font-size: 13px; line-height: 1.8; color: #2d2d2d; margin-bottom: 28px; }
+.cs-map-consent p a { color: inherit; }
+.cs-map-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.cs-map-actions .btn-blk { border: 0; cursor: pointer; font-family: inherit; }
 
 /* RESPONSIVE */
 @media (max-width: 960px) {

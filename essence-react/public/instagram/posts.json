@@ -1,92 +1,110 @@
 [
   {
-    "file": "img-new-01.webp",
+    "file": "caramel-balayage-curls-luton.webp",
+    "service": "balayage",
     "caption": "Fresh results from the studio ✨",
-    "alt": "Long brunette hair with caramel balayage and soft curls, Essence Hair Treatment, Luton"
+    "alt": "Caramel balayage on long brunette hair with soft curls, at Essence Hair Treatment in Luton"
   },
   {
-    "file": "img-new-02.webp",
+    "file": "black-wavy-hair-extensions-luton.webp",
+    "service": "extensions",
     "caption": "Hair extensions — lightweight and seamless 🌿",
-    "alt": "Long, voluminous black wavy hair extensions on a client in the Essence salon"
+    "alt": "Long, voluminous black wavy hair extensions fitted at the Essence salon in Luton"
   },
   {
-    "file": "img-new-03.webp",
+    "file": "brunette-caramel-balayage-luton.webp",
+    "service": "balayage",
     "caption": "Transformation at Essence Hair Treatment",
-    "alt": "Long straight hair with a brunette-to-caramel balayage blend, back view"
+    "alt": "Brunette-to-caramel balayage blend on long straight hair, back view"
   },
   {
-    "file": "img-new-04.webp",
+    "file": "jet-black-hair-extensions-luton.webp",
+    "service": "extensions",
     "caption": "Bespoke colour, tailored to you",
-    "alt": "Long, sleek jet-black straight hair, back view, Essence salon in Luton"
+    "alt": "Long, sleek jet-black hair extensions, back view, at the Essence salon in Luton"
   },
   {
-    "file": "img-new-06.webp",
+    "file": "sun-kissed-blonde-balayage-luton.webp",
+    "service": "balayage",
     "caption": "Sun-kissed balayage — no harsh lines",
     "alt": "Sun-kissed blonde balayage on long, loose curls"
   },
   {
-    "file": "img-new-07.webp",
+    "file": "copper-brown-hair-colour-luton.webp",
+    "service": "colour",
     "caption": "The Essence studio, Luton",
-    "alt": "Long copper-brown curls in front of the Essence Hair & Academy sign, Luton"
+    "alt": "Long copper-brown hair colour with loose waves, in front of the Essence Hair & Academy sign in Luton"
   },
   {
-    "file": "img-new-08.webp",
+    "file": "bronde-highlights-curls-luton.webp",
+    "service": "highlights",
     "caption": "Frizz-free results that last months",
-    "alt": "Bronde balayage with soft, bouncy curls"
+    "alt": "Bronde highlights with soft, bouncy curls"
   },
   {
-    "file": "img-new-09.webp",
+    "file": "sleek-black-hair-head-spa-luton.webp",
+    "service": "head-spa",
     "caption": "Head spa — deep hydration ritual",
-    "alt": "Long, sleek, glossy black hair after a treatment at Essence"
+    "alt": "Long, sleek, glossy black hair after a head spa treatment at Essence in Luton"
   },
   {
-    "file": "img-new-10.webp",
+    "file": "copper-hair-botox-luton.webp",
+    "service": "hair-botox",
     "caption": "Hair Botox — smooth, glossy, healthy",
     "alt": "Long, glossy copper hair after a Hair Botox treatment"
   },
   {
-    "file": "img-new-11.webp",
+    "file": "ash-brown-nanoplastia-luton.webp",
+    "service": "nanoplastia",
     "caption": "Nanoplastia treatment results",
-    "alt": "Long ash-brown hair with soft, frizz-free waves after Nanoplastia"
+    "alt": "Long ash-brown hair with soft, frizz-free waves after a Nanoplastia treatment"
   },
   {
-    "file": "img-new-12.webp",
+    "file": "chocolate-brown-keratin-treatment-luton.webp",
+    "service": "keratin",
     "caption": "Keratin treatment — cutting styling time in half",
     "alt": "Long, sleek chocolate-brown hair with subtle highlights after a Keratin treatment"
   },
   {
-    "file": "img-new-14.webp",
+    "file": "chestnut-hair-head-spa-luton.webp",
+    "service": "head-spa",
     "caption": "Scalp care at Essence",
-    "alt": "Long, straight, glossy chestnut-brown hair, back view, Essence salon in Luton"
+    "alt": "Long, straight, glossy chestnut-brown hair after a head spa scalp treatment at Essence in Luton"
   },
   {
-    "file": "img-new-15.webp",
+    "file": "caramel-highlights-bob-luton.webp",
+    "service": "highlights",
     "caption": "Another beautiful transformation ✨",
-    "alt": "Glossy shoulder-length bob with caramel highlights",
+    "alt": "Caramel highlights on a glossy shoulder-length bob",
     "focal": "center 22%"
   },
   {
-    "file": "img-new-16.webp",
+    "file": "brunette-caramel-balayage-waves-luton.webp",
+    "service": "balayage",
     "caption": "Organic, formaldehyde-free treatments",
-    "alt": "Long brunette hair with caramel balayage and bouncy curls under the Essence sign"
+    "alt": "Brunette balayage with caramel tones and bouncy waves, under the Essence sign in Luton"
   },
   {
-    "file": "img-new-18.webp",
+    "file": "face-framing-highlights-luton.webp",
+    "service": "highlights",
     "caption": "Real results, real clients",
-    "alt": "Client with long, layered dark-brown hair and caramel face-framing highlights"
+    "alt": "Caramel face-framing highlights on long, layered dark-brown hair"
   },
   {
-    "file": "img-new-19.webp",
+    "file": "golden-blonde-balayage-curls-luton.webp",
+    "service": "balayage",
     "caption": "Your hair, your story, our passion",
-    "alt": "Client with long golden-blonde balayage curls at Essence in Luton"
+    "alt": "Golden-blonde balayage curls on long hair, at Essence in Luton"
   },
   {
-    "file": "img-new-20.webp",
+    "file": "tape-in-hair-extensions-luton.webp",
+    "service": "extensions",
     "caption": "Book your appointment today",
     "alt": "Long, straight brunette hair with tape-in hair extensions"
   },
   {
-    "file": "1000076210.webp",
+    "file": "essence-salon-interior-luton.webp",
+    "service": "salon",
     "caption": "Inside the Essence studio",
     "alt": "Inside the Essence Hair & Academy salon in Luton"
   }

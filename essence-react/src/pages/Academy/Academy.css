@@ -93,3 +93,8 @@
   .ac-enrol { padding: 64px 20px; }
   .ac-e-stats { gap: 32px; flex-wrap: wrap; }
 }
+
+/* Course name and links through to each course page */
+.ac-c-link { color: inherit; text-decoration: none; }
+.ac-c-link:hover { color: #9A9087; }
+.ac-c-links { display: flex; flex-wrap: wrap; gap: 14px 26px; }

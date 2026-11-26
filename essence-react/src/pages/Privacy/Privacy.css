@@ -6,6 +6,7 @@
 .privacy-body { max-width: 800px; margin: 0 auto; padding: 80px 56px; }
 
 .privacy-intro { font-size: 14px; line-height: 1.9; color: #2d2d2d; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid #E8E0D6; }
+.privacy-intro a { color: inherit; }
 
 .privacy-section { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid #E8E0D6; }
 .privacy-section:last-child { border-bottom: none; margin-bottom: 0; }
@@ -21,6 +22,11 @@
 .ps-body ul li::before { content: '—'; color: #D4C9BB; flex-shrink: 0; margin-top: 2px; }
 
 .privacy-highlight { background: #F2EDE6; padding: 20px 24px; margin: 20px 0; font-size: 13px; line-height: 1.8; color: #2d2d2d; border-left: 2px solid #0a0a0a; }
+.privacy-intro .privacy-highlight { margin-top: 0; font-size: 14px; }
+
+.ps-body h3 { font-size: 9px; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: #0a0a0a; margin: 32px 0 12px; }
+.ps-body a { color: inherit; }
+.ps-body code { font-size: 12px; background: #F2EDE6; padding: 1px 6px; }
 
 .privacy-contact { background: #0a0a0a; padding: 64px 56px; text-align: center; }
 .privacy-contact h3 { font-family: 'Playfair Display', serif; font-size: clamp(22px,2.5vw,32px); font-weight: 300; color: #fff; margin-bottom: 12px; }
